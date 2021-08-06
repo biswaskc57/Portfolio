@@ -5,12 +5,13 @@ import Work from "./components/work/Work";
 import Experience  from "./components/experience/Experience";
 import Testimonials  from "./components/testimonials/Testimonials";
 import Contact  from "./components/contact/Contact";
-import "./App.scss"
+import "./app.scss"
 function App() {
   return (
     <div className="app">
       <Topbar />
       <div className="sections">
+        <p>lamo</p>
         <Intro/>
         <Portfolio/>
         <Work />
