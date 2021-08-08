@@ -1,9 +1,5 @@
-import "./Experience.scss"
+import "./Experience.scss";
 
 export default function Experience() {
-    return (
-        <div className = "experience">
-          
-        </div>
-    )
+  return <div className="experience" id="experience"></div>;
 }
