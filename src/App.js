@@ -3,7 +3,7 @@ import Intro from "./components/intro/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
 import Work from "./components/work/Work";
 import Menu from "./components/menu/Menu";
-import Experience from "./components/experience/Experience";
+import Skills from "./components/skills/Skills";
 import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import "./app.scss";
@@ -19,7 +19,7 @@ function App() {
         <Intro />
         <Portfolio />
         <Work />
-        <Experience />
+        <Skills />
         <Testimonials />
         <Contact />
       </div>
