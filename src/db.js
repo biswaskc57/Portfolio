@@ -1,7 +1,7 @@
 export const featuredPortfolio = [
   {
     id: 1,
-    title: "Personal Trainer App",
+    title: "Personal Trainer Apps",
     img: "assets/Trainer.png",
     url: "https://biswas-personal-trainer.herokuapp.com/",
   },
