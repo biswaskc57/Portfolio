@@ -1,3 +1,9 @@
 .portfolio {
-  background-color: rgba(211, 108, 52, 0.482);
+  background-color: rgb(243, 248, 249);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 50px;
+  }
 }
