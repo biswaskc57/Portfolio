@@ -6,7 +6,7 @@ import Menu from "./components/menu/Menu";
 import Skills from "./components/skills/Skills";
 
 import Contact from "./components/contact/Contact";
-import "./app.scss";
+import "./App.scss";
 import { useState } from "react";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
