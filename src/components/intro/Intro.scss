@@ -14,8 +14,8 @@
     overflow: hidden;
 
     .imgContainer {
-      width: 700px;
-      height: 700px;
+      width: 80%;
+      height: 70%;
 
       border-bottom-left-radius: 50%;
       border-bottom-right-radius: 50%;
@@ -26,6 +26,8 @@
 
       @include mobile {
         align-items: flex-start;
+        width: 700px;
+        height: 700px;
       }
 
       img {
