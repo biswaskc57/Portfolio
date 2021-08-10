@@ -1,5 +1,5 @@
 import "./skills.scss";
-
+import React from "react";
 export default function Intro() {
   return (
     <div className="skills" id="skills">

@@ -1,7 +1,7 @@
 import Topbar from "./components/topbar/Topbar";
 import Intro from "./components/intro/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
-
+import React from "react";
 import Menu from "./components/menu/Menu";
 import Skills from "./components/skills/Skills";
 
