@@ -26,8 +26,10 @@
 
       @include mobile {
         align-items: flex-start;
-        width: 700px;
+        width: 800px;
         height: 700px;
+        border-bottom-left-radius: 50%;
+        border-bottom-right-radius: 50%;
       }
 
       img {
