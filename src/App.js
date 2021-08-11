@@ -10,11 +10,16 @@ import "./App.scss";
 import { useState } from "react";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const [titleName, settitleName] = useState("Portfolio");
   return (
     <div className="app">
       <Topbar open={menuOpen} setOpen={setMenuOpen} />
-      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Menu
+        menuOpen={menuOpen}
+        setMenuOpen={setMenuOpen}
+        name={titleName}
+        setName={settitleName}
+      />
       <div className="sections">
         <Intro />
         <Portfolio />

@@ -6,11 +6,18 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 export default function Contact() {
-  const [message, setMessage] = useState(false);
+  const [message, setMessage] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setMessage(true);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setMessage(event.target.value);
+    setTimeout(() => {
+      setMessage("");
+    }, 5000);
+  };
+
+  const messageHandler = (event) => {
+    event.preventDefault();
   };
   return (
     <div className="contact" id="contact">
@@ -56,9 +63,12 @@ export default function Contact() {
           <h2>Send me a message.</h2>
           <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Email" />
-            <textarea placeholder="Message"></textarea>
+            <textarea
+              placeholder="Message"
+              onChange={messageHandler}
+            ></textarea>
             <button type="submit">Send</button>
-            {message && <span>Thanks, I'll reply ASAP :)</span>}
+            {message !== "" ? <span>Thanks</span> : ""}
           </form>
         </div>
       </div>

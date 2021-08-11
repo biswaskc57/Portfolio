@@ -7,6 +7,7 @@ import {
   MernPortfolio,
   ReactPortfolio,
   designPortfolio,
+  javaPortfolio,
 } from "../../db";
 
 export default function Portfolio() {
@@ -19,11 +20,11 @@ export default function Portfolio() {
     },
     {
       id: "MERN-Projects",
-      title: "MERNApp",
+      title: "MERN Projects",
     },
     {
       id: "React-Projects",
-      title: "React-App",
+      title: "React Projects",
     },
     {
       id: "Java-Projects",
@@ -45,6 +46,9 @@ export default function Portfolio() {
         break;
       case "React-Projects":
         setData(ReactPortfolio);
+        break;
+      case "Java-Projects":
+        setData(javaPortfolio);
         break;
       case "Design-Projects":
         setData(designPortfolio);

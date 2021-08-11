@@ -23,6 +23,15 @@ export default function Intro() {
         <div className="wrapper">
           <h2>Hi there, I´m </h2>
           <h1>Biswas KC</h1>
+          <h4>
+            <a
+              href="https://www.canva.com/design/DAEmm0R3Cjs/view"
+              target="_blank"
+            >
+              <p> Download CV</p>
+            </a>
+          </h4>
+
           <h3>
             <span ref={text}></span>
           </h3>
