@@ -8,7 +8,7 @@ export default function Intro() {
     init(text.current, {
       showCursor: true,
       backDelay: 2000,
-      strings: ["Fullstack Developer", "Web Developer", "UX/Ui Designer"],
+      strings: ["Fullstack Developer", "Software Developer", "UX/Ui Designer"],
     });
   }, []);
 
