@@ -1,31 +1,24 @@
 import "./Contact.scss";
 import React from "react";
-import { useState } from "react";
+
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
+import { useForm, ValidationError } from "@formspree/react";
+
 export default function Contact() {
-  const [message, setMessage] = useState("");
+  const [state, handleSubmit] = useForm("mnqlodag");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setMessage(event.target.value);
-    setTimeout(() => {
-      setMessage("");
-    }, 5000);
-  };
+  const buttonHandler = () => {};
 
-  const messageHandler = (event) => {
-    event.preventDefault();
-  };
   return (
     <div className="contact" id="contact">
       <div className="topic">
-        <div class="title">
+        <div className="title">
           <span>Contact</span>
         </div>
-        <div class="underline"></div>
+        <div className="underline"></div>
       </div>
       <div className="contactContent">
         <div className="left">
@@ -62,13 +55,27 @@ export default function Contact() {
         <div className="right">
           <h2>Send me a message.</h2>
           <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="Email" />
-            <textarea
-              placeholder="Message"
-              onChange={messageHandler}
-            ></textarea>
-            <button type="submit">Send</button>
-            {message !== "" ? <span>Thanks</span> : ""}
+            <label htmlFor="email">Email Address</label>
+            <input id="email" type="email" name="email" />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
+            <textarea id="message" name="message" />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
+            <button
+              type="submit"
+              disabled={state.submitting}
+              onClick={buttonHandler}
+            >
+              Submit
+            </button>
+            {}
           </form>
         </div>
       </div>

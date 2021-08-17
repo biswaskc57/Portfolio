@@ -4,10 +4,10 @@ export default function Intro() {
   return (
     <div className="skills" id="skills">
       <div className="topic">
-        <div class="title">
+        <div className="title">
           <span>Skills</span>
         </div>
-        <div class="underline"></div>
+        <div className="underline"></div>
       </div>
       <div className="skillcontent">
         <div className="left">
@@ -34,59 +34,59 @@ export default function Intro() {
 
         <div className="right">
           <div className="wrapper">
-            <div class="bars">
-              <div class="info">
+            <div className="bars">
+              <div className="info">
                 <span>HTML</span>
                 <span>90%</span>
               </div>
-              <div class="line">
-                <div class="html"></div>
+              <div className="line">
+                <div className="html"></div>
               </div>
             </div>
 
-            <div class="bars">
-              <div class="info">
+            <div className="bars">
+              <div className="info">
                 <span>CSS/SCSS</span>
                 <span>80%</span>
               </div>
-              <div class="line">
-                <div class="css"></div>
+              <div className="line">
+                <div className="css"></div>
               </div>
             </div>
-            <div class="bars">
-              <div class="info">
+            <div className="bars">
+              <div className="info">
                 <span>React & Redux</span>
                 <span>80%</span>
               </div>
-              <div class="line">
-                <div class="react"></div>
+              <div className="line">
+                <div className="react"></div>
               </div>
             </div>
-            <div class="bars">
-              <div class="info">
+            <div className="bars">
+              <div className="info">
                 <span>Java & Springboot</span>
                 <span>80%</span>
               </div>
-              <div class="line">
-                <div class="java"></div>
+              <div className="line">
+                <div className="java"></div>
               </div>
             </div>
-            <div class="bars">
-              <div class="info">
+            <div className="bars">
+              <div className="info">
                 <span>Mongo DB & Mysql</span>
                 <span>70%</span>
               </div>
-              <div class="line">
-                <div class="database"></div>
+              <div className="line">
+                <div className="database"></div>
               </div>
             </div>
-            <div class="bars">
-              <div class="info">
+            <div className="bars">
+              <div className="info">
                 <span>AWS</span>
                 <span>60%</span>
               </div>
-              <div class="line">
-                <div class="cloud"></div>
+              <div className="line">
+                <div className="cloud"></div>
               </div>
             </div>
           </div>

@@ -8,7 +8,7 @@ export default function Intro() {
     init(text.current, {
       showCursor: true,
       backDelay: 2000,
-      strings: ["Fullstack Developer", "Software Developer", "UX/Ui Designer"],
+      strings: ["Fullstack Developer", "Software Developer", " Designer"],
     });
   }, []);
 
@@ -24,10 +24,7 @@ export default function Intro() {
           <h2>Hi there, I´m </h2>
           <h1>Biswas KC</h1>
           <h4>
-            <a
-              href="https://www.canva.com/design/DAEmm0R3Cjs/view"
-              target="_blank"
-            >
+            <a href="https://www.canva.com/design/DAEmm0R3Cjs/view" target="">
               <p> Download CV</p>
             </a>
           </h4>
