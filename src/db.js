@@ -19,10 +19,10 @@ export const featuredPortfolio = [
   },
   {
     id: 4,
-    title: "Blog WebApp",
+    title: "Blog App",
     img:
-      "https://media.istockphoto.com/vectors/coming-soon-neon-banner-vector-template-glowing-night-bright-sign-vector-id1144514162",
-    url: "",
+      "assets/BlogApp.png",
+    url: "https://bloglist-biswas.herokuapp.com/",
   },
   {
     id: 5,
@@ -43,10 +43,10 @@ export const featuredPortfolio = [
 export const MernPortfolio = [
   {
     id: 1,
-    title: "Bloglist Web-App",
+    title: "Boglist Web-App",
     img:
-      "https://media.istockphoto.com/vectors/coming-soon-neon-banner-vector-template-glowing-night-bright-sign-vector-id1144514162",
-    url: "",
+      "assets/BlogApp.png",
+    url: "https://bloglist-biswas.herokuapp.com/",
   },
   {
     id: 2,

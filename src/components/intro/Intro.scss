@@ -15,10 +15,12 @@
 
     .imgContainer {
       width: 80%;
-      height: 70%;
-      margin-top: 70px;
+      height: 60%;
+      margin-top: 90px;
+      margin-right: 70px;
 
-      border-radius: 15%;
+      border-radius: 5%;
+      z-index: -2;
 
       display: flex;
       align-items: flex-end;
@@ -27,10 +29,10 @@
 
       @include mobile {
         align-items: flex-start;
-        width: 400px;
-        height: 550px;
-        border-bottom-left-radius: 50%;
-        border-bottom-right-radius: 50%;
+        width: 300px;
+        height: 290px;
+       
+       margin-left:40px
       }
 
       img {
@@ -85,7 +87,7 @@
 
         a {
           background-color: $mainColor;
-          margin-bottom: 175px;
+          margin-bottom: 150px;
           margin-left: -120px;
           margin-right: 10px;
           width: 230px;
@@ -98,7 +100,7 @@
 
           @include mobile {
             width: 200px;
-            margin-bottom: 60px;
+            margin-bottom: 30px;
             margin-right: 40px;
             margin-left: -80px;
           }
