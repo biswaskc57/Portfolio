@@ -1,6 +1,9 @@
 {
   "name": "port-folio",
   "version": "0.1.0",
+  "engines": {
+    "node": "6.11.1"
+  },
   "private": true,
   "dependencies": {
     "@formspree/react": "^2.2.3",
