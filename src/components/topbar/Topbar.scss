@@ -1,11 +1,12 @@
 @import "../../global.scss";
 
 .topbar {
-  background-color: rgba(240, 231, 227, 0.969);
+  background-color: $mainColor;
+  
   width: 100%;
   height: 70px;
   position: fixed;
-  color: $mainColor;
+  color: white;
   top: 0;
   z-index: 3;
   .wrapper {
@@ -55,7 +56,7 @@
         span {
           width: 100%;
           height: 3px;
-          background-color: $mainColor;
+          background-color: white;
           transform-origin: left;
           transition: all 1s ease;
         }
@@ -64,7 +65,7 @@
   }
 
   &.active {
-    background-color: $mainColor;
+    background-color: #284d7a;
     color: white;
 
     .hamburger {
