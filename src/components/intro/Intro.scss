@@ -5,39 +5,41 @@
   display: flex;
 
   @include mobile {
-    flex-direction: column;
+    flex-direction:column-reverse;
     align-items: center;
   }
 
   .right {
-    flex: 5;
+    flex: 4;
     overflow: hidden;
 
     .imgContainer {
       width: 60%;
-      margin-top: 90px;
-      margin-right: 130px;
+      margin-top: 140px;
+      margin-right: 140px;
       border-radius: 100%;
       z-index: -2;
-
       display: flex;
       align-items: flex-end;
       justify-content: center;
       float: right;
 
       @include mobile {
-        align-items: flex-start;
+        align-items: center;
         width: 300px;
-        height: 290px;
-       
-       margin-left:40px
+        min-width: 40%;
+        border-radius: 100%;
+        margin-top:60px;
+        margin-right: 10px;
+        float: left;
+        margin-left: 2%
       }
 
       img {
         height: 100%;
 
         @include mobile {
-          height: 60%;
+          width:100%;  
         }
       }
     }
@@ -45,25 +47,28 @@
   .left {
     flex: 4;
     overflow: hidden;
-    position: relative;
+    width: 100%;
 
     .wrapper {
       width: 80%;
       height: 80%;
       padding-left: 50px;
-      margin-top: 60px;
-      margin-left: 15%;
+      margin-top: 10px;
+      margin-left: 25%;
       display: flex;
       flex-direction: column;
       justify-content: center;
 
       @include mobile {
         align-items: center;
+        margin-top: 5px;
+        padding-left: 2px;
+        margin-right: 100px;
+        margin-left: 10%;
       }
 
       h1 {
         font-size: 60px;
-        margin: 10px 0 0 0 ;
         color: $mainColor;
 
         @include mobile {
@@ -72,11 +77,11 @@
       }
       h2 {
         font-size: 35px;
-        margin-bottom: 10px;
         color: $mainColor;
       }
       h3 {
         font-size: 30px;
+        margin: 10px 0px 10px 0px;
 
         @include mobile {
           font-size: 20px;
@@ -103,11 +108,16 @@
       .button {
         background-color: $mainColor;
         margin: 120px 0 40px 0px;
-        width: 50%;
+        width: 250px;
         color: white;
         height: 50px;
         border-radius: 3px;
         font-size: 22px;
+        
+        @include mobile {
+          margin: 20px 0 0px 0px;
+          font-size: 20px;
+        }
 
         a {
           color: white;
@@ -115,14 +125,17 @@
         }
       }
     }
-    .pointer {
-      
+    .pointer {   
       position:fixed;
-      bottom: 10px;
-      left: 40%;
+      bottom: 60px;
+      left: 45%;
+      
+      @include mobile {
+        bottom: 30px;
+      }
 
       img {
-        width: 10px;
+        width: 30px;
         animation: arrowBlink 2s infinite;
       }
 
