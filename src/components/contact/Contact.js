@@ -18,9 +18,8 @@ export default function Contact() {
       <div className="contactContent">
         <div className="left">
           <div className="text">
-            <p>Links:</p>
           </div>
-          <div className="Icon">
+          <div className="Icon-wrapper">
             <div className="github">
               <a href="https://github.com/biswaskc57">
                 <GitHubIcon
@@ -50,14 +49,13 @@ export default function Contact() {
         <div className="right">
           <h2>Send me a message.</h2>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email Address</label>
-            <input id="email" type="email" name="email" />
+            <input id="email"  placeholder="Enter your email here" label="Email address:" required="required" type="email" name="email" />
             <ValidationError
               prefix="Email"
               field="email"
               errors={state.errors}
             />
-            <textarea id="message" name="message" />
+            <textarea placeholder="Enter your text here" id="message" name="message" required="required" />
             <ValidationError
               prefix="Message"
               field="message"

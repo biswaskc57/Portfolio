@@ -7,7 +7,7 @@ export default function Intro() {
       <div className="skillcontent">
         <div className="left">
           <div className="experience">
-            <p className="p1">Education:-</p>
+            <p className="p1">Education:</p>
             <p className="p2">Business and IT(Haaga-Helia UAS) 2019-present</p>
             <div className="description">
               <p>
