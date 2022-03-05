@@ -1,22 +1,16 @@
-@import "../../global.scss";
+@import "../../styles/global.scss";
 
 .skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgb(243, 248, 249);
   overflow: hidden;
   @include mobile {
     flex-direction: column;
     align-items: center;
   }
-  .topic {
-    align-items: center;
-    margin-left: 570px;
-
-    margin-top: 30px;
-    height: 25%;
-    width: 20%;
-    @include mobile {
-      display: none;
-    }
+ 
     .title {
       margin-bottom: 5px;
 
@@ -26,7 +20,7 @@
         font-size: 34px;
         margin-left: 25px;
       }
-    }
+    
     .underline {
       content: "";
       height: 2%;
@@ -37,11 +31,10 @@
     }
   }
   .skillcontent {
-    width: 75%;
+    
     display: flex;
-    margin-left: 200px;
-
     height: 100%;
+    margin: 20px;
 
     @include mobile {
       flex-direction: column;
@@ -52,7 +45,7 @@
 
     .left {
       width: 90%;
-      margin-top: -12px;
+      margin-top: 35px;
       flex: 0.5;
       overflow: hidden;
       float: right;

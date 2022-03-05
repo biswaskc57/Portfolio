@@ -14,7 +14,7 @@ export default function Intro() {
   }, []);
 
   return (
-    <div className="intro" id="intro">
+    <div className="intro container"  id="intro">
       <div className="left">
         <div className="wrapper">
           <h2>Hi there, I'm </h2>

@@ -1,17 +1,10 @@
-@import "../../global.scss";
+@import "../../styles/global.scss";
+@import "../../styles/layout.scss";
 .portfolio {
-  background-color: rgb(243, 248, 249);
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  h1 {
-    font-size: 50px;
-
-    @include mobile {
-      font-size: 20px;
-    }
-  }
 
   ul {
     margin: 10px;
@@ -26,8 +19,7 @@
     }
   }
 
-  .container {
-    width: 70%;
+  .portfolio-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,7 +38,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
+      color: rgb(198, 155, 155);
       position: relative;
       transition: all 0.5s ease;
       cursor: pointer;

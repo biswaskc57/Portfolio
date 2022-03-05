@@ -2,16 +2,10 @@ import "./skills.scss";
 import React from "react";
 export default function Intro() {
   return (
-    <div className="skills" id="skills">
-      <div className="topic">
-        <div className="title">
-          <span>Skills</span>
-        </div>
-        <div className="underline"></div>
-      </div>
+    <div className="skills container" id="skills">
+       <span className="page-title">Skills</span>
       <div className="skillcontent">
         <div className="left">
-          <div className="text">Skills & Knowledge</div>
           <div className="experience">
             <p className="p1">Education:-</p>
             <p className="p2">Business and IT(Haaga-Helia UAS) 2019-present</p>

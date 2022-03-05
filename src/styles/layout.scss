@@ -1,0 +1,18 @@
+.container{
+    max-width: 80%;
+    margin-left: 10%;
+    background-color: rgb(243, 248, 249);
+    
+}
+.page-title {
+    font-size: 50px;
+    font-weight: 500;
+    color: black;
+    border-bottom: 5px solid;
+    margin-bottom: 20px;
+    
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }

@@ -13,13 +13,8 @@ export default function Contact() {
   const buttonHandler = () => {};
 
   return (
-    <div className="contact" id="contact">
-      <div className="topic">
-        <div className="title">
-          <span>Contact</span>
-        </div>
-        <div className="underline"></div>
-      </div>
+    <div className="contact container" id="contact">
+      <span className="page-title">Contact</span>
       <div className="contactContent">
         <div className="left">
           <div className="text">

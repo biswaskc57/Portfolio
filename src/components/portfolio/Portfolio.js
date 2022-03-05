@@ -60,8 +60,8 @@ export default function Portfolio() {
   }, [selected]);
 
   return (
-    <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
+    <div className="portfolio container" id="portfolio">
+      <span className="page-title">Projects</span>
       <ul>
         {list.map((item) => (
           <PortfolioList
@@ -72,7 +72,7 @@ export default function Portfolio() {
           />
         ))}
       </ul>
-      <div className="container">
+      <div className="portfolio-wrapper">
         {data.map((d) => (
           <div className="item">
             <a href={d.url}  target="_blank">

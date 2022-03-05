@@ -1,12 +1,15 @@
-@import "../../global.scss";
+@import "../../styles/global.scss";
+@import "../../styles/layout.scss";
 
 .intro {
-  background-color: #dae3de;
   display: flex;
+  
 
+  z-index: 2px;
   @include mobile {
     flex-direction:column-reverse;
     align-items: center;
+    
   }
 
   .right {
@@ -14,9 +17,9 @@
     overflow: hidden;
 
     .imgContainer {
-      width: 60%;
-      margin-top: 140px;
-      margin-right: 140px;
+      width: 80%;
+      margin-top: 100px;
+      margin-right: 20px;
       border-radius: 100%;
       z-index: -2;
       display: flex;
@@ -52,9 +55,8 @@
     .wrapper {
       width: 80%;
       height: 80%;
-      padding-left: 50px;
-      margin-top: 10px;
-      margin-left: 25%;
+      margin-top: 60px;
+      margin-left: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -62,9 +64,9 @@
       @include mobile {
         align-items: center;
         margin-top: 5px;
-        padding-left: 2px;
+        padding-left: 25px;
         margin-right: 100px;
-        margin-left: 10%;
+        
       }
 
       h1 {
