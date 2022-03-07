@@ -18,6 +18,7 @@ export default function Contact() {
       <div className="contactContent">
         <div className="left">
           <div className="text">
+          Follow me on social media
           </div>
           <div className="Icon-wrapper">
             <div className="github">

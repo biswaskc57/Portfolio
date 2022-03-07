@@ -8,17 +8,14 @@
 
   @include mobile {
     align-items: center;
-    justify-content: center;
   }
   .contactContent {
     display: flex;
-    margin-top: 20px;
 
     @include mobile {
       display: flex;
       flex-direction: column;
       width: 90%;
-      margin-top: 30px;
     }
 
     .left {
@@ -26,7 +23,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
+      flex-direction: column;
 
       @include mobile {
         flex-direction: column;
@@ -35,15 +32,18 @@
 
       .text {
         font-weight: 500;
-        font-size: 30px;
+        font-size: 25px;
+        margin: 10px;
 
         @include mobile {
-          display: none;
+          font-weight: 500;
+          font-size: 18px;
+          margin: 10px;
         }
       }
-
+      
       .Icon-wrapper {
-        height: 300px;
+        height: 60%;
         font-size: 50px;
         border: 2px solid $mainColor;
         background: rgb(243, 248, 249);
@@ -55,10 +55,9 @@
 
         @include mobile {
           width: 60%;
-          height: 200px;
+          height: 60%;
           flex-wrap: wrap;
           align-items: center;
-          margin-left: 70px;
           margin-top: 5px;
         }
 
@@ -73,8 +72,8 @@
           justify-content: center;
           transition: all 0.5s ease;
           cursor: pointer;
-          background-color:  $mainColor;
-          color: #dae3de;
+          background-color: #dae3de;
+          color: $mainColor ;
 
           @include mobile {
             margin: 10px 15px;
@@ -83,8 +82,10 @@
             margin-bottom: 10px;
           }
           &:hover {
-            background-color: #dae3de;
-            color: $mainColor ;
+            
+
+            background-color: $mainColor;
+            color: #dae3de;
             icon {
               opacity: 0.2;
               z-index: 0;
@@ -110,6 +111,10 @@
       h2 {
         font-size: 25px;
         font-weight: 500;
+        @include mobile {
+          font-weight: 500;
+          font-size: 18px;
+        }
       }
 
       form {
@@ -128,8 +133,9 @@
           border: 2px solid $mainColor ;
 
           @include mobile {
-            width: 300px;
+            width: 80%;
             height: 20px;
+            margin-left: 10%;
           }
         }
 
@@ -137,14 +143,14 @@
           width: 80%;
           height: 250px;
           font-size: 16px;
-          margin-bottom: 10px;
+          margin: 10px;
           border-radius: 5px;
           border: 2px solid $mainColor ;
 
           @include mobile {
-            width: 300px;
+            width: 80%;
             height: 120px;
-            margin-bottom: 4px;
+            margin-left: 10%;
           }
         }
 
