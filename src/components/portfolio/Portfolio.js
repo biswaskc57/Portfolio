@@ -8,7 +8,7 @@ import {
   ReactPortfolio,
   designPortfolio,
   javaPortfolio,
-} from "../../db";
+} from "../../data";
 
 export default function Portfolio() {
   const [selected, setSelected] = useState("features");
