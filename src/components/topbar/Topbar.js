@@ -1,7 +1,7 @@
 import "./Topbar.scss";
 import React from "react";
-import EmailIcon from "@material-ui/icons/Email";
-import PersonIcon from "@material-ui/icons/Person";
+import EmailIcon from "@mui/icons-material/Email";
+import PersonIcon from "@mui/icons-material/Person";
 export default function topbar({ open, setOpen }) {
   return (
     <div className={"topbar " + (open && "active")}>
