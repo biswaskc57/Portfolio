@@ -12,7 +12,7 @@ interface Repo {
     avatar_url: string;
     url: string;
     html_url: string;
-    [key: string]: any; // Optional for any additional properties you may not need
+    [key: string]: string | number; // Optional for any additional properties you may not need
   };
   html_url: string;
   description: string | null;
@@ -111,10 +111,10 @@ export default function Github() {
   };
 
   if (!data) {
-    <div> No data found</div>
+    <div> No data found</div>;
   }
   if (!repos || repos.length === 0) 
-    <div> No repos found</div>
+    <div> No repos found</div>;
 
   return (
     <div>
