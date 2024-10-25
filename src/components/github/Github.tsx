@@ -81,22 +81,13 @@ interface Repo {
   default_branch: string;
 }
 export default function Github() {
-  const [data, setData] = useState(null);
   const [repos, setRepos] = useState([] as Repo []);
 
   useEffect(() => {
-    fetchData();
     fetchRepos();
   }, []);
 
-  const fetchData = async () => {
-    try {
-      const { data: userData } = await axios.get('https://api.github.com/users/biswaskc57');
-      setData(userData);
-    } catch (error) {
-      console.error('Error fetching user data:', error);
-    }
-  };
+
 
   const fetchRepos = async () => {
     try {

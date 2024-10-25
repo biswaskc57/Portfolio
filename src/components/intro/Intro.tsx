@@ -20,7 +20,7 @@ const Intro: React.FC = () => {
     <div className="intro" id="intro">
       <div className="left">
         <div className="wrapper">
-          <h2>Hi there, I'm </h2>
+          <h2>Hi there, I`m </h2>
           <h1>Biswas K C</h1>
           <h3>
             <span ref={text}></span>

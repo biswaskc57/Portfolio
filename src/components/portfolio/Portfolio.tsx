@@ -47,23 +47,23 @@ export default function Portfolio() {
 
   useEffect(() => {
     switch (selected) {
-      case "features":
-        setData(featuredPortfolio);
-        break;
-      case "MERN-Projects":
-        setData(MernPortfolio);
-        break;
-      case "React-Projects":
-        setData(ReactPortfolio);
-        break;
-      case "Java-Projects":
-        setData(javaPortfolio);
-        break;
-      case "Design-Projects":
-        setData(designPortfolio);
-        break;
-      default:
-        setData(featuredPortfolio);
+    case "features":
+      setData(featuredPortfolio);
+      break;
+    case "MERN-Projects":
+      setData(MernPortfolio);
+      break;
+    case "React-Projects":
+      setData(ReactPortfolio);
+      break;
+    case "Java-Projects":
+      setData(javaPortfolio);
+      break;
+    case "Design-Projects":
+      setData(designPortfolio);
+      break;
+    default:
+      setData(featuredPortfolio);
     }
   }, [selected]);
 
@@ -85,7 +85,7 @@ export default function Portfolio() {
         {data.map((d) => (
           <div className="item" key={d.id}> {/* Add a unique key for each portfolio item */}
             <a href={d.url} target="_blank" rel="noopener noreferrer"> {/* Add rel attribute for security */}
-            <img src={d.img} alt={d.title} /> {/* Use alt text for accessibility */}
+              <img src={d.img} alt={d.title} /> {/* Use alt text for accessibility */}
             </a>
             <h3>{d.title}</h3>
           </div>
