@@ -1,24 +1,36 @@
+import React, { FunctionComponent, useState } from "react";
 import Topbar from "./components/topbar/Topbar";
 import Intro from "./components/intro/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
-import React from "react";
 import Menu from "./components/menu/Menu";
 import Skills from "./components/skills/Skills";
-//import Github from "./components/github/Github";
 import Contact from "./components/contact/Contact";
 import "./App.scss";
-import { useState } from "react";
-function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [titleName, settitleName] = useState("Portfolio");
+
+// Define props types for Topbar and Menu components
+interface TopbarProps {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+interface MenuProps {
+  menuOpen: boolean;
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  name: string;
+  setName: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const App: FunctionComponent = () => {
+  const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [titleName, setTitleName] = useState<string>("Portfolio");
+
   return (
     <div className="app">
+      {/* Ensure that Topbar and Menu components accept the correct props */}
       <Topbar open={menuOpen} setOpen={setMenuOpen} />
       <Menu
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
-        name={titleName}
-        setName={settitleName}
       />
       <div className="sections">
         <Intro />
@@ -28,6 +40,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

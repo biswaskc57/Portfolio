@@ -1,8 +1,16 @@
 import "./menu.scss";
 import React from "react";
-export default function Menu({ menuOpen, setMenuOpen }) {
+
+// Define the props interface for the Menu component
+interface MenuProps {
+  menuOpen: boolean;
+  setMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+// Convert the function to use the defined props type
+const Menu: React.FC<MenuProps> = ({ menuOpen, setMenuOpen }) => {
   return (
-    <div className={"menu " + (menuOpen && "active")}>
+    <div className={`menu ${menuOpen ? "active" : ""}`}>
       <ul>
         <li onClick={() => setMenuOpen(false)}>
           <a href="#intro">Home</a>
@@ -19,4 +27,6 @@ export default function Menu({ menuOpen, setMenuOpen }) {
       </ul>
     </div>
   );
-}
+};
+
+export default Menu;

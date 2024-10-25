@@ -1,6 +1,7 @@
 import "./skills.scss";
 import React from "react";
-export default function Intro() {
+
+const Skills: React.FC = () => {
   return (
     <div className="skills" id="skills">
       <div className="topic">
@@ -13,21 +14,19 @@ export default function Intro() {
         <div className="left">
           <div className="text">Skills & Knowledge</div>
           <div className="experience">
-            <p className="p1">Education:-</p>
-            <p className="p2">Business and IT(Haaga-Helia UAS) 2019-present</p>
+            <p className="p1">Education:</p>
+            <p className="p2">Business and IT (Haaga-Helia UAS) 2019-present</p>
             <div className="description">
               <p>
-                I am currently studying Business and IT in Haaga-Helia UAS. Im
-                majoring in software development and UX/UI designing.
+                I am currently studying Business and IT at Haaga-Helia UAS, majoring in software development and UX/UI designing.
               </p>
             </div>
 
-            <p className="p3">Full-Stack Development(Helsinki University) </p>
+            <p className="p3">Full-Stack Development (Helsinki University)</p>
           </div>
           <div className="description">
             <p>
-              I have completed full-stack course from Helsinki University with
-              react/redux at the front-end and node js at the back-end.{" "}
+              I have completed a full-stack course from Helsinki University with React/Redux on the front-end and Node.js on the back-end.
             </p>
           </div>
         </div>
@@ -64,7 +63,7 @@ export default function Intro() {
             </div>
             <div className="bars">
               <div className="info">
-                <span>Java & Springboot</span>
+                <span>Java & Spring Boot</span>
                 <span>80%</span>
               </div>
               <div className="line">
@@ -73,7 +72,7 @@ export default function Intro() {
             </div>
             <div className="bars">
               <div className="info">
-                <span>Mongo DB & Mysql</span>
+                <span>MongoDB & MySQL</span>
                 <span>70%</span>
               </div>
               <div className="line">
@@ -94,4 +93,6 @@ export default function Intro() {
       </div>
     </div>
   );
-}
+};
+
+export default Skills;

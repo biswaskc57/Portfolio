@@ -1,4 +1,6 @@
-export const featuredPortfolio = [
+import { PortfolioItem } from "./components/portfolio/Portfolio";
+
+export const featuredPortfolio: PortfolioItem [] = [
   {
     id: 1,
     title: "Personal Trainer Web-App",
