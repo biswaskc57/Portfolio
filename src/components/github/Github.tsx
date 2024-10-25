@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 interface Repo {
   id: number;
@@ -84,9 +84,6 @@ export default function Github() {
   const [data, setData] = useState(null);
   const [repos, setRepos] = useState([] as Repo []);
 
-  
-  
-
   useEffect(() => {
     fetchData();
     fetchRepos();
@@ -94,27 +91,21 @@ export default function Github() {
 
   const fetchData = async () => {
     try {
-      const { data: userData } = await axios.get("https://api.github.com/users/biswaskc57");
+      const { data: userData } = await axios.get('https://api.github.com/users/biswaskc57');
       setData(userData);
     } catch (error) {
-      console.error("Error fetching user data:", error);
+      console.error('Error fetching user data:', error);
     }
   };
 
   const fetchRepos = async () => {
     try {
-      const { data: repoData } = await axios.get("https://api.github.com/users/biswaskc57/repos");
+      const { data: repoData } = await axios.get('https://api.github.com/users/biswaskc57/repos');
       setRepos(repoData);
     } catch (error) {
-      console.error("Error fetching repositories:", error);
+      console.error('Error fetching repositories:', error);
     }
   };
-
-  if (!data) {
-    <div> No data found</div>;
-  }
-  if (!repos || repos.length === 0) 
-    <div> No repos found</div>;
 
   return (
     <div>
@@ -123,7 +114,10 @@ export default function Github() {
         {repos.length > 0 ? (
           repos.map((repo) => (
             <li key={repo.id}>
-              {repo.name} - {repo.language || "No language specified"}
+              {repo.name}
+              {' '}
+              -
+              {repo.language || 'No language specified'}
             </li>
           ))
         ) : (
