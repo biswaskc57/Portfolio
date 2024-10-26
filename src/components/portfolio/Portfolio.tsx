@@ -10,9 +10,18 @@ import {
   javaPortfolio,
 } from "../../data";
 
+// Define the structure of portfolio items
+export interface PortfolioItem {
+  id: number;
+  title: string;
+  img: string;
+  url: string;
+}
+
 export default function Portfolio() {
-  const [selected, setSelected] = useState("features");
-  const [data, setData] = useState([]);
+  const [selected, setSelected] = useState<string>("features");
+  const [data, setData] = useState<PortfolioItem[]>([]);
+  
   const list = [
     {
       id: "features",
@@ -38,24 +47,23 @@ export default function Portfolio() {
 
   useEffect(() => {
     switch (selected) {
-      case "featured":
-        setData(featuredPortfolio);
-        break;
-      case "MERN-Projects":
-        setData(MernPortfolio);
-        break;
-      case "React-Projects":
-        setData(ReactPortfolio);
-        break;
-      case "Java-Projects":
-        setData(javaPortfolio);
-        break;
-      case "Design-Projects":
-        setData(designPortfolio);
-        break;
-
-      default:
-        setData(featuredPortfolio);
+    case "features":
+      setData(featuredPortfolio);
+      break;
+    case "MERN-Projects":
+      setData(MernPortfolio);
+      break;
+    case "React-Projects":
+      setData(ReactPortfolio);
+      break;
+    case "Java-Projects":
+      setData(javaPortfolio);
+      break;
+    case "Design-Projects":
+      setData(designPortfolio);
+      break;
+    default:
+      setData(featuredPortfolio);
     }
   }, [selected]);
 
@@ -65,6 +73,7 @@ export default function Portfolio() {
       <ul>
         {list.map((item) => (
           <PortfolioList
+            key={item.id} // Add a unique key for each list item
             title={item.title}
             active={selected === item.id}
             setSelected={setSelected}
@@ -74,11 +83,10 @@ export default function Portfolio() {
       </ul>
       <div className="container">
         {data.map((d) => (
-          <div className="item">
-            <a href={d.url}  target="_blank">
-              <img src={d.img} alt="" />
+          <div className="item" key={d.id}> {/* Add a unique key for each portfolio item */}
+            <a href={d.url} target="_blank" rel="noopener noreferrer"> {/* Add rel attribute for security */}
+              <img src={d.img} alt={d.title} /> {/* Use alt text for accessibility */}
             </a>
- 
             <h3>{d.title}</h3>
           </div>
         ))}
