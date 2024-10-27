@@ -13,12 +13,7 @@ const App: FunctionComponent = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   return (
     <div className="app">
-      {/* Ensure that Topbar and Menu components accept the correct props */}
-      <Topbar open={menuOpen} setOpen={setMenuOpen} />
-      <Menu
-        menuOpen={menuOpen}
-        setMenuOpen={setMenuOpen}
-      />
+      <Menu/>
       <div className="sections">
         <Intro />
         <Portfolio />
@@ -30,3 +25,6 @@ const App: FunctionComponent = () => {
 };
 
 export default App;
+
+
+
