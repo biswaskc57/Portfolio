@@ -1,6 +1,5 @@
 import React, { FunctionComponent, useState } from 'react';
 import './App.scss';
-import Topbar from './components/topbar/Topbar';
 import Intro from './components/intro/Intro';
 import Menu  from './components/menu/Menu';
 import Contact from './components/contact/Contact';

@@ -37,7 +37,7 @@ const HamburgerMenu: React.FC = () => {
               </a>
               {link.label === "Home" && (
                 <div className={styles.closeIcon} onClick={toggleMenu}>
-                  <i className="fa-solid fa-xmark"></i>
+                  <i className="fa-solid fa-xmark" style={{ fontSize: '24px', color: 'red' }}></i>
                 </div>
               )}
             </li>
