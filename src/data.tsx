@@ -1,5 +1,5 @@
 // Define a TypeScript interface for each navigation link
-interface NavItem {
+export interface NavItem {
     id: string;
     label: string;
     icon: string;

@@ -1,0 +1,193 @@
+.introContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 50px;
+  height: 100vh;
+  width: auto;
+  background-image: url("../../assets/desktop2.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  filter: brightness(0.4);
+}
+
+.introElements {
+  filter: brightness(1.2);
+
+}
+
+.myImage {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  margin-top: -10px;
+  object-fit: cover; 
+}
+
+.typewriterText {
+  text-align: center;
+}
+
+.name {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 25px;
+  color: #56dcdc;
+}
+
+.profession {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 6s steps(60, end) infinite;
+  font-size: 40px;
+  margin-top: 10px;
+  color: #d3d3d3;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+button {
+  background-color: #66c2a5;
+  color: #008080;
+  border: 1px solid #66c2a5;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: monospace;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+  margin-top: 10px;
+
+  &:hover {
+    background-color: #d61111;
+    border-color: #d61111;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 430px) {
+  .introContainer {
+    height: 50vh;
+  }
+
+  .myImage {
+    width: 200px;
+    height: 200px;
+  }
+
+  .name {
+    font-size: 12px;
+  }
+
+  .profession {
+    font-size: 15px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 320px) {
+  .profession {
+    font-size: 14px !important;
+  }
+}
+
+@media only screen and (min-width: 431px) and (max-width: 540px) {
+  .introContainer {
+    height: 70vh;
+  }
+
+  .myImage {
+    width: 220px;
+    height: 220px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .profession {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 853px) {
+  .introContainer {
+    height: 70vh;
+  }
+
+  .myImage {
+    height: 250px;
+    width: 250px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .profession {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 912px) and (max-width: 1024px) {
+  .introContainer {
+    height: 70vh;
+  }
+
+  .myImage {
+    height: 250px;
+    width: 250px;
+  }
+
+  .name {
+    font-size: 22px;
+  }
+
+  .profession {
+    font-size: 30px;
+  }
+}
+
+@media (max-height: 600px) {
+  .myImage {
+    width: 180px;
+    height: 180px;
+    margin-top: 10px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .profession {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 6px;
+  }
+}
