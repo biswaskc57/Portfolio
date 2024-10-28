@@ -1,49 +1,28 @@
-import "./Intro.scss";
-import React, { useEffect, useRef } from "react";
-import { init } from "ityped";
+import React from "react";
+import styles from "./Intro.module.scss";
+
+import avatar from "../../assets/avatar.jpg";
+import Pdf from "../../assets/resume.pdf";
+
 
 const Intro: React.FC = () => {
-  // Define the ref type as HTMLSpanElement
-  const text = useRef<HTMLSpanElement>(null);
-
-  useEffect(() => {
-    if (text.current) {
-      init(text.current, {
-        showCursor: true,
-        backDelay: 2000,
-        strings: ["Fullstack Developer", "Software Developer", "Designer"],
-      });
-    }
-  }, []);
-
   return (
-    <div className="intro" id="intro">
-      <div className="left">
-        <div className="wrapper">
-          <h2>Hi there, I`m </h2>
-          <h1>Biswas K C</h1>
-          <h3>
-            <span ref={text}></span>
-          </h3>
-          <button className="button">
-            <a
-              href="https://www.canva.com/design/DAEmm0R3Cjs/view"
-              target="_blank"
-              rel="noopener noreferrer" // Add this for security reasons
+    <div className={styles.introContainer} >
+      <div className={styles.introElements}>
+        <img id ={styles.slider} className={styles.myImage} src={avatar} alt="profile" />
+        <div className={styles.typewriterText}>
+          <p className={styles.name}>
+          Hello, <span>I&apos;m Biswas K C!</span>
+          </p>
+          <p className={styles.profession}>Web Developer!</p>
+          <a href={Pdf} rel="noopener noreferrer" target="_blank">
+            <button
+              title="View resume"
             >
-              Download CV
-            </a>
-          </button>
-        </div>
-        <div>
-          <a href="#portfolio" className="pointer">
-            <img src="assets/images.png" alt="Portfolio" />
+              Resume
+            </button>
           </a>
-        </div>
-      </div>
-      <div className="right">
-        <div className="imgContainer">
-          <img src="assets/Cropped.png" alt="Biswas K C" />
+
         </div>
       </div>
     </div>

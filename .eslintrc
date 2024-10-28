@@ -26,7 +26,7 @@
         "namedComponents": ["function-declaration", "arrow-function"]
       }
     ],
-    "no-mixed-spaces-and-tabs": "error"
-    // Add other rules as needed
+    "no-mixed-spaces-and-tabs": "error",
+    "comma-spacing": ["error", { "before": false, "after": true }]
   }
 }
