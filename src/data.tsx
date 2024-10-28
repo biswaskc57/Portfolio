@@ -1,3 +1,18 @@
+
+import express from "./assets/express.png";
+import js from "./assets/js.png";
+import mysql from "./assets/mysql.png";
+import postgres from "./assets/postgers.png";
+import python from "./assets/python.png";
+import react from "./assets/react-native.png";
+import node from "./assets/node-js.png";
+import redux from "./assets/redux.png";
+import tailwind from "./assets/tailwind.png";
+import ts from "./assets/ts.png";
+import kotlin from "./assets/kotlin.jpg";
+import java from "./assets/java.jpg";
+import cPlus from "./assets/c-plus.png";
+
 // Define a TypeScript interface for each navigation link
 export interface NavItem {
     id: string;
@@ -12,6 +27,23 @@ export const navItems: NavItem[] = [
   { id: "projects", label: "Projects", icon: "fa-diagram-project" },
   { id: "experience", label: "Experience", icon: "fa-briefcase" },
   { id: "contact", label: "Contact", icon: "fa-address-card" },
+];
+
+export const skills = [
+  { name: "TypeScript", url: ts },
+  { name: "Node.js", url: node },
+  { name: "Tailwind CSS", url: tailwind },
+  { name: "Redux", url: redux },
+  { name: "React Native", url: react },
+  { name: "Postgres", url: postgres },
+  { name: "JavaScript", url: js },
+  { name: "Kotlin", url: kotlin },
+  { name: "Express", url: express },
+  { name: "MySQL", url: mysql },
+  { name: "Python", url: python },
+  { name: "Java", url: java },
+  { name: "C++", url: cPlus },
+  // { name: "Robot Framework", url: robot },
 ];
 
 import { PortfolioItem } from "./components/portfolio/Portfolio";
