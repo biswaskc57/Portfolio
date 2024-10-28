@@ -3,27 +3,28 @@ import styles from './App.module.scss';
 import Intro from './components/intro/Intro';
 import Menu from './components/menu/Menu';
 import { navItems } from "./data";
+import Info from './components/Info/Info';
 
 interface NavProps {
   isScrollingUp: boolean;
 }
 interface SectionRefs {
   intro: React.RefObject<HTMLDivElement>;
-  about: React.RefObject<HTMLDivElement>;
+  info: React.RefObject<HTMLDivElement>;
   projects: React.RefObject<HTMLDivElement>;
   experience: React.RefObject<HTMLDivElement>;
   contact: React.RefObject<HTMLDivElement>;
 }
 
 const App: React.FC = () => {
-  const [isAboutSectionActive, setIsAboutSectionActive] = useState<boolean>(false);
+  const [isInfoSectionActive, setisInfoSectionActive] = useState<boolean>(false);
   const [isScrollingUp, setIsScrollingUp] = useState<boolean>(true);
   const lastScrollY = useRef<number>(0); // To store the last scroll position
 
   // 
   const sectionRefs = useRef<SectionRefs>({
     intro: React.createRef<HTMLDivElement>(),
-    about: React.createRef<HTMLDivElement>(),
+    info: React.createRef<HTMLDivElement>(),
     projects: React.createRef<HTMLDivElement>(),
     experience: React.createRef<HTMLDivElement>(),
     contact: React.createRef<HTMLDivElement>(),
@@ -45,12 +46,12 @@ const App: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const { intro, about, projects, experience, contact } = sectionRefs.current;
+    const { intro, info, projects, experience, contact } = sectionRefs.current;
 
     const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
         if (entry.target.id === "intro") {
-          setIsAboutSectionActive(entry.isIntersecting);
+          setisInfoSectionActive(entry.isIntersecting);
         }
       });
     };
@@ -59,7 +60,7 @@ const App: React.FC = () => {
       threshold: 0.5,
     });
 
-    const pages = [intro, about,  projects, experience, contact ];
+    const pages = [intro, info,  projects, experience, contact ];
 
     pages.forEach((ref) => {
       if (ref.current) {
@@ -96,20 +97,16 @@ const App: React.FC = () => {
   };
   
   return (
-    <div className={`${styles.app} ${isAboutSectionActive ? styles.aboutActive : ''}`}>
+    <div className={`${styles.app} ${isInfoSectionActive ? styles.infoActive : ''}`}>
       <Navigation isScrollingUp={isScrollingUp} />
       <Menu />
-      <div className="sections"></div>
       <div id="intro" ref={sectionRefs.current.intro}>
         <Intro />
       </div>
+      <div id="info" ref={sectionRefs.current.info}>
+        <Info />
+      </div>
     </div>
-  /* <div className="sections">
-        <Intro />
-        <Portfolio />
-        <Skills />
-        <Contact />
-      </div> */
   );
 };
 
