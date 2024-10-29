@@ -31,8 +31,8 @@ export interface Project {
   
 // Apply the NavLink[] type to ensure each item in the array matches the interface
 export const navItems: NavItem[] = [
-  { id: "info", label: "Home", icon: "fa-home" },
-  { id: "intro", label: "About", icon: "fa-user" },
+  { id: "intro", label: "Home", icon: "fa-home" },
+  { id: "about", label: "About", icon: "fa-user" },
   { id: "projects", label: "Projects", icon: "fa-diagram-project" },
   { id: "experience", label: "Experience", icon: "fa-briefcase" },
   { id: "contact", label: "Contact", icon: "fa-address-card" },
