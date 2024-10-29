@@ -3,7 +3,7 @@ import styles from './App.module.scss';
 import Intro from './components/intro/Intro';
 import Menu from './components/menu/Menu';
 import { navItems } from "./data";
-import Info from './components/Info/Info';
+import About from './components/About/About';
 import Projects from './components/projects/Projects';
 import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
@@ -12,8 +12,8 @@ interface NavProps {
   isScrollingUp: boolean;
 }
 interface SectionRefs {
+  about: React.RefObject<HTMLDivElement>;
   intro: React.RefObject<HTMLDivElement>;
-  info: React.RefObject<HTMLDivElement>;
   projects: React.RefObject<HTMLDivElement>;
   experience: React.RefObject<HTMLDivElement>;
   contact: React.RefObject<HTMLDivElement>;
@@ -26,8 +26,8 @@ const App: React.FC = () => {
 
   // 
   const sectionRefs = useRef<SectionRefs>({
+    about: React.createRef<HTMLDivElement>(),
     intro: React.createRef<HTMLDivElement>(),
-    info: React.createRef<HTMLDivElement>(),
     projects: React.createRef<HTMLDivElement>(),
     experience: React.createRef<HTMLDivElement>(),
     contact: React.createRef<HTMLDivElement>(),
@@ -49,7 +49,7 @@ const App: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const { intro, info, projects, experience, contact } = sectionRefs.current;
+    const { about, intro, projects, experience, contact } = sectionRefs.current;
 
     const observerCallback: IntersectionObserverCallback = (entries) => {
       entries.forEach((entry) => {
@@ -63,7 +63,7 @@ const App: React.FC = () => {
       threshold: 0.5,
     });
 
-    const pages = [intro, info,  projects, experience, contact ];
+    const pages = [about, intro,  projects, experience, contact ];
 
     pages.forEach((ref) => {
       if (ref.current) {
@@ -100,14 +100,14 @@ const App: React.FC = () => {
   };
   
   return (
-    <div className={`${styles.app} ${isInfoSectionActive ? styles.infoActive : ''}`}>
+    <div className={`${styles.app} ${isInfoSectionActive ? styles.introActive : ''}`}>
       <Navigation isScrollingUp={isScrollingUp} />
       <Menu />
       <div id="intro" ref={sectionRefs.current.intro}>
         <Intro />
       </div>
-      <div id="info" ref={sectionRefs.current.info}>
-        <Info />
+      <div id="about" ref={sectionRefs.current.about}>
+        <About /> 
       </div>
       <div id="projects" ref={sectionRefs.current.projects}>
         <Projects />

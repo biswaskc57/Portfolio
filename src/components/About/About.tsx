@@ -1,6 +1,6 @@
 import React from "react";
 import { skills } from "../../data";
-import styles from './info.module.scss';
+import styles from './about.module.scss';
 
 const About: React.FC = () => {
   return (
