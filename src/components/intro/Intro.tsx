@@ -4,7 +4,6 @@ import styles from "./Intro.module.scss";
 import avatar from "../../assets/avatar.jpg";
 import Pdf from "../../assets/resume.pdf";
 
-
 const Intro: React.FC = () => {
   return (
     <div className={styles.introContainer} >

@@ -4,6 +4,7 @@ import Intro from './components/intro/Intro';
 import Menu from './components/menu/Menu';
 import { navItems } from "./data";
 import Info from './components/Info/Info';
+import Projects from './components/portfolio/Projects';
 
 interface NavProps {
   isScrollingUp: boolean;
@@ -105,6 +106,9 @@ const App: React.FC = () => {
       </div>
       <div id="info" ref={sectionRefs.current.info}>
         <Info />
+      </div>
+      <div id="projects" ref={sectionRefs.current.projects}>
+        <Projects />
       </div>
     </div>
   );
