@@ -4,7 +4,7 @@ import Intro from './components/intro/Intro';
 import Menu from './components/menu/Menu';
 import { navItems } from "./data";
 import Info from './components/Info/Info';
-import Projects from './components/portfolio/Projects';
+import Projects from './components/projects/Projects';
 import Experience from './components/Experience/Experience';
 
 interface NavProps {
