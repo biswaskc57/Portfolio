@@ -8,7 +8,6 @@ import Projects from './components/projects/Projects';
 import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
 import GoToTop from './components/GoToTop/GoToTop';
-import useOnThrottle from './components/Hooks/useOnThrottle';
 
 
 interface SectionRefs {
@@ -22,9 +21,6 @@ interface SectionRefs {
 const App: React.FC = () => {
   const [isGoToTopSectionActive, setIsGoToTopSectionActive] = useState<boolean>(false);
 
-  console.log;
-
-
   const sectionRefs = useRef<SectionRefs>({
     about: React.createRef<HTMLDivElement>(),
     intro: React.createRef<HTMLDivElement>(),
@@ -33,12 +29,9 @@ const App: React.FC = () => {
     contact: React.createRef<HTMLDivElement>(),
   });
 
-
-  // Intersection Observer for section visibility with debounce
-  const handleIntersection =(entries: IntersectionObserverEntry[]) => {
+  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
-      console.log("entry.target.id ", entry.target.id );
-      if (entry.target.id === "about") {
+      if (entry.target.id === "intro") {
         setIsGoToTopSectionActive(false);
       }
       else {
@@ -47,12 +40,10 @@ const App: React.FC = () => {
     });
   };
 
-  const throttledHandleIntersection = useOnThrottle(handleIntersection, 500);
-
   useEffect(() => {
     const { about, intro, projects, experience, contact } = sectionRefs.current;
 
-    const observer = new IntersectionObserver(throttledHandleIntersection, {
+    const observer = new IntersectionObserver(handleIntersection, {
       threshold: 0.5,
     });
 
