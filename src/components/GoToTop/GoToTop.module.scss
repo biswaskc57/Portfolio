@@ -7,7 +7,7 @@
     transition: opacity 0.3s ease;
   
     &.hidden {
-        opacity: .5;
+        opacity: 0;
         cursor: not-allowed;
         pointer-events: none; // Prevent clicks when hidden
     }
