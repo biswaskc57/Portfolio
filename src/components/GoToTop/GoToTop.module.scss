@@ -1,27 +1,59 @@
 .goToTop {
+    height: 40px;
     position: fixed;
-    bottom: 20px; // Adjust as needed
-    right: 20px;  // Adjust as needed
+    bottom: 10%;
+    right: 5%;
     cursor: pointer;
     transition: opacity 0.3s ease;
   
     &.hidden {
-      opacity: 0;
-      cursor: not-allowed;
-      pointer-events: none; // Prevent clicks when hidden
+        opacity: .5;
+        cursor: not-allowed;
+        pointer-events: none; // Prevent clicks when hidden
     }
   
     &.visible {
-      opacity: 1;
-      pointer-events: auto; // Enable clicks when visible
+        opacity: 1;
+        pointer-events: auto; // Enable clicks when visible
     }
   
     .arrow {
-      font-size: 24px; // Adjust the size as needed
-      color: white; // Change the color to fit your design
-      background: rgba(0, 0, 0, 0.5); // Semi-transparent background
-      border-radius: 50%; // Rounded shape for the button
-      padding: 10px; // Padding around the arrow
+        font-size: 35px;
+        color: white;
+        background: rgba(210, 39, 39, 0.5);
+        border-radius: 50%;
+        padding: 15px;
+        animation: wave-pop 3s ease-in-out infinite;
+        // animation: slow-appear 2s ease-in-out infinite;
+        animation-delay: calc(var(--i) * 0.3s);
+        
     }
-  }
-  
+
+    @keyframes wave-pop {
+        0% {
+          transform: scale(1) rotate(0deg) translateY(0);
+          opacity: 1;
+        }
+        25% {
+          transform: scale(1.01) rotate(0) translateY(-1px);
+          opacity: 0.9;
+        }
+        50% {
+          transform: scale(1.02) rotate(0) translateY(-2px);
+          opacity: 0.8;
+        }
+        75% {
+          transform: scale(1.01) rotate(0) translateY(-1px);
+          opacity: 0.9;
+        }
+        100% {
+          transform: scale(1) rotate(0deg) translateY(0);
+          opacity: 1;
+        }
+    }
+
+    :hover {
+        opacity: 2;
+        background: rgba(210, 39, 39, 0.907)
+    }
+}  

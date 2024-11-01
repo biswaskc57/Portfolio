@@ -9,7 +9,6 @@ import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
 import GoToTop from './components/GoToTop/GoToTop';
 
-
 interface SectionRefs {
   about: React.RefObject<HTMLDivElement>;
   intro: React.RefObject<HTMLDivElement>;
@@ -30,15 +29,25 @@ const App: React.FC = () => {
   });
 
   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-    entries.forEach((entry) => {
-      if (entry.target.id === "intro") {
+    // Use 'some' to stop checking once the condition is met
+    const isIntroVisible = entries.some((entry: IntersectionObserverEntry) => {
+      console.log("entry.target.id", entry);
+      // Check if the entry is the 'intro' section and is intersecting
+      if (entry.target.id === "intro" && entry.isIntersecting) {
         setIsGoToTopSectionActive(false);
+        return true; // Stop further checks
       }
-      else {
-        setIsGoToTopSectionActive(true);
-      }
+      return false; // Continue checking
     });
+
+    // If 'intro' is not visible, set the active state accordingly
+    if (!isIntroVisible) {
+      setIsGoToTopSectionActive(true);
+    }
   };
+
+
+  console.log("isGoToTopSectionActive", isGoToTopSectionActive);
 
   useEffect(() => {
     const { about, intro, projects, experience, contact } = sectionRefs.current;

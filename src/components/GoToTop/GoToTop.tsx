@@ -16,7 +16,7 @@ const GoToTop: React.FC<{ isVisible: boolean }> = ({ isVisible }) => {
       className={`${styles.goToTop} ${isVisible ? styles.visible : styles.hidden}`}
       onClick={handleClick}
     >
-      <div className={styles.arrow}>&#8679;</div>
+      <i className={`fas fa-arrow-up ${styles.arrow}`}></i> {/* Font Awesome arrow up icon */}
     </div>
   );
 };
