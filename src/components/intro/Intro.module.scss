@@ -29,6 +29,17 @@
   animation: slideInImage 1.5s ease-out forwards;
 }
 
+.myElement {
+  height: 300px;
+  font-size: 35px;
+  color: rgb(0, 255, 140);
+}
+
+.myElement.animate {
+  opacity: 1; /* Fade in */
+  animation: slideInImage 1.5s ease-out forwards;
+}
+
 /* Keyframes for sliding from left to center */
 @keyframes slideInImage {
   0% {
@@ -39,6 +50,10 @@
     opacity: 1;               /* Fully visible */
     transform: translateX(0);  /* Move to the center */
   }
+}
+
+.myElement.hide {
+  visibility: hidden;
 }
 
 .typewriterText {
