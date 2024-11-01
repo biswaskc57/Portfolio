@@ -22,7 +22,7 @@ const useOnElementVisible = (ref: RefObject<HTMLElement>): boolean => {
   useEffect(() => {
     // Set up the Intersection Observer only once when the component mounts
     const observer = new IntersectionObserver(throttledHandleIntersection, {
-      threshold: 0.5, // Trigger the callback when 50% of the target is visible
+      threshold: 0.1, // Trigger the callback when 10% of the target is visible
     });
 
     // Observe the current element if it exists

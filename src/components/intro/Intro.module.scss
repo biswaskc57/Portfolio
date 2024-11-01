@@ -52,7 +52,7 @@
   }
 }
 
-.myElement.hide {
+.myElement.hide, .typewriterText.hide{
   visibility: hidden;
 }
 
@@ -67,7 +67,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 .typewriterText.animateText {

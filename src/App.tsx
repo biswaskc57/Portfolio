@@ -7,7 +7,6 @@ import About from './components/About/About';
 import Projects from './components/projects/Projects';
 import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
-import useOnDebounce from './components/Hooks/useOnDebounce';
 import GoToTop from './components/GoToTop/GoToTop';
 import useOnThrottle from './components/Hooks/useOnThrottle';
 

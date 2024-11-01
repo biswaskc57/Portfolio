@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, {useRef } from "react";
 import styles from "./Intro.module.scss";
 import avatar from "../../assets/avatar.jpg";
 import Pdf from "../../assets/resume.pdf";
@@ -8,29 +8,19 @@ import useOnElementVisible from "../Hooks/useOnElementVisible";
 const Intro: React.FC = () => {
 
   const imageRef = useRef<HTMLDivElement>(null);
+  const textRef = useRef<HTMLDivElement>(null);
 
-  const isVisible = useOnElementVisible(imageRef);
-
-  // State to store visibility
-  const [imageVisible, setImageVisible] = useState(false);
-
-  useEffect(() => {
-    // Update visibility state if the image is currently visible
-    if (isVisible) {
-      setImageVisible(true);
-    } else {
-      setImageVisible(false);
-    }
-  }, [isVisible]); // Update when visibility changes
+  const isImageVisible = useOnElementVisible(imageRef);
+  const isTextVisible = useOnElementVisible(textRef);
 
 
   return (
     <div className={styles.introContainer}>
       <div className={styles.introElements}>
-        <div ref={imageRef} id={"testElement"} className={`${styles.myElement} ${imageVisible ? styles.animate : styles.hide}`}>
-          <img id={styles.slider} className={`${styles.myImage} ${isVisible ? styles.animateImage : ''}`} src={avatar} alt="profile" />
+        <div ref={imageRef} id={"testElement"} className={`${styles.myElement} ${isImageVisible ? styles.animate : styles.hide}`}>
+          <img id={styles.slider} className={styles.myImage} src={avatar} alt="profile" />
         </div>
-        <div className={styles.typewriterText}>
+        <div ref={textRef} className={`${styles.typewriterText} ${isTextVisible ? styles.animateText : styles.hide}`}>
           <p className={styles.name}>
             Hello, <span>I&apos;m Biswas K C!</span>
           </p>
