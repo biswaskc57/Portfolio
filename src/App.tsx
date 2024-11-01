@@ -7,10 +7,13 @@ import About from './components/About/About';
 import Projects from './components/projects/Projects';
 import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
+import useOnDebounce from './components/Hooks/useOnDebounce';
+import GoToTop from './components/GoToTop/GoToTop';
 
 interface NavProps {
   isScrollingUp: boolean;
 }
+
 interface SectionRefs {
   about: React.RefObject<HTMLDivElement>;
   intro: React.RefObject<HTMLDivElement>;
@@ -20,11 +23,11 @@ interface SectionRefs {
 }
 
 const App: React.FC = () => {
-  const [isInfoSectionActive, setisInfoSectionActive] = useState<boolean>(false);
+  const [isInfoSectionActive, setIsInfoSectionActive] = useState<boolean>(false);
+  const [isGoToTopSectionActive, setIsGoToTopSectionActive] = useState<boolean>(false);
   const [isScrollingUp, setIsScrollingUp] = useState<boolean>(true);
   const lastScrollY = useRef<number>(0); // To store the last scroll position
 
-  // 
   const sectionRefs = useRef<SectionRefs>({
     about: React.createRef<HTMLDivElement>(),
     intro: React.createRef<HTMLDivElement>(),
@@ -33,37 +36,46 @@ const App: React.FC = () => {
     contact: React.createRef<HTMLDivElement>(),
   });
 
-  // Handle scroll direction
+  // Handle scroll direction with debounce
+  const handleScroll = useOnDebounce(() => {
+    const currentScrollY = window.scrollY;
+    setIsScrollingUp(currentScrollY < lastScrollY.current);
+    lastScrollY.current = currentScrollY;
+  }, 100); // Adjust the delay as needed
+
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsScrollingUp(currentScrollY < lastScrollY.current);
-      lastScrollY.current = currentScrollY;
+    const handleScrollEvent = () => {
+      handleScroll();
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScrollEvent);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScrollEvent);
     };
   }, []);
+
+  // Intersection Observer for section visibility with debounce
+  const handleIntersection = useOnDebounce((entries: IntersectionObserverEntry[]) => {
+    entries.forEach((entry) => {
+      if (entry.target.id === "intro") {
+        setIsInfoSectionActive(entry.isIntersecting);
+        setIsGoToTopSectionActive(false);
+      }
+      else {
+        setIsGoToTopSectionActive(true);
+      }
+    });
+  }, 1000); // Adjust the delay as needed
 
   useEffect(() => {
     const { about, intro, projects, experience, contact } = sectionRefs.current;
 
-    const observerCallback: IntersectionObserverCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.target.id === "intro") {
-          setisInfoSectionActive(entry.isIntersecting);
-        }
-      });
-    };
-
-    const observer = new IntersectionObserver(observerCallback, {
+    const observer = new IntersectionObserver(handleIntersection, {
       threshold: 0.5,
     });
 
-    const pages = [about, intro,  projects, experience, contact ];
+    const pages = [about, intro, projects, experience, contact];
 
     pages.forEach((ref) => {
       if (ref.current) {
@@ -82,7 +94,7 @@ const App: React.FC = () => {
 
   const Navigation: React.FC<NavProps> = ({ isScrollingUp }) => {
     return (
-      <nav className={`${styles.appNav} ${isScrollingUp ? styles.visible : styles.hidden}`}>
+      <nav className={`${styles.appNav} ${styles.visible}`}>
         <ul>
           {navItems
             .filter((link) => link.id !== "contact")
@@ -98,16 +110,16 @@ const App: React.FC = () => {
       </nav>
     );
   };
-  
+
   return (
-    <div className={`${styles.app} ${isInfoSectionActive ? styles.introActive : ''}`}>
+    <div className={styles.app}>
       <Navigation isScrollingUp={isScrollingUp} />
       <Menu />
       <div id="intro" ref={sectionRefs.current.intro}>
         <Intro />
       </div>
       <div id="about" ref={sectionRefs.current.about}>
-        <About /> 
+        <About />
       </div>
       <div id="projects" ref={sectionRefs.current.projects}>
         <Projects />
@@ -115,11 +127,10 @@ const App: React.FC = () => {
       <div id="experience" ref={sectionRefs.current.experience}>
         <Experience />
       </div>
-      <Footer/>
+      <Footer />
+      <GoToTop isVisible={isGoToTopSectionActive} />
     </div>
   );
 };
 
 export default App;
-
-
