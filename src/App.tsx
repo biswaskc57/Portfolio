@@ -9,10 +9,8 @@ import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
 import useOnDebounce from './components/Hooks/useOnDebounce';
 import GoToTop from './components/GoToTop/GoToTop';
+import useOnThrottle from './components/Hooks/useOnThrottle';
 
-interface NavProps {
-  isScrollingUp: boolean;
-}
 
 interface SectionRefs {
   about: React.RefObject<HTMLDivElement>;
@@ -23,10 +21,10 @@ interface SectionRefs {
 }
 
 const App: React.FC = () => {
-  const [isInfoSectionActive, setIsInfoSectionActive] = useState<boolean>(false);
   const [isGoToTopSectionActive, setIsGoToTopSectionActive] = useState<boolean>(false);
-  const [isScrollingUp, setIsScrollingUp] = useState<boolean>(true);
-  const lastScrollY = useRef<number>(0); // To store the last scroll position
+
+  console.log;
+
 
   const sectionRefs = useRef<SectionRefs>({
     about: React.createRef<HTMLDivElement>(),
@@ -36,42 +34,26 @@ const App: React.FC = () => {
     contact: React.createRef<HTMLDivElement>(),
   });
 
-  // Handle scroll direction with debounce
-  const handleScroll = useOnDebounce(() => {
-    const currentScrollY = window.scrollY;
-    setIsScrollingUp(currentScrollY < lastScrollY.current);
-    lastScrollY.current = currentScrollY;
-  }, 100); // Adjust the delay as needed
-
-  useEffect(() => {
-    const handleScrollEvent = () => {
-      handleScroll();
-    };
-
-    window.addEventListener("scroll", handleScrollEvent);
-
-    return () => {
-      window.removeEventListener("scroll", handleScrollEvent);
-    };
-  }, []);
 
   // Intersection Observer for section visibility with debounce
-  const handleIntersection = useOnDebounce((entries: IntersectionObserverEntry[]) => {
+  const handleIntersection =(entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
-      if (entry.target.id === "intro") {
-        setIsInfoSectionActive(entry.isIntersecting);
+      console.log("entry.target.id ", entry.target.id );
+      if (entry.target.id === "about") {
         setIsGoToTopSectionActive(false);
       }
       else {
         setIsGoToTopSectionActive(true);
       }
     });
-  }, 1000); // Adjust the delay as needed
+  };
+
+  const throttledHandleIntersection = useOnThrottle(handleIntersection, 500);
 
   useEffect(() => {
     const { about, intro, projects, experience, contact } = sectionRefs.current;
 
-    const observer = new IntersectionObserver(handleIntersection, {
+    const observer = new IntersectionObserver(throttledHandleIntersection, {
       threshold: 0.5,
     });
 
@@ -92,7 +74,7 @@ const App: React.FC = () => {
     };
   }, []);
 
-  const Navigation: React.FC<NavProps> = ({ isScrollingUp }) => {
+  const Navigation: React.FC = () => {
     return (
       <nav className={`${styles.appNav} ${styles.visible}`}>
         <ul>
@@ -113,7 +95,7 @@ const App: React.FC = () => {
 
   return (
     <div className={styles.app}>
-      <Navigation isScrollingUp={isScrollingUp} />
+      <Navigation />
       <Menu />
       <div id="intro" ref={sectionRefs.current.intro}>
         <Intro />

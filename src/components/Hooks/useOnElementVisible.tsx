@@ -1,6 +1,5 @@
 import { RefObject, useEffect, useState, useCallback } from 'react';
 import useOnThrottle from './useOnThrottle';
-
 const useOnElementVisible = (ref: RefObject<HTMLElement>): boolean => {
   const [isVisible, setIsVisible] = useState(false);
 
