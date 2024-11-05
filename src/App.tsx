@@ -8,6 +8,7 @@ import Projects from './components/projects/Projects';
 import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
 import GoToTop from './components/GoToTop/GoToTop';
+import Contact from './components/Contact/Contact';
 
 interface SectionRefs {
   about: React.RefObject<HTMLDivElement>;
@@ -31,7 +32,6 @@ const App: React.FC = () => {
   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
     // Use 'some' to stop checking once the condition is met
     const isIntroVisible = entries.some((entry: IntersectionObserverEntry) => {
-      console.log("entry.target.id", entry);
       // Check if the entry is the 'intro' section and is intersecting
       if (entry.target.id === "intro" && entry.isIntersecting) {
         setIsGoToTopSectionActive(false);
@@ -45,9 +45,6 @@ const App: React.FC = () => {
       setIsGoToTopSectionActive(true);
     }
   };
-
-
-  console.log("isGoToTopSectionActive", isGoToTopSectionActive);
 
   useEffect(() => {
     const { about, intro, projects, experience, contact } = sectionRefs.current;
@@ -78,7 +75,6 @@ const App: React.FC = () => {
       <nav className={`${styles.appNav} ${styles.visible}`}>
         <ul>
           {navItems
-            .filter((link) => link.id !== "contact")
             .map((link) => (
               <li key={link.id}>
                 <a href={`#${link.id}`}>
@@ -107,6 +103,9 @@ const App: React.FC = () => {
       </div>
       <div id="experience" ref={sectionRefs.current.experience}>
         <Experience />
+      </div>
+      <div id="contact" ref={sectionRefs.current.contact}>
+        <Contact />
       </div>
       <Footer />
       <GoToTop isVisible={isGoToTopSectionActive} />
