@@ -110,7 +110,7 @@ export const projects: Project [] = [
 ];
 
 
-export const countryCodes  = [
+export const countryCodes = [
   { code: "+1", name: "United States", flag: "🇺🇸" },
   { code: "+7", name: "Russia", flag: "🇷🇺" },
   { code: "+20", name: "Egypt", flag: "🇪🇬" },
@@ -157,6 +157,7 @@ export const countryCodes  = [
   { code: "+93", name: "Afghanistan", flag: "🇦🇫" },
   { code: "+94", name: "Sri Lanka", flag: "🇱🇰" },
   { code: "+95", name: "Myanmar", flag: "🇲🇲" },
+  { code: "+977", name: "Nepal", flag: "🇳🇵" },
   { code: "+98", name: "Iran", flag: "🇮🇷" },
   { code: "+212", name: "Morocco", flag: "🇲🇦" },
   { code: "+213", name: "Algeria", flag: "🇩🇿" },
