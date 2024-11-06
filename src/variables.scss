@@ -1,0 +1,37 @@
+// Light Theme Variables
+$light-background: #ffffff;
+$light-font-color: #333333;
+$light-accent-color: #3498db;
+
+// Dark Theme Variables
+$dark-background: #121212;
+$dark-font-color: #f0f0f0;
+$dark-accent-color: #bb86fc;
+
+// Theme Mixins
+@mixin lightTheme {
+  background-color: $light-background;
+  color: $light-font-color;
+  --accent-color: $light-accent-color;
+}
+
+@mixin darkTheme {
+  background-color: $dark-background;
+  color: $dark-font-color;
+  --accent-color: $dark-accent-color;
+}
+
+// Apply theme styles to the root element based on a class
+.lightTheme {
+  @include lightTheme;
+}
+
+.darkTheme {
+  @include darkTheme;
+}
+
+@mixin mobile {
+  @media only screen and (max-width: #{$width}) {
+    @content;
+  }
+}

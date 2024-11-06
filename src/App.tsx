@@ -9,6 +9,7 @@ import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
 import GoToTop from './components/GoToTop/GoToTop';
 import Contact from './components/Contact/Contact';
+import ThemeToggle from './components/ToggleButton/ToggleButton';
 
 interface SectionRefs {
   about: React.RefObject<HTMLDivElement>;
@@ -20,6 +21,7 @@ interface SectionRefs {
 
 const App: React.FC = () => {
   const [isGoToTopSectionActive, setIsGoToTopSectionActive] = useState<boolean>(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const sectionRefs = useRef<SectionRefs>({
     about: React.createRef<HTMLDivElement>(),
@@ -72,7 +74,7 @@ const App: React.FC = () => {
 
   const Navigation: React.FC = () => {
     return (
-      <nav className={`${styles.appNav} ${styles.visible}`}>
+      <nav className={`${styles.appNav} ${styles.darkTheme} ${styles.visible}`}>
         <ul>
           {navItems
             .map((link) => (
@@ -89,8 +91,9 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className={styles.app}>
+    <div className={`${styles.app} ${isDarkMode ? styles.darkTheme : styles.lightTheme}`}>
       <Navigation />
+      <ThemeToggle isDarkMode={isDarkMode}setIsDarkMode={setIsDarkMode}/>
       <Menu />
       <div id="intro" ref={sectionRefs.current.intro}>
         <Intro />
