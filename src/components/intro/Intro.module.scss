@@ -7,7 +7,7 @@
   height: 100vh;
   width: auto;
   background-size: contain;
-  background: linear-gradient(320deg, rgb(94 34 34 / 80%), rgb(65 100 123 / 80%), rgb(77 77 38 / 80%));
+  // background: linear-gradient(320deg, rgb(94 34 34 / 80%), rgb(65 100 123 / 80%), rgb(77 77 38 / 80%));
 }
 
 .introElements {
@@ -32,7 +32,7 @@
 .myElement {
   height: 300px;
   font-size: 35px;
-  color: rgb(0, 255, 140);
+  // color: rgb(0, 255, 140);
 }
 
 .myElement.animate {
@@ -90,8 +90,6 @@
   }
 }
 
-
-
 .name {
   margin-top: 5px;
   font-weight: bold;
@@ -105,7 +103,6 @@
   animation: typing 6s steps(60, end) infinite;
   font-size: 30px;
   margin: 10px 0px;
-  color: #d3d3d3;
 }
 
 @keyframes typing {
