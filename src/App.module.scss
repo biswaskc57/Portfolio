@@ -9,7 +9,11 @@ body {
   height: 100%;
   color: white;
   font-family: monospace !important;
-  background-color: #0f172a;
+  // background-color: #0f172a;
+  background-size: contain;
+  background: linear-gradient(120deg, rgb(34 117 117 / 80%), /* Green with transparency */ rgb(6 12 16 / 80%), /* Blue with transparency */ rgb(46 46 4 / 80%) /* Yellow with transparency */);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .appNav {
@@ -22,7 +26,6 @@ body {
   justify-content: flex-end;
   opacity: 0;
   transform: translateX(100%);
-  background: #4fb34829;
 
   &.visible {
     opacity: 1;
