@@ -28,6 +28,7 @@ const Intro: React.FC = () => {
           <a href={Pdf} rel="noopener noreferrer" target="_blank">
             <button title="View resume">Resume</button>
           </a>
+          <i className="fas fa-caret-down"></i>
         </div>
       </div>
     </div>

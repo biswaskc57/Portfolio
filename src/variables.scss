@@ -1,24 +1,38 @@
 // Light Theme Variables
-$light-background: #ffffff;
+$light-background: linear-gradient(90deg, #f7dad4, #f7f4e9, rgb(213 248 232), #cee6ff);
 $light-font-color: #121212;
 $light-accent-color: #3498db;
 
 // Dark Theme Variables
-$dark-background: #121212;
+$dark-background: linear-gradient(90deg, #2a0903, #333026, #012c0b, #072544);
 $dark-font-color: #ffffff;
 $dark-accent-color: #bb86fc;
 
 // Theme Mixins
 @mixin lightTheme {
-  background-color: $light-background;
+  background: $light-background; // Change from background-color to background
   color: $light-font-color;
   --accent-color: $light-accent-color;
+  background-size: 200% 100%;
+  background-clip: padding-box;
+  animation: gradient-border 20s infinite alternate;
+  border-bottom: 4px solid transparent;
 }
 
+@keyframes gradient-border {
+  0% { background-position: 0% 100%; }
+  100% { background-position: 100% 100%; }
+}
+
+
 @mixin darkTheme {
-  background-color: $dark-background;
+  background: $dark-background;
   color: $dark-font-color;
   --accent-color: $dark-accent-color;
+  background-size: 200% 100%;
+  background-clip: padding-box;
+  animation: gradient-border 20s infinite alternate;
+  border-bottom: 4px solid transparent;
 }
 
 // Apply theme styles to the root element based on a class
@@ -30,6 +44,7 @@ $dark-accent-color: #bb86fc;
   @include darkTheme;
 }
 
+// Example mobile mixin
 @mixin mobile {
   @media only screen and (max-width: #{$width}) {
     @content;

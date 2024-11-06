@@ -17,7 +17,7 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({ isDarkMode, setIsDarkMode }) 
 
   return (
     <div onClick={handleToggle} style={{ cursor: 'pointer', fontSize: '24px' }}>
-      <i className={`${styles.themeToggle} fa ${isDarkMode ? 'fa-solid fa-lightbulb' : 'fa-regular fa-lightbulb'}`}></i>
+      <i className={`${styles.themeToggle} fas ${isDarkMode ? 'fa-sun' : 'fa-moon'}`}></i>
     </div>
   );
 };
