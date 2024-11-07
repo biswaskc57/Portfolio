@@ -15,7 +15,7 @@ $dark-accent-color: #bb86fc;
   --accent-color: $light-accent-color;
   background-size: 200% 100%;
   background-clip: padding-box;
-  animation: gradient-border 20s infinite alternate;
+  animation: gradient-border 10s infinite alternate;
   border-bottom: 4px solid transparent;
 }
 
@@ -42,6 +42,25 @@ $dark-accent-color: #bb86fc;
 
 .darkTheme {
   @include darkTheme;
+}
+
+// Define the separator mixin
+@mixin separator($border-height: 4px, $border-color: linear-gradient(to right, #c8bcba, #e2dfd6, #bbd3c1, #a3aeba), $shadow-color: rgba(0, 0, 0, 0.1)) {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 90%;
+    margin: 0 5%;
+    height: $border-height;
+    background: $border-color;
+    box-shadow: 0 4px 6px $shadow-color;
+    border-radius: 2px; // Rounded corners for the border
+    
+  }
 }
 
 // Example mobile mixin

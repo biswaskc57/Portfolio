@@ -1,30 +1,19 @@
+@use '../../variables' as *;
+
 .introContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 50px;
+  padding: 40px 50px;
   height: 100vh;
   width: auto;
-  // background-image: url("../../assets/background.jpg");
   background-size: contain;
   border-bottom: 4px solid transparent;
-  // background: linear-gradient(90deg, #FF5733, #FFC300, #28A745, #007BFF);
   background-size: 200% 100%;
   background-clip: padding-box;
   animation: gradient-border 3s infinite alternate;
-}
-
-.introContainer::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px; /* Thickness of the border */
-  // background: linear-gradient(to right, #FF5733, #FFC300, #28A745, #007BFF); /* Gradient border */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  border-radius: 2px; /* Rounded corners */
+  @include separator;
 }
 
 @keyframes gradient-border {
@@ -38,6 +27,7 @@
   width: 100vw;
   display: flex;
   flex-direction: column;
+  margin-top: 60px;
 
 }
 
@@ -155,6 +145,10 @@ button {
     height: 50vh;
   }
 
+  .introElements {
+    margin-top: 60px;
+  }
+
   .myImage {
     height: 200px;
   }
@@ -182,6 +176,9 @@ button {
   .profession {
     font-size: 14px !important;
   }
+  .introElements {
+    margin-top: 60px;
+  }
 }
 
 @media only screen and (min-width: 431px) and (max-width: 540px) {
@@ -189,6 +186,9 @@ button {
     height: 70vh;
   }
 
+  .introElements {
+    margin-top: 60px;
+  }
 
   .typewriterText {
     width: 30vw;

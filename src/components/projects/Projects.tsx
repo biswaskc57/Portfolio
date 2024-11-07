@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./projects.module.scss";
 import { projects } from "../../data";
+import NoPreview from "../../assets/noPreview2.jpg";
 
 interface Project {
   name: string;
@@ -27,7 +28,7 @@ const Projects: React.FC = () => {
           >
             <h3 className={styles.projectTitle}>{project.name}</h3>
             <img
-              src={"../../assets/exerciseBuddy.png"}
+              src={NoPreview}
               alt={project.name}
               className={styles.projectImage}
             />

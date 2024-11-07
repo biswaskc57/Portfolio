@@ -4,7 +4,7 @@
     bottom: 10%;
     right: 5%;
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    transition: opacity 2 ease;
   
     &.hidden {
         opacity: 0;
@@ -20,7 +20,7 @@
     .arrow {
         font-size: 35px;
         color: white;
-        background: rgba(210, 39, 39, 0.5);
+        background: #2a6654;
         border-radius: 50%;
         padding: 15px;
         animation: wave-pop 3s ease-in-out infinite;
@@ -54,6 +54,6 @@
 
     :hover {
         opacity: 2;
-        background: rgba(210, 39, 39, 0.907)
+        background: #28493f;
     }
 }  
