@@ -110,8 +110,8 @@ const App: React.FC = () => {
       <div id="contact" ref={sectionRefs.current.contact}>
         <Contact />
       </div>
-      <Footer />
       <GoToTop isVisible={isGoToTopSectionActive} />
+      <Footer />
     </div>
   );
 };

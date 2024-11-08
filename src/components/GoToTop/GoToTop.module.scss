@@ -1,10 +1,10 @@
 .goToTop {
-    height: 40px;
-    position: fixed;
-    bottom: 10%;
-    right: 5%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
     cursor: pointer;
     transition: opacity 2 ease;
+    z-index: 4;
   
     &.hidden {
         opacity: 0;

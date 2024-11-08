@@ -24,7 +24,6 @@ $dark-accent-color: #bb86fc;
   100% { background-position: 100% 100%; }
 }
 
-
 @mixin darkTheme {
   background: $dark-background;
   color: $dark-font-color;
@@ -63,7 +62,6 @@ $dark-accent-color: #bb86fc;
   }
 }
 
-// Example mobile mixin
 @mixin mobile {
   @media only screen and (max-width: #{$width}) {
     @content;

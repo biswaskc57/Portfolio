@@ -186,7 +186,6 @@ export const countryCodes = [
   { code: "+263", name: "Zimbabwe", flag: "🇿🇼" },
   { code: "+264", name: "Namibia", flag: "🇳🇦" },
   { code: "+267", name: "Botswana", flag: "🇧🇼" },
-  { code: "+27", name: "South Africa", flag: "🇿🇦" },
   { code: "+255", name: "Tanzania", flag: "🇹🇿" },
   { code: "+256", name: "Uganda", flag: "🇺🇬" },
   { code: "+257", name: "Burundi", flag: "🇧🇮" },
