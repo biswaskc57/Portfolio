@@ -7,6 +7,7 @@ $light-accent-color: #3498db;
 $dark-background: linear-gradient(90deg, #2a0903, #333026, #012c0b, #072544);
 $dark-font-color: #ffffff;
 $dark-accent-color: #bb86fc;
+$box-shadow-color: 0 0 3px rgba(192, 172, 172, 0.3);
 
 // Theme Mixins
 @mixin lightTheme {

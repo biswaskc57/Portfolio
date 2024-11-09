@@ -14,7 +14,6 @@
 }
 
 .experience {
-  color: white;
   max-width: 1100px;
   min-height: 600px;
 }
@@ -22,13 +21,17 @@
 .info {
   padding: 20px;
   margin: 30px;
-  background-color: #0f172a;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
   cursor: pointer;
+  box-shadow: $box-shadow-color;
 }
 
+.info:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.01);
+}
 .duration {
   flex: 1;
 }
@@ -63,7 +66,6 @@
 }
 
 .technology div {
-  background-color: #14304d;
   padding: 7px;
   margin-left: -5px;
   border-radius: 20px;
