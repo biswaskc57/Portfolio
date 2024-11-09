@@ -1,20 +1,23 @@
 .themeToggle {
-    position: absolute;
-    top: 50px;
-    right: 30px;
+    background: aliceblue;
+    margin-left: 20px;
+    color: darkcyan;
+    /* top: 50px; */
+    /* right: 30px; */
     padding: 10px 15px;
     cursor: pointer;
     transition: background-color 0.3s;
-    z-index: 9999;
+
+}
+
+.themeToggle:hover {
+  transform: scale(1);
 }
 
 @media only screen and (min-width: 320px) and (max-width: 920px) {
     .themeToggle {
-        top: 20px;
-        right: 20px;
-      }
-    .themeToggle:hover {
-      transform: scale(1);
+      display: block;
     }
+    
   }
   

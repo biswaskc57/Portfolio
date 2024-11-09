@@ -2,13 +2,24 @@ import React, { useState, useEffect } from 'react';
 import styles from './Navigation.module.scss';
 import { navItems } from "../../data";
 import useScrollOn from '../../components/Hooks/useOnScroll';
+import ThemeToggle from '../ToggleButton/ToggleButton';
 
-const Navigation: React.FC = () => {
+interface NavigationProps {
+    isDarkMode: boolean;
+    setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+const Navigation: React.FC<NavigationProps> = ({isDarkMode, setIsDarkMode}) => {
   const scrollY = useScrollOn();
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(scrollY);
 
   useEffect(() => {
+
+    if(scrollY < 250) {
+      setIsVisible(true);
+      return;
+    }
     if (scrollY < lastScrollY) {
       // Scrolling up - show the navigation immediately
       setIsVisible(true);
@@ -35,6 +46,7 @@ const Navigation: React.FC = () => {
           </li>
         ))}
       </ul>
+      <ThemeToggle isDarkMode={isDarkMode}setIsDarkMode={setIsDarkMode}/> 
     </nav>
   );
 };

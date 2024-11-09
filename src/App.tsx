@@ -8,7 +8,6 @@ import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
 import GoToTop from './components/GoToTop/GoToTop';
 import Contact from './components/Contact/Contact';
-import ThemeToggle from './components/ToggleButton/ToggleButton';
 import Navigation from './components/Navigation/Navigation';
 
 interface SectionRefs {
@@ -75,8 +74,7 @@ const App: React.FC = () => {
 
   return (
     <div className={`${styles.app} ${isDarkMode ? styles.darkTheme : styles.lightTheme}`}>
-      <Navigation />
-      <ThemeToggle isDarkMode={isDarkMode}setIsDarkMode={setIsDarkMode}/>
+      <Navigation isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode}/>
       <Menu />
       <div id="intro" ref={sectionRefs.current.intro}>
         <Intro />
