@@ -4,12 +4,12 @@ import useOnThrottle from './useOnThrottle';
 const useScrollOn = () => {
   const [scrollY, setScrollY] = useState(window.scrollY);
 
-  // Throttle scroll handler with useCallback
+  // Throttle scroll handler to immediately update scrollY
   const throttledHandleScroll = useOnThrottle(
     useCallback(() => {
       setScrollY(window.scrollY);
-    }, []), // Only initialize once
-    1000 // Adjust the throttle delay as needed
+    }, []),
+    100 // Adjust this as needed for responsiveness
   );
 
   useEffect(() => {

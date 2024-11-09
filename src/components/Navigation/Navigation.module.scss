@@ -1,0 +1,56 @@
+.appNav {
+    position: sticky;
+    background: white;
+    top: 0;
+    right: 40px;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.appNav.hidden {
+    transform: translateY(0);
+    display: flex;
+    opacity: 0;
+}
+
+.appNav.visible {
+    transform: translateY(0);
+    display: flex;
+    opacity: 1;
+}
+
+.appNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.appNav li {
+    padding: 10px;
+}
+
+.appNav li a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #008080;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.appNav li a:hover {
+    color: rebeccapurple;
+    transform: scale(1.1);
+}
+
+@media (max-width: 540px) {
+    .appNav {
+        display: none;
+    }
+}

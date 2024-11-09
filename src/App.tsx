@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import styles from './App.module.scss';
 import Intro from './components/intro/Intro';
 import Menu from './components/menu/Menu';
-import { navItems } from "./data";
 import About from './components/About/About';
 import Projects from './components/projects/Projects';
 import Experience from './components/Experience/Experience';
@@ -10,6 +9,7 @@ import Footer from './components/Footer/Footer';
 import GoToTop from './components/GoToTop/GoToTop';
 import Contact from './components/Contact/Contact';
 import ThemeToggle from './components/ToggleButton/ToggleButton';
+import Navigation from './components/Navigation/Navigation';
 
 interface SectionRefs {
   about: React.RefObject<HTMLDivElement>;
@@ -21,7 +21,7 @@ interface SectionRefs {
 
 const App: React.FC = () => {
   const [isGoToTopSectionActive, setIsGoToTopSectionActive] = useState<boolean>(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const sectionRefs = useRef<SectionRefs>({
     about: React.createRef<HTMLDivElement>(),
@@ -72,23 +72,6 @@ const App: React.FC = () => {
     };
   }, []);
 
-  const Navigation: React.FC = () => {
-    return (
-      <nav className={`${styles.appNav} ${styles.darkTheme} ${styles.visible}`}>
-        <ul>
-          {navItems
-            .map((link) => (
-              <li key={link.id}>
-                <a href={`#${link.id}`}>
-                  <i className={`fas ${link.icon}`}></i>
-                  {link.label}
-                </a>
-              </li>
-            ))}
-        </ul>
-      </nav>
-    );
-  };
 
   return (
     <div className={`${styles.app} ${isDarkMode ? styles.darkTheme : styles.lightTheme}`}>
