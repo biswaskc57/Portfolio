@@ -1,0 +1,69 @@
+// Light Theme Variables
+$light-background: linear-gradient(90deg, #f7dad4, #f7f4e9, rgb(213 248 232), #cee6ff);
+$light-font-color: #121212;
+$light-accent-color: #3498db;
+
+// Dark Theme Variables
+$dark-background: linear-gradient(90deg, #2a0903, #333026, #012c0b, #072544);
+$dark-font-color: #ffffff;
+$dark-accent-color: #bb86fc;
+
+// Theme Mixins
+@mixin lightTheme {
+  background: $light-background; // Change from background-color to background
+  color: $light-font-color;
+  --accent-color: $light-accent-color;
+  background-size: 200% 100%;
+  background-clip: padding-box;
+  animation: gradient-border 10s infinite alternate;
+  border-bottom: 4px solid transparent;
+}
+
+@keyframes gradient-border {
+  0% { background-position: 0% 100%; }
+  100% { background-position: 100% 100%; }
+}
+
+@mixin darkTheme {
+  background: $dark-background;
+  color: $dark-font-color;
+  --accent-color: $dark-accent-color;
+  background-size: 200% 100%;
+  background-clip: padding-box;
+  animation: gradient-border 20s infinite alternate;
+  border-bottom: 4px solid transparent;
+}
+
+// Apply theme styles to the root element based on a class
+.lightTheme {
+  @include lightTheme;
+}
+
+.darkTheme {
+  @include darkTheme;
+}
+
+// Define the separator mixin
+@mixin separator($border-height: 4px, $border-color: linear-gradient(to right, #c8bcba, #e2dfd6, #bbd3c1, #a3aeba), $shadow-color: rgba(0, 0, 0, 0.1)) {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 90%;
+    margin: 0 5%;
+    height: $border-height;
+    background: $border-color;
+    box-shadow: 0 4px 6px $shadow-color;
+    border-radius: 2px; // Rounded corners for the border
+    
+  }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: #{$width}) {
+    @content;
+  }
+}

@@ -1,19 +1,18 @@
+@use 'variables' as *;
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
+  font-family: monospace ;
   margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  color: white;
-  font-family: monospace !important;
-  // background-color: #0f172a;
-  background-size: contain;
-  background: linear-gradient(120deg, rgb(34 117 117 / 80%), /* Green with transparency */ rgb(6 12 16 / 80%), /* Blue with transparency */ rgb(46 46 4 / 80%) /* Yellow with transparency */);
-  background-size: cover;
-  background-repeat: no-repeat;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2 {
+   text-transform: uppercase !important;
+   text-decoration: none !important;
 }
 
 .appNav {
@@ -28,22 +27,17 @@ body {
   transform: translateX(100%);
 
   &.visible {
+    right: 0px;
     opacity: 1;
     transform: translateX(0);
     transition: transform 0.5s ease, opacity 0.5s ease;
     height: 40px;
   }
 
-  // &.hidden {
-  //   opacity: 0;
-  //   transform: translateX(100%);
-  //   transition: transform 0.5s ease, opacity 0.5s ease;
-  // }
-
   ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 20px 0 0;
     display: flex;
     gap: 15px;
 
@@ -81,6 +75,13 @@ body {
 
 .app.aboutActive .appNav a {
   color: white;
+}
+.app.lightTheme {
+  @include lightTheme;
+}
+
+.app.darkTheme {
+  @include darkTheme;
 }
 
 #home,
