@@ -4,12 +4,7 @@ import { navItems } from "../../data";
 import useScrollOn from '../../components/Hooks/useOnScroll';
 import ThemeToggle from '../ToggleButton/ToggleButton';
 
-interface NavigationProps {
-    isDarkMode: boolean;
-    setIsDarkMode: React.Dispatch<React.SetStateAction<boolean>>
-}
-
-const Navigation: React.FC<NavigationProps> = ({isDarkMode, setIsDarkMode}) => {
+const Navigation: React.FC = () => {
   const scrollY = useScrollOn();
   const [isVisible, setIsVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(scrollY);
@@ -46,7 +41,6 @@ const Navigation: React.FC<NavigationProps> = ({isDarkMode, setIsDarkMode}) => {
           </li>
         ))}
       </ul>
-      <ThemeToggle isDarkMode={isDarkMode}setIsDarkMode={setIsDarkMode}/> 
     </nav>
   );
 };
