@@ -8,21 +8,22 @@
   justify-content: flex-end;
   margin-left: 20px;
   padding: 10px 15px;
-  transition: $box-shadow-color 0.3s;
-  box-sizing: $box-shadow-color;
+  transition: background-color 0.3s;
 }
 
 .themeToggleIcon {
-    padding: 5px;
-    position: fixed;
-    top: 40px;
-    right: 20px;
-    z-index: 999;
-    background: transparent;
-    border: none;
-    cursor: pointer;
+  box-shadow: $box-shadow-color;
+  padding: 5px;
+  position: fixed;
+  top: 40px;
+  right: 25px;
+  z-index: 999;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 
   &:hover {
-    transform: scale(1.1);
+    /* Instead of scaling, change the color or background for hover effect */
+    background-color: rgba(0, 0, 0, 0.1);
   }
 }
