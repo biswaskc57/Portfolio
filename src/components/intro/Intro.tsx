@@ -4,6 +4,7 @@ import slush from "../../assets/Slush.jpg";
 import Pdf from "../../assets/resume.pdf";
 
 import useOnElementVisible from "../Hooks/useOnElementVisible";
+import Tooltip from "../Atoms/Tooltip/Tooltip";
 
 const Intro: React.FC = () => {
 
@@ -30,9 +31,10 @@ const Intro: React.FC = () => {
           </a>
         </div>
       </div>
-      <div className={styles.caretButton}>
-        <i className="fas fa-caret-down"></i>
-        <span className={styles.tooltip}>Scroll down</span>
+      <div>
+        <Tooltip message="Click here to scroll down" direction="top">
+          <i className="fas fa-caret-down"></i>
+        </Tooltip>
       </div>
     </div>
   );
