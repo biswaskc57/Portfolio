@@ -6,10 +6,10 @@ import About from './components/About/About';
 import Projects from './components/projects/Projects';
 import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
-import GoToTop from './components/GoToTop/GoToTop';
 import Contact from './components/Contact/Contact';
 import Navigation from './components/Navigation/Navigation';
-import ThemeToggle from './components/ToggleButton/ToggleButton';
+import GoToTop from './components/Atoms/GoToTop/GoToTop';
+import ThemeToggle from './components/Atoms/ToggleButton/ToggleButton';
 
 interface SectionRefs {
   about: React.RefObject<HTMLDivElement>;
