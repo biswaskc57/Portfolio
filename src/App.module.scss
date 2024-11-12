@@ -8,7 +8,13 @@ body{
   font-family: monospace ;
   margin: 0;
   transition: background-color 0.3s, color 0.3s;
+  
 }
+
+// html, body {
+  //  overflow-y: scroll;
+  //  scrollbar-width: none;
+// }
 
 h1, h2 {
    text-transform: uppercase !important;
@@ -73,15 +79,9 @@ h1, h2 {
   }
 }
 
-.app {
-  overflow-y: scroll;
-  scrollbar-width: none; /* For Firefox */
-  overflow-x: hidden;
-}
-
-.app::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
-}
+// .app {
+//   width: 100%;
+// }
 
 .app.aboutActive .appNav a {
   color: white;
