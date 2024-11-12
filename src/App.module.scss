@@ -73,6 +73,15 @@ h1, h2 {
   }
 }
 
+.app {
+  overflow-y: scroll;
+  scrollbar-width: none; /* For Firefox */
+}
+
+.app::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
 .app.aboutActive .appNav a {
   color: white;
 }
