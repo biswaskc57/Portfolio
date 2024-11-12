@@ -1,6 +1,6 @@
 import React, {useRef } from "react";
 import styles from "./Intro.module.scss";
-import avatar from "../../assets/avatar.jpg";
+import slush from "../../assets/Slush.jpg";
 import Pdf from "../../assets/resume.pdf";
 
 import useOnElementVisible from "../Hooks/useOnElementVisible";
@@ -18,7 +18,7 @@ const Intro: React.FC = () => {
     <div className={styles.introContainer}>
       <div className={styles.introElements}>
         <div ref={imageRef} id={"testElement"} className={`${styles.myElement} ${isImageVisible ? styles.animate : styles.hide}`}>
-          <img id={styles.slider} className={styles.myImage} src={avatar} alt="profile" />
+          <img id={styles.slider} className={styles.myImage} src={slush} alt="profile" />
         </div>
         <div ref={textRef} className={`${styles.typewriterText} ${isTextVisible ? styles.animateText : styles.hide}`}>
           <p className={styles.name}>

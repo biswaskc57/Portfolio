@@ -1,13 +1,13 @@
 // Light Theme Variables
-$light-background: linear-gradient(90deg, #f7dad4, #f7f4e9, rgb(213 248 232), #cee6ff);
+$light-background: linear-gradient(90deg, #f0e4e1, #f6f3eb, rgb(239 254 248), #f3ebde);
 $light-font-color: #121212;
 $light-accent-color: #3498db;
 
 // Dark Theme Variables
-$dark-background: linear-gradient(90deg, #2a0903, #333026, #012c0b, #072544);
+$dark-background: linear-gradient(90deg, #2a2a2a, #2e2f30, #232b34, #16202a);
 $dark-font-color: #ffffff;
 $dark-accent-color: #bb86fc;
-$box-shadow-color: 0 0 3px rgba(131, 105, 105, 0.3);
+$box-shadow-color: 0 0 3px rgba(172, 111, 111, 0.3);
 
 // Theme Mixins
 @mixin lightTheme {

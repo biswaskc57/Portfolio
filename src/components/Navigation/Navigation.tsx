@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styles from './Navigation.module.scss';
 import { navItems } from "../../data";
 import useScrollOn from '../../components/Hooks/useOnScroll';
-import ThemeToggle from '../ToggleButton/ToggleButton';
 
 const Navigation: React.FC = () => {
   const scrollY = useScrollOn();
@@ -29,7 +28,7 @@ const Navigation: React.FC = () => {
 
   return (
     <nav
-      className={`${styles.appNav} ${styles.darkTheme} ${isVisible ? styles.visible : styles.hidden}`}
+      className={`${styles.appNav} ${isVisible ? styles.visible : styles.hidden}`}
     >
       <ul>
         {navItems.map((link) => (

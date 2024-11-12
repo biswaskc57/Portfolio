@@ -40,7 +40,8 @@
 .appNav li a {
     font-weight: bold;
     text-decoration: none;
-    color: #008080;
+    background-color: inherit;
+    color: inherit;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -48,13 +49,12 @@
 }
 
 .appNav li a:hover {
-    color: rebeccapurple;
+    color: #008080;
     transform: scale(1.1);
 }
 
 .appNav li a i {
     margin: 0 10px;
-    // position: fixed;
 }
 
 @media only screen and (min-width: 280px) and (max-width: 920px) {

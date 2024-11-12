@@ -12,7 +12,7 @@
 }
 
 .themeToggleIcon {
-  box-shadow: $box-shadow-color;
+  box-shadow: inherit;
   padding: 5px;
   position: fixed;
   top: 40px;
@@ -23,7 +23,6 @@
   cursor: pointer;
 
   &:hover {
-    /* Instead of scaling, change the color or background for hover effect */
     background-color: rgba(0, 0, 0, 0.1);
   }
 }
