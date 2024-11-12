@@ -28,8 +28,11 @@ const Intro: React.FC = () => {
           <a href={Pdf} rel="noopener noreferrer" target="_blank">
             <button title="View resume">Resume</button>
           </a>
-          <i className="fas fa-caret-down"></i>
         </div>
+      </div>
+      <div className={styles.caretButton}>
+        <i className="fas fa-caret-down"></i>
+        <span className={styles.tooltip}>Scroll down</span>
       </div>
     </div>
   );

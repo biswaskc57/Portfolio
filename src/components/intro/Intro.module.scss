@@ -125,6 +125,49 @@ button {
   }
 }
 
+.caretButton {
+    color: green; // Start color
+    font-size: 24px; // Adjust as needed
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    animation: colorChange 5s infinite alternate;
+
+  &:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+  }
+}
+
+// Keyframes for color change
+@keyframes colorChange {
+  0% {
+    color: green;
+  }
+  100% {
+    color: blue;
+  }
+}
+
+// Tooltip styling
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.7); // Dark background
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: -5px; // Adjust to position the tooltip
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    transition: opacity 0.3s;
+    margin-left: 10px;
+}
+
 /* Mobile Responsive Styles */
 @media only screen and (max-width: 430px) {
   .introContainer {
