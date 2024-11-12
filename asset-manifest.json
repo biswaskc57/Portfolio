@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.0fb0f5bd.css",
-    "main.js": "/Portfolio/static/js/main.f20c8f66.js",
+    "main.css": "/Portfolio/static/css/main.8ecfbdf6.css",
+    "main.js": "/Portfolio/static/js/main.8f4a5fc5.js",
     "static/media/resume.pdf": "/Portfolio/static/media/resume.29ba972d6688f28d77f2.pdf",
     "static/media/react-native.png": "/Portfolio/static/media/react-native.49c37bcc86b8259bb642.png",
     "static/media/python.png": "/Portfolio/static/media/python.d8b377f05522bf35de36.png",
@@ -19,11 +19,11 @@
     "static/media/js.png": "/Portfolio/static/media/js.266bd9fb2663dcc057b4.png",
     "static/media/mysql.png": "/Portfolio/static/media/mysql.17ec01314179e9a8ab58.png",
     "index.html": "/Portfolio/index.html",
-    "main.0fb0f5bd.css.map": "/Portfolio/static/css/main.0fb0f5bd.css.map",
-    "main.f20c8f66.js.map": "/Portfolio/static/js/main.f20c8f66.js.map"
+    "main.8ecfbdf6.css.map": "/Portfolio/static/css/main.8ecfbdf6.css.map",
+    "main.8f4a5fc5.js.map": "/Portfolio/static/js/main.8f4a5fc5.js.map"
   },
   "entrypoints": [
-    "static/css/main.0fb0f5bd.css",
-    "static/js/main.f20c8f66.js"
+    "static/css/main.8ecfbdf6.css",
+    "static/js/main.8f4a5fc5.js"
   ]
 }
