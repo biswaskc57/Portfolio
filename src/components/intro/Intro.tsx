@@ -10,9 +10,11 @@ const Intro: React.FC = () => {
 
   const imageRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
+  const caretRef = useRef<HTMLDivElement>(null);
 
   const isImageVisible = useOnElementVisible(imageRef);
   const isTextVisible = useOnElementVisible(textRef);
+  const isCaretVisible = useOnElementVisible(caretRef);
 
 
   return (
@@ -31,9 +33,12 @@ const Intro: React.FC = () => {
           </a>
         </div>
       </div>
-      <div>
+      <div ref={caretRef} className={`${isCaretVisible ? styles.animateCaret : styles.hideCaret}`}>
         <Tooltip message="Click here to scroll down" direction="top">
-          <i className="fas fa-caret-down"></i>
+          <i className="fas fa-caret-down" onClick={()=>{
+            // Add a logic here to go to about page on click
+            document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+          }}></i>
         </Tooltip>
       </div>
     </div>

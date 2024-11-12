@@ -124,29 +124,40 @@ button {
   }
 }
 
-.caretButton {
-    color: green; // Start color
-    font-size: 24px; // Adjust as needed
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    animation: colorChange 5s infinite alternate;
-
-  &:hover .tooltip {
-    visibility: visible;
+/* Define the initial fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateX(-350px);
+  }
+  100% {
     opacity: 1;
-    position: absolute;
+    transform: translateX(0);
   }
 }
 
-// Keyframes for color change
-@keyframes colorChange {
-  0% {
-    color: green;
+/* Define the bounce animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
   }
-  100% {
-    color: blue;
+  50% {
+    transform: translateY(-10px);
   }
+}
+
+/* This class applies the initial fade-in and bounce effect */
+.animateCaret {
+  margin-top: 30px;
+  opacity: 1;
+  animation: fadeInUp 1.5s ease forwards, bounce 1.5s ease-in-out 3s infinite;
+}
+
+/* This class hides the element */
+.hideCaret {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 // Tooltip styling
