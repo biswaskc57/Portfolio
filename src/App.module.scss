@@ -76,6 +76,7 @@ h1, h2 {
 .app {
   overflow-y: scroll;
   scrollbar-width: none; /* For Firefox */
+  overflow-x: hidden;
 }
 
 .app::-webkit-scrollbar {
