@@ -92,7 +92,7 @@
   display: block;
   overflow: hidden;
   white-space: nowrap;
-  animation: typing 6s steps(60, end) infinite;
+  animation: typing 6s steps(60, end) 1;
   font-size: 1.3rem;
   margin: 10px 0px;
 }
@@ -158,24 +158,6 @@ button {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-// Tooltip styling
-.tooltip {
-    visibility: hidden;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.7); // Dark background
-    color: white;
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 5px;
-    position: absolute;
-    top: -5px; // Adjust to position the tooltip
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 14px;
-    transition: opacity 0.3s;
-    margin-left: 10px;
 }
 
 /* Mobile Responsive Styles */

@@ -40,7 +40,7 @@
         }
         50% {
           transform: scale(1.02) rotate(0) translateY(-2px);
-          opacity: 0.8;
+          opacity: 0.9;
         }
         75% {
           transform: scale(1.01) rotate(0) translateY(-1px);
@@ -53,7 +53,7 @@
     }
 
     :hover {
-        opacity: 2;
-        background: #28493f;
+      scale: 1.05;
+
     }
 }  
