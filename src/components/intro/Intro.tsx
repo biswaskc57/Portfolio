@@ -27,7 +27,7 @@ const Intro: React.FC = () => {
           <p className={styles.name}>
             Hello, <span>I&apos;m Biswas K C!</span>
           </p>
-          <p className={styles.profession}>Web Developer!</p>
+          <p className={styles.profession}>Mobile application and Web developer</p>
           <a href={Pdf} rel="noopener noreferrer" target="_blank">
             <button title="View resume">Resume</button>
           </a>

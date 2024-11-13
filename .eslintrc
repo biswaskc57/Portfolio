@@ -28,6 +28,17 @@
     ],
     "no-mixed-spaces-and-tabs": "error",
     "comma-spacing": ["error", { "before": false, "after": true }],
-    "no-console": ["warn", { "allow": ["warn", "error"] }]
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "max-len": [
+      "warn",
+      {
+        "code": 150,
+        "ignorePattern": "^import\\s.+\\sfrom\\s.+;$",
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreComments": true
+      }
+    ]
   }
 }
