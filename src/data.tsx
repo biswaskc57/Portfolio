@@ -6,12 +6,17 @@ import postgres from "./assets/postgers.png";
 import python from "./assets/python.png";
 import react from "./assets/react-native.png";
 import node from "./assets/node-js.png";
+import cypress from "./assets/cypress.png";
 import redux from "./assets/redux.png";
 import tailwind from "./assets/tailwind.png";
+import carshop from "./assets/carshop.jpg";
 import ts from "./assets/ts.png";
 import kotlin from "./assets/kotlin.jpg";
 import java from "./assets/java.jpg";
 import cPlus from "./assets/c-plus.png";
+import React from "./assets/React-icon.png";
+import noPreview from "./assets/noPreview.jpg";
+import hhApp from "./assets/hhApp.png";
 
 // Define a TypeScript interface for each navigation link
 export interface NavItem {
@@ -22,7 +27,7 @@ export interface NavItem {
 
 export interface Project {
     name: string;
-    url: string;
+    image: string;
     description: string;
     link: string;
     stacks: string[];
@@ -39,73 +44,51 @@ export const navItems: NavItem[] = [
 ];
 
 export const skills = [
+  { name: "React", url: React },
   { name: "TypeScript", url: ts },
+  { name: "JavaScript", url: js },
+  { name: "Cypress", url: cypress},
   { name: "Node.js", url: node },
   { name: "Tailwind CSS", url: tailwind },
   { name: "Redux", url: redux },
   { name: "React Native", url: react },
   { name: "Postgres", url: postgres },
-  { name: "JavaScript", url: js },
   { name: "Kotlin", url: kotlin },
   { name: "Express", url: express },
   { name: "MySQL", url: mysql },
   { name: "Python", url: python },
   { name: "Java", url: java },
   { name: "C++", url: cPlus },
-  // { name: "Robot Framework", url: robot },
 ];
-
-
 
 export const projects: Project [] = [
   {
-    name: "Personal Trainer Web-App",
-    url: "../../assets/exerciseBuddy.png",
+    name: "CarShop",
+    image: carshop,
     description: "A web application for personal trainers to manage clients and workouts.",
-    link: "https://biswas-personal-trainer.herokuapp.com/",
-    stacks: ["Java", "Springboot"],
-  },
-  {
-    name: "Phonebook",
-    url: "assets/Phonebook.png",
-    description: "A phonebook application to save and manage contacts.",
-    link: "https://biswas-phonebook.herokuapp.com/",
-    stacks: ["React", "Node.js", "Express", "MongoDB"],
+    link: "https://biswaskc57.github.io/Casrshop/",
+    stacks: ["React", "Material UI"],
   },
   {
     name: "Blog App",
-    url: "assets/BlogApp.png",
+    image: noPreview,
     description: "A blogging platform where users can post and share blogs.",
-    link: "https://bloglist-biswas.herokuapp.com/",
-    stacks: ["React", "Node.js", "Express", "MongoDB"],
-  },
-  {
-    name: "CountryList",
-    url: "https://media.istockphoto.com/vectors/coming-soon-neon-banner-vector-template-glowing-night-bright-sign-vector-id1144514162",
-    description: "An app that provides information about different countries.",
-    link: "",
-    stacks: ["React", "API Integration"],
+    link: "https://github.com/biswaskc57/Blog-application",
+    stacks: ["React", "Node.js", "Express", "MongoDB", "Cypress"],
   },
   {
     name: "Weather Web App",
-    url: "https://media.istockphoto.com/vectors/coming-soon-neon-banner-vector-template-glowing-night-bright-sign-vector-id1144514162",
+    image: noPreview,
     description: "An application that shows weather information for cities.",
-    link: "",
-    stacks: ["React", "JavaScript", "API Integration"],
-  },
-  {
-    name: "3 UAS Chatbot",
-    url: "https://media.istockphoto.com/vectors/coming-soon-neon-banner-vector-template-glowing-night-bright-sign-vector-id1144514162",
-    description: "A chatbot designed for educational institutions.",
-    link: "",
-    stacks: ["Java", "AI/ML", "NLP"],
+    link: "https://github.com/biswaskc57/weather-app",
+    stacks: ["React", "TypeScript"],
   },
   {
     name: "Haaga-helia Mobile App",
-    url: "https://media.istockphoto.com/vectors/coming-soon-neon-banner-vector-template-glowing-night-bright-sign-vector-id1144514162",
+    image: hhApp,
     description: "A mobile app designed for Haaga-helia university.",
-    link: "",
-    stacks: ["Design", "UI/UX"],
+    link: "https://www.figma.com/proto/uKbsEmV8CqyM56cYWpKBdg/Prototyping_FinalProject?node-id=11-2&t=vYo9WJ09hXZTyVUl-1",
+    stacks: ["Figma", "Design", "UI/UX"],
   }
 ];
 

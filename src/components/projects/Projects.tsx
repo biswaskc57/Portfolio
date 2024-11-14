@@ -1,11 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import styles from "./projects.module.scss";
 import { projects } from "../../data";
-import NoPreview from "../../assets/noPreview.jpg";
 
 interface Project {
   name: string;
-  url: string;
+  image: string;
   description: string;
   link: string;
   stacks: string[];
@@ -124,7 +123,7 @@ const Projects: React.FC = () => {
             >
               <h3 className={styles.projectTitle}>{project.name}</h3>
               <img
-                src={NoPreview}
+                src={project.image}
                 alt={project.name}
                 className={styles.projectImage}
               />
