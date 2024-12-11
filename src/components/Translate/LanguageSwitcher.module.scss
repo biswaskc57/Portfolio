@@ -1,0 +1,58 @@
+@use '../../variables.scss' as *;
+
+.selectorSection {
+    position: fixed; /* Covers the viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers content */
+    z-index: 9999; /* Ensure it's above other elements */
+    pointer-events: auto; /* Allows interaction with this layer */
+    background-color: var(--background, transparent); 
+    opacity: 1; /* Makes it invisible */
+    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.selector.lightTheme {
+    @include lightTheme;
+  }
+  
+.selector.darkTheme {
+    @include darkTheme;
+  }
+  
+
+.selector {
+    position: relative; /* Required for pseudo-element layering */
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 10; /* Ensure it is above the blur layer */
+    background: inherit !important; /* Inherit the background from the root */
+    isolation: isolate !important; /* Prevent blur from affecting this element */
+}
+
+
+
+.button {
+    margin: 10px;
+    background-color: inherit !important;
+    color: inherit !important;
+    border: none;
+    &:hover {
+        background-color: rgba(171, 159, 159, 0.369) !important;
+    }  
+}
+
+.select {
+    display: flex;
+}
+
+.options {
+    display:flex;
+    flex-direction: column;
+    margin: 10px;
+    color: inherit !important;
+    border: none;
+}

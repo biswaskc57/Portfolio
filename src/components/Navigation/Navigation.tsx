@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import styles from './Navigation.module.scss';
 import { navItems } from "../../data";
 import useScrollOn from '../../components/Hooks/useOnScroll';
+import { useLanguage } from "../Contexts/LanguageContext";
 
 const Navigation: React.FC = () => {
+  
   const scrollY = useScrollOn();
   const [isVisible, setIsVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(scrollY);
+  const {setIsModelOpen, isModelOpen, selectedLanguage} = useLanguage();
 
   useEffect(() => {
 
@@ -25,6 +28,7 @@ const Navigation: React.FC = () => {
     // Update last scroll position
     setLastScrollY(scrollY);
   }, [scrollY, lastScrollY]);
+  const language = {id: "language", label: "", icon:"fa-language" };
 
   return (
     <nav
@@ -39,7 +43,14 @@ const Navigation: React.FC = () => {
             </a>
           </li>
         ))}
+        <li key={language.id} onClick={()=>{setIsModelOpen(!isModelOpen);}}>
+          <a href={`#${language.id}`}>
+            <i className={`fa ${language.icon}`}>{selectedLanguage}</i>
+          </a>
+
+        </li>
       </ul>
+
     </nav>
   );
 };
