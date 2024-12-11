@@ -16,7 +16,7 @@
 .appNav.hidden {
     transform: translateY(0);
     display: flex;
-    opacity: 0;
+    visibility: hidden;
 }
 
 .appNav.visible {

@@ -11,9 +11,8 @@
     align-items: center; /* Centers content */
     z-index: 9999; /* Ensure it's above other elements */
     pointer-events: auto; /* Allows interaction with this layer */
-    // background-color: var(--background, transparent); 
     backdrop-filter: blur(12px); 
-    overflow-y: hidden; /* Prevents scrolling of content within the element */
+    transform: scale(1.1);
 }
 
 .lightTheme {
@@ -31,6 +30,18 @@
     z-index: 10; /* Ensure it is above the blur layer */
 }
 
+.closeButton {
+    position: relative;
+    margin: 0px;
+    right: -20px;
+    color: inherit !important;
+    border: none;
+    background-color: inherit !important;
+    &:hover {
+        color: rgba(171, 159, 159, 0.369) !important;
+    }
+}
+
 .button {
     margin: 10px;
     background-color: inherit !important;
@@ -39,6 +50,10 @@
     &:hover {
         background-color: rgba(171, 159, 159, 0.369) !important;
     }  
+}
+
+.selectedLanguage {
+    background-color: rgba(171, 159, 159, 0.369) !important;
 }
 
 .select {

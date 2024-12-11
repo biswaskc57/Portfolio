@@ -7,12 +7,12 @@ import Projects from './components/projects/Projects';
 import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
 import Contact from './components/Contact/Contact';
-import Navigation from './components/Navigation/Navigation';
 import GoToTop from './components/Atoms/GoToTop/GoToTop';
 import ThemeToggle from './components/Atoms/ToggleButton/ToggleButton';
 import LanguageSwitcher from './components/Translate/LanguageSwitcher';
 import { LanguageProvider } from './components/Contexts/LanguageContext';
 import { ThemeProvider, useTheme } from './components/Contexts/ThemeContext';
+import Navigation from './components/Navigation/Navigation';
 
 interface SectionRefs {
   about: React.RefObject<HTMLDivElement>;

@@ -1,11 +1,11 @@
 import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
-import { languageStrings, LanguageType, WorkExperience,  } from '../Translate/Languages';
+import { languageStrings, LanguageType, Description,  } from '../Translate/Languages';
 
 
 interface LanguageContextType {
   selectedLanguage: LanguageType;
   setSelectedLanguage: (lang: LanguageType) => void;
-  language: WorkExperience;
+  language: Description;
   isModelOpen: boolean;
    setIsModelOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
