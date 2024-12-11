@@ -60,7 +60,6 @@ const Contact: React.FC = () => {
       <div className={styles.contactFormContainer}>
         <h2 className={styles.heading}>Contact Me</h2>
         <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-          {/* Name */}
           <label htmlFor="name" className={styles.label}>Name</label>
           <input
             id="name"
@@ -71,7 +70,6 @@ const Contact: React.FC = () => {
           />
           {errors.name && <p className={styles.error}>{errors.name.message}</p>}
 
-          {/* Email */}
           <label htmlFor="email" className={styles.label}>Email</label>
           <input
             id="email"
@@ -147,7 +145,7 @@ const Contact: React.FC = () => {
   };
   return (
     <div className={styles.container}>
-      <h1 className={styles.pageHeading}>Get in Touch</h1>
+      <h2 className={styles.pageHeading}>Get in Touch</h2>
       <ContactForm />
     </div>
   );

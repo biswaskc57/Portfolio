@@ -5,14 +5,45 @@ html {
 }
 
 body{
-  font-family: monospace ;
+  font-family: 'Inter', Arial, sans-serif; ;
   margin: 0;
   transition: background-color 0.3s, color 0.3s; 
 }
 
-h1, h2 {
-   text-transform: uppercase !important;
+h1{
+  //  text-transform: uppercase !important;
    text-decoration: none !important;
+   font-weight: 700;
+   letter-spacing: 0.1em;
+   font-size:x-large;
+   line-height: 1.6;
+}
+
+h2 {
+  text-decoration: none !important;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-size: x-large;
+}
+
+h3 {
+  text-decoration: none !important;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-size:large;
+}
+
+h4 {
+  text-decoration: none !important;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  font-size:small;
+}
+
+p {
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+  font-size:medium;
 }
 
 .appNav {

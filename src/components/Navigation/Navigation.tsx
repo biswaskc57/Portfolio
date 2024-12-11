@@ -54,13 +54,13 @@ const Navigation: React.FC = () => {
           <li key={link.id}>
             <a href={`#${link.id}`}>
               <i className={`fas ${link.icon}`}></i>
-              {language.Navigation[link.label]}
+              <h1>{language.Navigation[link.label]}</h1>
             </a>
           </li>
         ))}
         <div className={styles.languageSection} key={languageNav.id} onClick={()=>{setIsModelOpen(!isModelOpen);}}> 
           <i className={`fa ${languageNav.icon}`}> </i>
-          <div className={styles.languageText}>{language.languageTypes[selectedLanguage].toLocaleUpperCase().slice(0, 2)}</div>
+          <div className={styles.languageText}>{language.languageTypes[selectedLanguage].toLocaleUpperCase()}</div>
         </div>
       </ul>
 
