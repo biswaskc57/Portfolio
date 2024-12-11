@@ -1,15 +1,12 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-// Define the context type
 interface ThemeContextType {
   isDarkMode: boolean;
   toggleTheme: () => void;
 }
 
-// Create the context
 export const ThemeContext = createContext<ThemeContextType>({} as ThemeContextType);
 
-// Provider component
 export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 

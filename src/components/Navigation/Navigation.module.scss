@@ -48,13 +48,23 @@
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.appNav li a:hover {
-    color: #008080;
+.languageSection:hover, .appNav li a:hover {
+    color: $hover-color;
     transform: scale(1.1);
 }
 
 .appNav li a i {
     margin: 0 10px;
+}
+
+.languageSection {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    .languageText {
+        margin: 0 6px;
+    }
+
 }
 
 @media only screen and (min-width: 280px) and (max-width: 920px) {

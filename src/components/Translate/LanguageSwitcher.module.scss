@@ -11,29 +11,25 @@
     align-items: center; /* Centers content */
     z-index: 9999; /* Ensure it's above other elements */
     pointer-events: auto; /* Allows interaction with this layer */
-    background-color: var(--background, transparent); 
-    opacity: 1; /* Makes it invisible */
-    backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+    // background-color: var(--background, transparent); 
+    backdrop-filter: blur(12px); 
+    overflow-y: hidden; /* Prevents scrolling of content within the element */
 }
-.selector.lightTheme {
+
+.lightTheme {
     @include lightTheme;
   }
   
-.selector.darkTheme {
+.darkTheme {
     @include darkTheme;
-  }
-  
+  } 
 
 .selector {
     position: relative; /* Required for pseudo-element layering */
     padding: 20px;
     border-radius: 15px;
     z-index: 10; /* Ensure it is above the blur layer */
-    background: inherit !important; /* Inherit the background from the root */
-    isolation: isolate !important; /* Prevent blur from affecting this element */
 }
-
-
 
 .button {
     margin: 10px;
@@ -56,3 +52,6 @@
     color: inherit !important;
     border: none;
 }
+.noScroll {
+    overflow: hidden; /* Disable scrolling on body */
+  }
