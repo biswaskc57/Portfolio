@@ -46,7 +46,7 @@ $box-shadow-color: 0 0 3px rgba(172, 111, 111, 0.3);
 }
 
 // Define the separator mixin
-@mixin separator($border-height: 4px, $border-color: linear-gradient(to right, #c8bcba, #e2dfd6, #bbd3c1, #a3aeba), $shadow-color: rgba(0, 0, 0, 0.1)) {
+@mixin separator($border-height: 1px, $border-color: linear-gradient(to right, #c8bcba, #e2dfd6, #bbd3c1, #a3aeba), $shadow-color: rgba(0, 0, 0, 0.1)) {
   position: relative;
   
   &::after {
@@ -54,12 +54,11 @@ $box-shadow-color: 0 0 3px rgba(172, 111, 111, 0.3);
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 90%;
-    margin: 0 5%;
+    width: 100%;
     height: $border-height;
     background: $border-color;
-    box-shadow: 0 4px 6px $shadow-color;
-    border-radius: 2px; // Rounded corners for the border
+    box-shadow: 0 3px 4px $shadow-color;
+    border-radius: 1px; // Rounded corners for the border
     
   }
 }

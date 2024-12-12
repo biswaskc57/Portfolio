@@ -5,6 +5,7 @@ import Pdf from "../../assets/resume.pdf";
 
 import useOnElementVisible from "../Hooks/useOnElementVisible";
 import Tooltip from "../Atoms/Tooltip/Tooltip";
+import { useLanguage } from "../Contexts/LanguageContext";
 
 const Intro: React.FC = () => {
 
@@ -15,6 +16,8 @@ const Intro: React.FC = () => {
   const isImageVisible = useOnElementVisible(imageRef);
   const isTextVisible = useOnElementVisible(textRef);
   const isCaretVisible = useOnElementVisible(caretRef);
+
+  const { language } = useLanguage(); 
 
 
   return (
@@ -27,12 +30,19 @@ const Intro: React.FC = () => {
           <h1>
             Hello, <span>I&apos;m Biswas K C!</span>
           </h1>
-          <h2 className={styles.profession}>Mobile application and Web developer</h2>
-          <a href={Pdf} rel="noopener noreferrer" target="_blank">
-            <button title="View resume">Resume</button>
-          </a>
+          <div className={styles.buttons}>
+            <a href={Pdf} rel="noopener noreferrer" target="_blank">
+              <button title="View resume">Resume</button>
+            </a>
+            <a href={Pdf} rel="noopener noreferrer" target="_blank">
+              <button title="View resume">Contact</button>
+            </a>
+          </div>
         </div>
       </div>
+      <p className={`${styles.text} ${styles.profession}`}>
+        {language.bio}
+      </p>
       <div ref={caretRef} className={`${isCaretVisible ? styles.animateCaret : styles.hideCaret}`}>
         <Tooltip message="Click here to scroll down" direction="top">
           <i className="fas fa-caret-down" onClick={()=>{
