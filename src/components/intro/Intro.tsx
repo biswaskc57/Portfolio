@@ -30,6 +30,9 @@ const Intro: React.FC = () => {
           <h1>
             Hello, <span>I&apos;m Biswas K C!</span>
           </h1>
+          <p className={`${styles.text} ${styles.profession}`}>
+            {language.intro}
+          </p>
           <div className={styles.buttons}>
             <a href={Pdf} rel="noopener noreferrer" target="_blank">
               <button title="View resume">Resume</button>
@@ -40,9 +43,6 @@ const Intro: React.FC = () => {
           </div>
         </div>
       </div>
-      <p className={`${styles.text} ${styles.profession}`}>
-        {language.bio}
-      </p>
       <div ref={caretRef} className={`${isCaretVisible ? styles.animateCaret : styles.hideCaret}`}>
         <Tooltip message="Click here to scroll down" direction="top">
           <i className="fas fa-caret-down" onClick={()=>{

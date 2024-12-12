@@ -17,13 +17,7 @@ import cPlus from "./assets/c-plus.png";
 import React from "./assets/React-icon.png";
 import noPreview from "./assets/noPreview.jpg";
 import hhApp from "./assets/hhApp.png";
-
-// Define a TypeScript interface for each navigation link
-export interface NavItem {
-    id: string;
-    label: string;
-    icon: string;
-  }
+import { NavigationItems } from "./components/Translate/Languages";
 
 export interface Project {
     name: string;
@@ -32,16 +26,6 @@ export interface Project {
     link: string;
     stacks: string[];
   }
-  
-  
-// Apply the NavLink[] type to ensure each item in the array matches the interface
-export const navItems: NavItem[] = [
-  { id: "intro", label: "Home", icon: "fa-home" },
-  { id: "about", label: "About", icon: "fa-user" },
-  { id: "projects", label: "Projects", icon: "fa-diagram-project" },
-  { id: "experience", label: "Experience", icon: "fa-briefcase" },
-  { id: "contact", label: "Contact", icon: "fa-address-card" },
-];
 
 export const skills = [
   { name: "React", url: React },
@@ -59,6 +43,19 @@ export const skills = [
   { name: "Python", url: python },
   { name: "Java", url: java },
   { name: "C++", url: cPlus },
+];
+
+export interface NavItem {
+  id: string;
+  label: keyof NavigationItems;  // This ensures 'label' can only be one of the keys of Navigation
+  icon: string;
+}
+export const navItems: NavItem[] = [
+  { id: "intro", label: "Home", icon: "fa-home" },
+  { id: "experience", label: "Experience", icon: "fa-briefcase" },
+  { id: "projects", label: "Projects", icon: "fa-diagram-project" },
+  { id: "contact", label: "Contact", icon: "fa-address-card" },
+  { id: "about", label: "About", icon: "fa-user" },
 ];
 
 export const projects: Project [] = [

@@ -72,29 +72,31 @@ const App: React.FC = () => {
 
   return (
     <div className={`${styles.app} ${isDarkMode ? styles.darkTheme : styles.lightTheme}`}>
-      <LanguageProvider>
-        <Navigation />
-        <ThemeToggle />
-        <LanguageSwitcher />
-        <Menu />
-        <div id="intro" ref={sectionRefs.current.intro}>
-          <Intro />
-        </div>
-        <div id="about" ref={sectionRefs.current.about}>
-          <About />
-        </div>
-        <div id="projects" ref={sectionRefs.current.projects}>
-          <Projects />
-        </div>
-        <div id="experience" ref={sectionRefs.current.experience}>
-          <Experience />
-        </div>
-        <div id="contact" ref={sectionRefs.current.contact}>
-          <Contact />
-        </div>
-        <GoToTop isVisible={isGoToTopSectionActive} />
-        <Footer />
-      </LanguageProvider>
+      <div className={`${styles.appContainer}`}>
+        <LanguageProvider>
+          <Navigation />
+          <ThemeToggle />
+          <LanguageSwitcher />
+          <Menu />
+          <div id="intro" ref={sectionRefs.current.intro}>
+            <Intro />
+          </div>
+          <div id="experience" ref={sectionRefs.current.experience}>
+            <Experience />
+          </div>
+          <div id="projects" ref={sectionRefs.current.projects}>
+            <Projects />
+          </div>
+          <div id="about" ref={sectionRefs.current.about}>
+            <About />
+          </div>
+          <div id="contact" ref={sectionRefs.current.contact}>
+            <Contact />
+          </div>
+          <GoToTop isVisible={isGoToTopSectionActive} />
+          <Footer />
+        </LanguageProvider>
+      </div>
     </div>
   );
 };

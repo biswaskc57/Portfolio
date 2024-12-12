@@ -2,29 +2,17 @@ import React, { useState, useEffect } from 'react';
 import styles from './Navigation.module.scss';
 import useScrollOn from '../../components/Hooks/useOnScroll';
 import { useLanguage } from "../Contexts/LanguageContext";
-import { NavigationItems } from '../Translate/Languages';
+import { navItems } from '../../data';
 
 const Navigation: React.FC = () => {
   
   const scrollY = useScrollOn();
   const [isVisible, setIsVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(scrollY);
+  const [selectedNavItem, setSelectedNavItem] = useState("Home");
   const {setIsModelOpen, isModelOpen, selectedLanguage, language} = useLanguage();
 
   // Apply the NavLink[] type to ensure each item in the array matches the interface
-
-  interface NavItem {
-    id: string;
-    label: keyof NavigationItems;  // This ensures 'label' can only be one of the keys of Navigation
-    icon: string;
-  }
-  const navItems: NavItem[] = [
-    { id: "intro", label: "Home", icon: "fa-home" },
-    { id: "about", label: "About", icon: "fa-user" },
-    { id: "projects", label: "Projects", icon: "fa-diagram-project" },
-    { id: "experience", label: "Experience", icon: "fa-briefcase" },
-    { id: "contact", label: "Contact", icon: "fa-address-card" },
-  ];
 
   useEffect(() => {
 
@@ -51,7 +39,7 @@ const Navigation: React.FC = () => {
     >
       <ul>
         {navItems.map((link) => (
-          <li key={link.id}>
+          <li key={link.id} onClick={()=>setSelectedNavItem(link.label)} className={`${selectedNavItem === link.label ? styles.selectedNavItem : ""}`}>
             <a href={`#${link.id}`}>
               <i className={`fas ${link.icon}`}></i>
               <h1>{language.Navigation[link.label]}</h1>

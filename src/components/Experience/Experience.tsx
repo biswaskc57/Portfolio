@@ -48,7 +48,7 @@ const Experience: React.FC = () => {
               window.open(exp.url, "_blank", "noopener noreferrer")
             }
           >
-            <div className={styles.duration}><h3>{exp.duration}</h3></div>
+            <div className={styles.duration}><h2>{exp.duration}</h2></div>
             <div className={styles.detail}>
               <div>
                 <h3>

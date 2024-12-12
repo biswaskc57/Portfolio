@@ -1,8 +1,24 @@
 // Light Theme Variables
 $light-background: linear-gradient(90deg, #f0e4e1, #f6f3eb, rgb(239 254 248), #f3ebde);
 $light-font-color: #121212;
-$light-accent-color: #3498db;
-$hover-color: #008080;
+$light-accent-color: #C2E5D3;
+$hover-color: #556B2F;
+$hover-experience-color: #5ae0d2;
+
+$h1-color: #008080;
+$h2-color: #046307;
+$h3-color: #228B22;
+$h4-color: linear-gradient(135deg, #4caf50, #2e7d32);
+
+$h1-hover-color: #D0F0C0;
+$h2-hover-color: #A8E4A0;
+$h3-hover-color: #C2E5D3;
+$h4-hover-color: #ab9f9f5e;
+$h5-hover-color: linear-gradient(135deg, #4caf50, #2e7d32);
+
+
+$button-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
+$button-hover-box-shadow: 0 2px 2px 2px #ab9f9f5e;
 
 // Dark Theme Variables
 $dark-background: linear-gradient(90deg, #2a2a2a, #2e2f30, #232b34, #16202a);

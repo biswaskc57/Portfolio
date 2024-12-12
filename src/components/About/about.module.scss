@@ -27,8 +27,8 @@
     margin-top: 10px;
 
     &:hover {
-      background-color: #008080;
-      border-color: #008080;
+      background-color: $hover-color;
+      border-color:  $hover-color;
     }
 
     &:focus {

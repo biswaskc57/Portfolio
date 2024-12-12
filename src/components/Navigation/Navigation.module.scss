@@ -48,7 +48,7 @@
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.languageSection:hover, .appNav li a:hover {
+.selectedNavItem,.languageSection:hover, .appNav li a:hover {
     color: $hover-color;
     transform: scale(1.1);
 }

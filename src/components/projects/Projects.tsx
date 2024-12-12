@@ -105,13 +105,13 @@ const Projects: React.FC = () => {
       <div className={styles.sliderContainer}>
         {showLeftButton && (
           <button
-            className={`${styles.scrollButton} ${styles.left}`}
+            className={`${styles.scrollButton} `}
             onClick={() => {
               handleScroll("left");
               updateButtonVisibility();
             }}
           >
-            <i className="fa-solid fa-circle-chevron-left"></i>
+            <i className={`fa-solid fa-chevron-left ${styles.left}`}></i>
           </button>
         )}
         <div className={styles.projectsSlider} ref={sliderRef}>
@@ -144,7 +144,7 @@ const Projects: React.FC = () => {
               updateButtonVisibility();
             }}
           >
-            <i className="fa-solid fa-circle-chevron-right"></i>
+            <i className="fa-solid fa-chevron-right"></i>
           </button>
         )}
       </div>

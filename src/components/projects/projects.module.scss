@@ -23,13 +23,13 @@
 }
 
 .scrollButton {
-  background: none !important;
+  background: $h4-color; // Add gradient background
   border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #008080;
-  padding: 0 15px;
-  transition: color 0.3s;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: inherit;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -39,7 +39,10 @@
   justify-content: center;
 
   &:hover {
-    opacity: 0.8;
+    box-shadow: $button-box-shadow;
+    background: $h5-hover-color;
+    transform: translateY(-50%) scale(1.03);
+    cursor: pointer;
   }
 
   &.left {
@@ -49,7 +52,13 @@
   &.right {
     right: 5px;
   }
+
+  i {
+    font-size: 1.2rem;
+    pointer-events: none; // Prevent click on the icon
+  }
 }
+
 
 .projectsSlider {
   display: flex;
@@ -128,7 +137,7 @@
 }
 
 .stack div {
-  background-color: #008080;
+  background-color: $h4-hover-color;
   padding: 5px 8px;
   border-radius: 15px;
   font-size: 12px;
@@ -151,7 +160,7 @@
 }
 
 .paginationBullet.active {
-  background-color: #008080;
+  background-color: $h1-color;
   transform: scale(1.2);
 }
 

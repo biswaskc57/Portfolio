@@ -1,6 +1,7 @@
 export type LanguageType = 'en' | 'fi' | 'ne';
 
 export interface Description {
+  intro: string;
   bio: string;
   frosmo: string;
   haagaHelia: string;
@@ -31,6 +32,7 @@ export interface Languages {
 
 export const languageStrings: LanguageStrings = {
   en: {
+    intro: "I’m a frontend developer with 3+ years of experience in React, JavaScript, and TypeScript, pursuing a master’s in AI for Business Transformation. At Frosmo Limited, I built SaaS applications and UI components, excelling in debugging, CI/CD, and Cypress. I’m eager to grow, collaborate, and tackle innovative challenges in a mid/senior-level role.",
     bio: "I’m a frontend developer with 3+ years of experience in React, JavaScript, TypeScript, HTML, and CSS. At Frosmo Limited, I specialize in developing SaaS applications and UI components, collaborating with cross-functional teams to deliver high-quality solutions. Proficient in debugging, CI/CD, and end-to-end testing with Cypress, I thrive in team environments and am passionate about continuous growth. I’m currently seeking a mid/senior-level frontend developer role to contribute my expertise and tackle innovative challenges.",
     frosmo: "👨‍💻 Building dynamic, data-driven interfaces and reusable components while enhancing UI/UX, collaborating in Agile teams, and delivering customer-focused solutions.",
     haagaHelia: "👨‍💻 Developed dynamic interfaces with React and TypeScript, optimized data management with GraphQL, and collaborated with Siili Solutions on a large-scale application using scalable AWS architecture.",
@@ -49,6 +51,7 @@ export const languageStrings: LanguageStrings = {
     },
   },
   fi: {
+    intro: "Olen frontend-kehittäjä, jolla on yli 3 vuoden kokemus Reactista, JavaScriptista ja TypeScriptista. Opiskelen maisteriksi AI for Business Transformation -ohjelmassa. Työskentelin Frosmo Limitedillä, missä kehitin SaaS-sovelluksia ja käyttöliittymäkomponentteja. Olen innostunut kehittymisestä ja yhteistyöstä ja valmis kohtaamaan uusia haasteita.",
     bio: "Olen frontend-kehittäjä, jolla on yli 3 vuoden kokemus Reactista, JavaScriptistä, TypeScriptistä, HTML:stä ja CSS:stä. Frosmo Limitedillä kehität SaaS-sovelluksia ja käyttöliittymäkomponentteja. Osaan virheenkorjauksen, CI/CD-putket ja testauksen Cypressillä. Etsin uusia mahdollisuuksia, joissa voin käyttää osaamistani ja kehittää itseäni.",
     frosmo: "👨‍💻 Rakentamassa dynaamisia, dataohjattuja käyttöliittymiä ja uudelleenkäytettäviä komponentteja, parantamassa UI/UX:ää, tekemässä yhteistyötä Agile-tiimien kanssa ja toimittamassa asiakaslähtöisiä ratkaisuja.",
     haagaHelia: "👨‍💻 Kehitti dynaamisia käyttöliittymiä Reactilla ja TypeScriptillä, optimoi datanhallintaa GraphQL:llä ja teki yhteistyötä Siili Solutionsin kanssa laajamittaisessa sovellusprojektissa käyttäen skaalautuvaa AWS-arkkitehtuuria.",
@@ -67,6 +70,7 @@ export const languageStrings: LanguageStrings = {
     },
   },
   ne: {
+    intro: "म React, JavaScript, र TypeScript मा ३+ वर्षको अनुभव भएको फ्रन्टएन्ड डेवलपर हुँ र अहिले AI for Business Transformation मा मास्टर्स गर्दैछु। Frosmo Limited मा मैले SaaS एप्लिकेसन र UI कम्पोनेन्टहरू विकास गरेको छु। म प्रगति र सहकार्यप्रति उत्साही छु र नयाँ चुनौतीहरू समाधान गर्न तयार छु।",
     bio: "म फ्रन्टएन्ड विकासकर्ता हुँ, जसले React, JavaScript, TypeScript, HTML, र CSS मा ३+ वर्षको अनुभव संग काम गरिरहेको छु। Frosmo Limited मा म SaaS अनुप्रयोगहरू र UI कम्पोनेन्टहरू विकास गर्दैछु। म डिबगिङ, CI/CD, र Cypress संग अन्त्यदेखि अन्त्य परीक्षणमा दक्ष छु। म नयाँ चुनौतीहरू समाधान गर्न र आफ्नो विशेषज्ञता योगदान गर्न उत्सुक छु।",
     frosmo: "👨‍💻 गतिशील, डाटा-चालित इन्टरफेस र पुनः प्रयोग गर्न सकिने कम्पोनेन्टहरू निर्माण गर्दै, UI/UX सुधार गर्दै, र Agile टोलीहरूसँग सहकार्य गर्दै।",
     haagaHelia: "👨‍💻 React र TypeScript संग गतिशील इन्टरफेस विकास गर्दै, GraphQL संग डाटा व्यवस्थापनलाई अनुकूलित गर्दै, र Siili Solutions को साथ स्केलेबल AWS आर्किटेक्चर प्रयोग गर्दै ठूलो अनुप्रयोग परियोजनामा सहकार्य गर्दै।",
