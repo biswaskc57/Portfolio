@@ -6,6 +6,7 @@ import Pdf from "../../assets/resume.pdf";
 import useOnElementVisible from "../Hooks/useOnElementVisible";
 import Tooltip from "../Atoms/Tooltip/Tooltip";
 import { useLanguage } from "../Contexts/LanguageContext";
+import Button from "../Atoms/Button/Button";
 
 const Intro: React.FC = () => {
 
@@ -35,10 +36,10 @@ const Intro: React.FC = () => {
           </p>
           <div className={styles.buttons}>
             <a href={Pdf} rel="noopener noreferrer" target="_blank">
-              <button title="View resume">Resume</button>
+              <Button variant="primary" >Resume</Button>
             </a>
             <a href={Pdf} rel="noopener noreferrer" target="_blank">
-              <button title="View resume">Contact</button>
+              <Button variant="secondary" >Contacts</Button>
             </a>
           </div>
         </div>
