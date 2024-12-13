@@ -13,8 +13,9 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [selectedLanguage, setSelectedLanguage] = useState<LanguageType>('en');
   const storedLanguage = localStorage.getItem('selectedLanguage') as LanguageType | null;
+  const [selectedLanguage, setSelectedLanguage] = useState<LanguageType>(storedLanguage ||'en');
+
   const [language, setLanguage] = useState(storedLanguage ? languageStrings[storedLanguage] : languageStrings[selectedLanguage]);
 
   const [isModelOpen, setIsModelOpen] = useState(false);

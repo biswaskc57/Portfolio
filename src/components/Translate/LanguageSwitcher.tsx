@@ -48,6 +48,7 @@ const LanguageSelector = () => {
               key={langCode}
               onClick={() => {
                 setSelectedLanguage(langCode as LanguageType);
+                localStorage.setItem('selectedLanguage', langCode); 
                 setIsModelOpen(!isModelOpen);
               }}
               className={`${styles.button} ${selectedLanguage === langCode ? styles.selectedLanguage: ""}`}

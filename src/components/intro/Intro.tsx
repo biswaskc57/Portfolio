@@ -29,7 +29,7 @@ const Intro: React.FC = () => {
         </div>
         <div ref={textRef} className={`${styles.typewriterText} ${isTextVisible ? styles.animateText : styles.hide}`}>
           <h1>
-            Hello, I&apos;m<span className={styles.name}> Biswas K C</span>
+            <span className={styles.name}> {language.greeting}</span>
           </h1>
           <p className={`${styles.text} ${styles.profession}`}>
             {language.intro}

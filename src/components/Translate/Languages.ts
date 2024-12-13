@@ -1,6 +1,7 @@
 export type LanguageType = 'en' | 'fi' | 'ne';
 
 export interface Description {
+  greeting: string,
   intro: string;
   bio: string;
   frosmo: string;
@@ -32,6 +33,7 @@ export interface Languages {
 
 export const languageStrings: LanguageStrings = {
   en: {
+    greeting: "Hello, I'm Biswas K C",
     intro: "I'm a Web Developer with 3+ years of experience in React and TypeScript, focusing on SaaS applications and UI components. I'm currently studying AI for Business Transformation and excited to use AI to drive business innovation. I’m looking for new challenges where I can help companies grow using advanced technology.",
     bio: "I’m a frontend developer with 3+ years of experience in React, JavaScript, TypeScript, HTML, and CSS. At Frosmo Limited, I specialize in developing SaaS applications and UI components, collaborating with cross-functional teams to deliver high-quality solutions. Proficient in debugging, CI/CD, and end-to-end testing with Cypress, I thrive in team environments and am passionate about continuous growth. I’m currently seeking a mid/senior-level frontend developer role to contribute my expertise and tackle innovative challenges.",
     frosmo: "👨‍💻 Building dynamic, data-driven interfaces and reusable components while enhancing UI/UX, collaborating in Agile teams, and delivering customer-focused solutions.",
@@ -51,6 +53,7 @@ export const languageStrings: LanguageStrings = {
     },
   },
   fi: {
+    greeting: "Hei, minä olen Biswas K C",
     intro: "Olen web-kehittäjä, jolla on yli 3 vuoden kokemus Reactista ja TypeScriptistä. Erikoistun SaaS-sovelluksiin ja käyttöliittymäkomponentteihin. Opiskelen tekoälyä liiketoiminnan kehittämiseksi ja etsin haasteita, joissa voin auttaa yrityksiä hyödyntämään teknologiaa kasvussa.",
     bio: "Olen frontend-kehittäjä, jolla on yli 3 vuoden kokemus Reactista, JavaScriptistä, TypeScriptistä, HTML:stä ja CSS:stä. Frosmo Limitedillä kehität SaaS-sovelluksia ja käyttöliittymäkomponentteja. Osaan virheenkorjauksen, CI/CD-putket ja testauksen Cypressillä. Etsin uusia mahdollisuuksia, joissa voin käyttää osaamistani ja kehittää itseäni.",
     frosmo: "👨‍💻 Rakentamassa dynaamisia, dataohjattuja käyttöliittymiä ja uudelleenkäytettäviä komponentteja, parantamassa UI/UX:ää, tekemässä yhteistyötä Agile-tiimien kanssa ja toimittamassa asiakaslähtöisiä ratkaisuja.",
@@ -70,6 +73,7 @@ export const languageStrings: LanguageStrings = {
     },
   },
   ne: {
+    greeting: "म बिस्वास के सी हुँ|",
     intro: "म वेब विकासकर्ता हुँ, जसको ३+ वर्षको अनुभव React र TypeScript मा छ, र SaaS अनुप्रयोग र UI कम्पोनेंटहरूमा काम गरेको छु। अहिले म व्यापारमा एआईको उपयोग गर्नको लागि मास्टर अध्ययन गर्दै छु। म नयाँ चुनौतीहरू स्वीकार गर्न र व्यापारको वृद्धिमा सहयोग गर्न चाहन्छु।",
     bio: "म फ्रन्टएन्ड विकासकर्ता हुँ, जसले React, JavaScript, TypeScript, HTML, र CSS मा ३+ वर्षको अनुभव संग काम गरिरहेको छु। Frosmo Limited मा म SaaS अनुप्रयोगहरू र UI कम्पोनेन्टहरू विकास गर्दैछु। म डिबगिङ, CI/CD, र Cypress संग अन्त्यदेखि अन्त्य परीक्षणमा दक्ष छु। म नयाँ चुनौतीहरू समाधान गर्न र आफ्नो विशेषज्ञता योगदान गर्न उत्सुक छु।",
     frosmo: "👨‍💻 गतिशील, डाटा-चालित इन्टरफेस र पुनः प्रयोग गर्न सकिने कम्पोनेन्टहरू निर्माण गर्दै, UI/UX सुधार गर्दै, र Agile टोलीहरूसँग सहकार्य गर्दै।",

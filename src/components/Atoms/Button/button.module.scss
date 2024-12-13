@@ -1,27 +1,24 @@
-@import "../../../variables.scss"; // Import your theme variables
+@import "../../../variables.scss";
 
-// Button color variables
-$primary-background: #4CAF50; // Green
-$primary-text-color: #FFFFFF; // White
-$primary-hover-background: #45a049; // Darker green for hover
+$primary-background: #4CAF50;
+$primary-text-color: #FFFFFF;
+$primary-hover-background: #45a049;
 
-$secondary-background: #ab9f9f5e; // Blue
-$secondary-text-color: #FFFFFF; // White
-$secondary-hover-background: #989ca0; // Darker blue for hover
+$secondary-background: #ab9f9f5e;
+$secondary-text-color: #FFFFFF;
+$secondary-hover-background: #8b81815e;
 
-$outline-border-color: #FFC107; // Yellow
-$outline-text-color: #FFC107; // Yellow
-$outline-hover-background: #FFC107; // Yellow on hover
+$outline-border-color: #FFC107;
+$outline-text-color: #FFC107;
+$outline-hover-background: #FFC107;
 
-$disabled-background: #D3D3D3; // Light gray
-$disabled-text-color: #A9A9A9; // Darker gray
+$disabled-background: #D3D3D3;
+$disabled-text-color: #A9A9A9;
 
-// Box shadow color generator based on button color
-$primary-box-shadow: rgba(56, 129, 58, 0.5); // Light green shadow for primary button
-$secondary-box-shadow: rgba(106, 103, 103, 0.5); // Light blue shadow for secondary button
-$outline-box-shadow: rgba(255, 193, 7, 0.5); // Light yellow shadow for outline button
+$primary-box-shadow: rgba(56, 129, 58, 0.5);
+$secondary-box-shadow: rgba(106, 103, 103, 0.5);
+$outline-box-shadow: rgba(255, 193, 7, 0.5);
 
-// Button Styles
 .button {
   width: 100%;
   font-size: 1rem;
@@ -34,13 +31,13 @@ $outline-box-shadow: rgba(255, 193, 7, 0.5); // Light yellow shadow for outline 
   animation: scaleIn .4s forwards;
   animation-duration: .3s;
 
-  // Default box shadow for button
-  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1); // Subtle shadow for all buttons
+
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1);
 
   &--primary {
     background-color: $primary-background;
     color: inherit;
-    box-shadow: 0 2px 2px rgba(42, 93, 44, 0.7); // Darker shadow on hover
+    box-shadow: 0 2px 2px rgba(42, 93, 44, 0.7);
     
 
     &:hover {
@@ -53,7 +50,7 @@ $outline-box-shadow: rgba(255, 193, 7, 0.5); // Light yellow shadow for outline 
   &--secondary {
     background-color: $secondary-background;
     color: inherit;
-    box-shadow: 0 2px 2px rgba(78, 72, 72, 0.7); // Darker shadow on hover
+    box-shadow: 0 2px 2px rgba(78, 72, 72, 0.7);
     
 
     &:hover {
@@ -72,7 +69,7 @@ $outline-box-shadow: rgba(255, 193, 7, 0.5); // Light yellow shadow for outline 
     &:hover {
       background-color: $outline-hover-background;
       color: inherit;
-      box-shadow: 0 4px 8px rgba(255, 193, 7, 0.7); // Darker shadow on hover
+      box-shadow: 0 4px 8px rgba(255, 193, 7, 0.7);
     }
   }
 
