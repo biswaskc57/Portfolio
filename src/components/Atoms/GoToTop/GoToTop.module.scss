@@ -1,3 +1,4 @@
+@use '../../../variables.scss' as *;
 .goToTop {
     display: flex;
     justify-content: center;
@@ -19,8 +20,8 @@
   
     .arrow {
         font-size: 35px;
-        color: white;
-        background: #2a6654;
+        color: inherit;
+        background: $h3-color;
         border-radius: 50%;
         padding: 15px;
         animation: wave-pop 3s ease-in-out infinite;

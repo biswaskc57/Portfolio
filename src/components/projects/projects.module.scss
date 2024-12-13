@@ -18,8 +18,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  width: 100%;
-  max-width: 1200px;
+  width: 80%;
 }
 
 .scrollButton {
@@ -28,7 +27,7 @@
   font-size: 1.75rem;
   font-weight: 600;
   color: inherit;
-  padding: 10px 20px;
+  padding: 20px;
   transition: all 0.3s ease-in-out;
   position: absolute;
   top: 50%;
@@ -46,11 +45,11 @@
   }
 
   &.left {
-    left: -50px;
+    left: -5px;
   }
 
   &.right {
-    right: 5px;
+    right: 30px;
   }
 
   i {
@@ -64,7 +63,7 @@
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
-  gap: 20px;
+  gap: 2em;
   padding: 10px;
   width: 100%;
   max-width: calc(100% - 80px);
@@ -83,14 +82,14 @@
 }
 
 .projectCard {
-  min-width: 300px;
-  max-width: 300px;
+  box-shadow: $box-shadow-color;
+  opacity: 0.9;
+  cursor: pointer;
+  min-width: 15em;
+  max-width: 15em;
   flex-shrink: 0;
-  border: 1px solid #f6f6f6;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
   height: 480px;
   transform: translateX(0);
   opacity: 1;
@@ -105,14 +104,12 @@
   /* Animation for projects sliding in */
   &.slide-in {
     transform: translateX(100%);
-    opacity: 1;
   }
 
   &:hover {
-    box-shadow: $box-shadow-color;
-    opacity: 0.9;
-    cursor: pointer;
-    scale: 1.01;
+    box-shadow: $box-hover-shadow-color;
+    scale: 1.02;
+    opacity: 1;
   }
 }
 
@@ -176,12 +173,14 @@
   }
 
   .projectsSlider {
-    gap: 10px;
+    gap: 2em;
   }
 
   .projectCard {
-    min-width: 300px; /* Reduce card size on mobile */
-    max-width: 300px; /* Adjust card size on mobile */
+    min-width: 13em; /* Reduce card size on mobile */
+    max-width: 13em; /* Adjust card size on mobile */
     height: auto; /* Allow the card height to adjust */
   }
+
+  
 }

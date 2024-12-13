@@ -6,7 +6,6 @@ import About from './components/About/About';
 import Projects from './components/projects/Projects';
 import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
-import Contact from './components/Contact/Contact';
 import GoToTop from './components/Atoms/GoToTop/GoToTop';
 import ThemeToggle from './components/Atoms/ToggleButton/ToggleButton';
 import LanguageSwitcher from './components/Translate/LanguageSwitcher';
@@ -19,7 +18,6 @@ interface SectionRefs {
   intro: React.RefObject<HTMLDivElement>;
   projects: React.RefObject<HTMLDivElement>;
   experience: React.RefObject<HTMLDivElement>;
-  contact: React.RefObject<HTMLDivElement>;
 }
 
 const App: React.FC = () => {
@@ -30,7 +28,6 @@ const App: React.FC = () => {
     intro: React.createRef<HTMLDivElement>(),
     projects: React.createRef<HTMLDivElement>(),
     experience: React.createRef<HTMLDivElement>(),
-    contact: React.createRef<HTMLDivElement>(),
   });
 
   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
@@ -48,13 +45,13 @@ const App: React.FC = () => {
   };
 
   useEffect(() => {
-    const { about, intro, projects, experience, contact } = sectionRefs.current;
+    const { about, intro, projects, experience } = sectionRefs.current;
 
     const observer = new IntersectionObserver(handleIntersection, {
       threshold: 0.5,
     });
 
-    const pages = [about, intro, projects, experience, contact];
+    const pages = [about, intro, projects, experience];
 
     pages.forEach((ref) => {
       if (ref.current) observer.observe(ref.current);
@@ -88,9 +85,6 @@ const App: React.FC = () => {
         </div>
         <div id="about" ref={sectionRefs.current.about}>
           <About />
-        </div>
-        <div id="contact" ref={sectionRefs.current.contact}>
-          <Contact />
         </div>
         <GoToTop isVisible={isGoToTopSectionActive} />
         <Footer />

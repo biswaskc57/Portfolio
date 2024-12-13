@@ -4,16 +4,16 @@ button {
     background-color: inherit;
     border: 1px solid;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 10px 0px;
     font-size: 1rem;
     font-family: monospace;
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
     margin-top: 10px;
-    margin-left: 10px;
+    // margin-left: 10px;
   
     &:hover {
-      box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    //   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -30,6 +30,7 @@ button {
     pointer-events: auto; /* Allows interaction with this layer */
     backdrop-filter: blur(12px); 
     transform: scale(1.1);
+    padding: 0 20px;
 }
 
 .lightTheme {
@@ -70,7 +71,7 @@ button {
 }
 
 .selectedLanguage {
-    background-color: #C2E5D3 !important;
+    background-color:$h4-hover-color !important;
 }
 
 .select {

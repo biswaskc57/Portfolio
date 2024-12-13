@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
     const slider = sliderRef.current;
     if (!slider) return;
 
-    const scrollAmount = direction === "left" ? -365 : 365;
+    const scrollAmount = direction === "left" ? -280 : 280;
     slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
 
@@ -105,13 +105,13 @@ const Projects: React.FC = () => {
       <div className={styles.sliderContainer}>
         {showLeftButton && (
           <button
-            className={`${styles.scrollButton} `}
+            className={`${styles.scrollButton} ${styles.left}`}
             onClick={() => {
               handleScroll("left");
               updateButtonVisibility();
             }}
           >
-            <i className={`fa-solid fa-chevron-left ${styles.left}`}></i>
+            <i className={`fa-solid fa-chevron-left`}></i>
           </button>
         )}
         <div className={styles.projectsSlider} ref={sliderRef}>
@@ -121,12 +121,12 @@ const Projects: React.FC = () => {
               key={index}
               onClick={() => handleCardClick(project.link)}
             >
-              <h3 className={styles.projectTitle}>{project.name}</h3>
               <img
                 src={project.image}
                 alt={project.name}
                 className={styles.projectImage}
               />
+              <h3 className={styles.projectTitle}>{project.name}</h3>
               <p className={styles.description}>{project.description}</p>
               <div className={styles.stack}>
                 {project.stacks.map((stack, index) => (

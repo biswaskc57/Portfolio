@@ -25,11 +25,11 @@
   align-items: flex-start;
   justify-content: space-around;
   cursor: pointer;
-  box-shadow: $box-shadow-color;
+  box-shadow: $box-shadow-color ;
 }
 
 .info:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: $button-box-shadow;
   transform: scale(1.01);
 }
 .duration {
