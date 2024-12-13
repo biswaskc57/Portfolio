@@ -1,7 +1,31 @@
 @import "../../../variables.scss"; // Import your theme variables
 
-.button {
+// Button color variables
+$primary-background: #4CAF50; // Green
+$primary-text-color: #FFFFFF; // White
+$primary-hover-background: #45a049; // Darker green for hover
+$primary-hover-text-color: #FFFFFF; // White
 
+$secondary-background: #008CBA; // Blue
+$secondary-text-color: #FFFFFF; // White
+$secondary-hover-background: #007bb5; // Darker blue for hover
+$secondary-hover-text-color: #FFFFFF; // White
+
+$outline-background: transparent;
+$outline-border-color: #FFC107; // Yellow
+$outline-text-color: #FFC107; // Yellow
+$outline-hover-background: #FFC107; // Yellow on hover
+$outline-hover-text-color: #FFFFFF; // White text on hover
+
+$disabled-background: #D3D3D3; // Light gray
+$disabled-text-color: #A9A9A9; // Darker gray
+$disabled-border-color: #A9A9A9; // Border color
+$disabled-hover-background: #D3D3D3; // Same gray on hover
+$disabled-hover-text-color: #A9A9A9; // Same gray text on hover
+
+// Button Styles
+.button {
+  width: 100%;
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -11,40 +35,40 @@
   box-shadow: $button-box-shadow;
 
   &--primary {
-    background-color: $h2-color;
-    color: $light-font-color;
+    background-color: $primary-background;
+    color: $primary-text-color;
 
     &:hover {
-      background-color: $h4-hover-color;
-      color: $dark-font-color;
+      background-color: $primary-hover-background;
+      color: $primary-hover-text-color;
     }
   }
 
   &--secondary {
-    background-color: $h3-color;
-    color: $light-font-color;
+    background-color: $secondary-background;
+    color: $secondary-text-color;
 
     &:hover {
-      background-color: $h4-hover-color;
-      color: $dark-font-color;
+      background-color: $secondary-hover-background;
+      color: $secondary-hover-text-color;
     }
   }
 
   &--outline {
-    background-color: transparent;
-    border: 2px solid $h3-color;
-    color: $h3-color;
+    background-color: $outline-background;
+    border: 2px solid $outline-border-color;
+    color: $outline-text-color;
 
     &:hover {
-      background-color: $h3-hover-color;
-      color: $light-font-color;
+      background-color: $outline-hover-background;
+      color: $outline-hover-text-color;
     }
   }
 
   &--disabled,
   &--disabled:hover {
-    background-color: $light-accent-color;
-    color: $dark-font-color;
+    background-color: $disabled-background;
+    color: $disabled-text-color;
     cursor: not-allowed;
     box-shadow: none;
   }
