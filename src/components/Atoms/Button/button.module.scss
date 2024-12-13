@@ -4,24 +4,22 @@
 $primary-background: #4CAF50; // Green
 $primary-text-color: #FFFFFF; // White
 $primary-hover-background: #45a049; // Darker green for hover
-$primary-hover-text-color: #FFFFFF; // White
 
-$secondary-background: #008CBA; // Blue
+$secondary-background: #ab9f9f5e; // Blue
 $secondary-text-color: #FFFFFF; // White
-$secondary-hover-background: #007bb5; // Darker blue for hover
-$secondary-hover-text-color: #FFFFFF; // White
+$secondary-hover-background: #989ca0; // Darker blue for hover
 
-$outline-background: transparent;
 $outline-border-color: #FFC107; // Yellow
 $outline-text-color: #FFC107; // Yellow
 $outline-hover-background: #FFC107; // Yellow on hover
-$outline-hover-text-color: #FFFFFF; // White text on hover
 
 $disabled-background: #D3D3D3; // Light gray
 $disabled-text-color: #A9A9A9; // Darker gray
-$disabled-border-color: #A9A9A9; // Border color
-$disabled-hover-background: #D3D3D3; // Same gray on hover
-$disabled-hover-text-color: #A9A9A9; // Same gray text on hover
+
+// Box shadow color generator based on button color
+$primary-box-shadow: rgba(56, 129, 58, 0.5); // Light green shadow for primary button
+$secondary-box-shadow: rgba(106, 103, 103, 0.5); // Light blue shadow for secondary button
+$outline-box-shadow: rgba(255, 193, 7, 0.5); // Light yellow shadow for outline button
 
 // Button Styles
 .button {
@@ -32,36 +30,49 @@ $disabled-hover-text-color: #A9A9A9; // Same gray text on hover
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: $button-box-shadow;
+  color: inherit;
+  animation: scaleIn .4s forwards;
+  animation-duration: .3s;
+
+  // Default box shadow for button
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.1); // Subtle shadow for all buttons
 
   &--primary {
     background-color: $primary-background;
-    color: $primary-text-color;
+    color: inherit;
+    box-shadow: 0 2px 2px rgba(42, 93, 44, 0.7); // Darker shadow on hover
+    
 
     &:hover {
       background-color: $primary-hover-background;
-      color: $primary-hover-text-color;
+      box-shadow: 0 4px 6px $primary-box-shadow;
+     
     }
   }
 
   &--secondary {
     background-color: $secondary-background;
-    color: $secondary-text-color;
+    color: inherit;
+    box-shadow: 0 2px 2px rgba(78, 72, 72, 0.7); // Darker shadow on hover
+    
 
     &:hover {
       background-color: $secondary-hover-background;
-      color: $secondary-hover-text-color;
+      box-shadow: 0 2px 2px $secondary-box-shadow;
+      
     }
   }
 
   &--outline {
-    background-color: $outline-background;
+    background-color: transparent;
     border: 2px solid $outline-border-color;
     color: $outline-text-color;
+    box-shadow: 0 4px 6px $outline-box-shadow;
 
     &:hover {
       background-color: $outline-hover-background;
-      color: $outline-hover-text-color;
+      color: inherit;
+      box-shadow: 0 4px 8px rgba(255, 193, 7, 0.7); // Darker shadow on hover
     }
   }
 

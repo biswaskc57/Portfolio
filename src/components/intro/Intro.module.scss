@@ -115,6 +115,7 @@
 .buttons a {
   flex: 1;  // Make each <a> take equal space
   display: block; // Ensure that <a> is a block-level element to take up the width
+  color: inherit;
 }
 
 
