@@ -1,7 +1,7 @@
 @import "../../../variables.scss"; // Import your theme variables
 
 .button {
-  font-family: Arial, sans-serif;
+
   font-size: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 5px;
@@ -10,26 +10,22 @@
   transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: $button-box-shadow;
 
-  &:hover {
-    box-shadow: $button-hover-box-shadow;
-  }
-
   &--primary {
-    background-color: $h1-color;
+    background-color: $h2-color;
     color: $light-font-color;
 
     &:hover {
-      background-color: $h1-hover-color;
+      background-color: $h4-hover-color;
       color: $dark-font-color;
     }
   }
 
   &--secondary {
-    background-color: $h2-color;
+    background-color: $h3-color;
     color: $light-font-color;
 
     &:hover {
-      background-color: $h2-hover-color;
+      background-color: $h4-hover-color;
       color: $dark-font-color;
     }
   }

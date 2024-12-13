@@ -22,8 +22,8 @@
 
 .introElements {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row-reverse;
+  // align-items: center;
   filter: brightness(1.3);
   text-align: center;
   width: 80%;
@@ -49,7 +49,7 @@
 @keyframes slideInImage {
   0% {
     opacity: 0;
-    transform: translateX(-100vw);
+    transform: translateX(100vw);
   }
   100% {
     opacity: 1;
@@ -59,28 +59,27 @@
 
 .typewriterText {
   z-index: 3;
-    margin: 20px;
-    border-radius: 15px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
+  margin: 20px;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .typewriterText.animateText {
   transform: translateX(0);
-  animation: slideInAndRotate 1.5s ease-out forwards;
+  animation: slideInFromLeft 1.5s ease-out forwards;
 }
 
-@keyframes slideInAndRotate {
+@keyframes slideInFromLeft {
   0% {
     opacity: 0;
-    transform: translateX(100vw) rotate(0deg);
+    transform: translateX(100vw);
   }
   100% {
     opacity: 1;
-    transform: translateX(0) rotate(0deg);
+    transform: translateX(0) ;
   }
 }
 
@@ -104,22 +103,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-button {
-  background-color: inherit;
-  border: 1px solid;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  font-family: monospace;
-  cursor: pointer;
-  transition: background-color 0.3s, border-color 0.3s;
-  margin-top: 10px;
-  margin-left: 10px;
-
-  &:hover {
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  }
 }
 
 /* Define the initial fade-in animation */
@@ -188,10 +171,5 @@ button {
 
   .profession {
     font-size: 1rem;
-  }
-
-  button {
-    font-size: 0.9rem;
-    padding: 8px 16px;
   }
 }

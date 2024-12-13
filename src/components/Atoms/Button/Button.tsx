@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import "./button.module.scss";
+import styles from "./button.module.scss"; // Use the 'styles' object to access the classes
 
 interface ButtonProps {
   variant?: "primary" | "secondary" | "outline" | "disabled";
@@ -19,15 +19,15 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   // Generate the button class names dynamically
   const buttonClass = classNames(
-    "button", // Always apply the base "button" class
-    `button--${variant}`, // Add the variant class, like button--primary
-    `button--${size}`, // Add the size class, like button--medium
-    { "button--disabled": disabled } // Add the disabled class conditionally
+    styles.button, // Use 'styles.button' for CSS Module class name
+    styles[`button--${variant}`], // Use dynamic classes for variant
+    styles[`button--${size}`], // Use dynamic classes for size
+    { [styles["button--disabled"]]: disabled } // Conditionally add the disabled class
   );
 
   return (
     <button
-      className={buttonClass} // Apply buttonClass directly
+      className={buttonClass} // Apply the generated class names
       onClick={onClick}
       disabled={disabled || variant === "disabled"}
     >
