@@ -42,7 +42,7 @@ const Navigation: React.FC = () => {
           <li key={link.id} onClick={()=>setSelectedNavItem(link.label)} className={`${selectedNavItem === link.label ? styles.selectedNavItem : ""}`}>
             <a href={`#${link.id}`}>
               <i className={`fas ${link.icon}`}></i>
-              <h1>{language.Navigation[link.label]}</h1>
+              <h3>{language.Navigation[link.label]}</h3>
             </a>
           </li>
         ))}

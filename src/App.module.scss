@@ -13,37 +13,37 @@ body{
 h1{
   //  text-transform: uppercase !important;
    text-decoration: none !important;
-   font-weight: 700;
-   letter-spacing: 0.1em;
-   font-size:x-large;
-   line-height: 1.6;
+   font-weight: 600;
+   letter-spacing: 0.07em;
+   font-size: 2.5em;
 }
 
 h2 {
   text-decoration: none !important;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  font-size: x-large;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: 1.8em;
 }
 
 h3 {
   text-decoration: none !important;
   font-weight: 600;
   letter-spacing: 0.06em;
-  font-size:large;
+  font-size: 1.5em;
 }
 
 h4 {
   text-decoration: none !important;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 0.05em;
-  font-size:small;
+  font-size: 1em;
 }
 
 p {
   line-height: 1.6;
-  letter-spacing: 0.06em;
-  font-size:medium;
+  letter-spacing: 0.04em;
+  font-size: 1.2rem;
+  font-weight: 200;
 }
 
 .appNav {
