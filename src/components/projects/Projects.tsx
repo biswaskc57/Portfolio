@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import styles from "./projects.module.scss";
 import { projects } from "../../data";
+import { useLanguage } from "../Contexts/LanguageContext";
 
 interface Project {
   name: string;
@@ -15,6 +16,8 @@ const Projects: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showLeftButton, setShowLeftButton] = useState(false);
   const [showRightButton, setShowRightButton] = useState(true);
+  const {language} = useLanguage();
+
 
   // Scroll handling for navigation buttons
   const handleScroll = (direction: string) => {
@@ -101,7 +104,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className={styles.projectsContainer}>
-      <h2>Projects</h2>
+      <h2>{language.Navigation.Projects}</h2>
       <div className={styles.sliderContainer}>
         {showLeftButton && (
           <button

@@ -7,7 +7,7 @@ const About: React.FC = () => {
   const { language } = useLanguage(); 
   return (
     <div className={styles.infoContainer}>
-      <h2>About Me</h2>
+      <h2><h2>{language.Navigation.About}</h2></h2>
       <div className={styles.myDetail}>
         <div 
           tabIndex={0}

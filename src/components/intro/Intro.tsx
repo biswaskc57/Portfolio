@@ -51,7 +51,7 @@ const Intro: React.FC = () => {
             </a>
             <a href="#" rel="noopener noreferrer" onClick={(e) => e.preventDefault()}>
               <Button onClick={toggleModal} variant="secondary">
-              Contacts
+                {language.Navigation.Contact}
               </Button>
             </a>
           </div>

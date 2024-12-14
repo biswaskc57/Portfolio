@@ -6,13 +6,6 @@ import styles from "./menu.module.scss";
 import LanguageSwitcher from "../Translate/LanguageSwitcher";
 import { useLanguage } from "../Contexts/LanguageContext";
 
-// Define the type for the nav items
-type NavLink = {
-  id: string;
-  label: string;
-  icon: string;
-};
-
 const HamburgerMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -37,11 +30,11 @@ const HamburgerMenu: React.FC = () => {
           <div className={styles.closeIcon} onClick={toggleMenu}>
             <i className="fa-solid fa-xmark"></i>
           </div>
-          {navItems.map((link: NavLink) => (
+          {navItems.map((link) => (
             <li key={link.id} className={link.label === "Home" ? styles.homeItem : ""}>
               <a href={`#${link.id}`} onClick={() => setIsOpen(false)}>
                 <i className={`fas ${link.icon} ${styles.icon}`}></i>
-                {link.label}
+                {language.Navigation[link.label]}
               </a>
             </li>
           ))}
