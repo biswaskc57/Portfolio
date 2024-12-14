@@ -29,17 +29,15 @@ const HamburgerMenu: React.FC = () => {
       </div>
       <nav className={`${styles.navMenu} ${isOpen ? styles.show : styles.hidden}`}>
         <ul>
+          <div className={styles.closeIcon} onClick={toggleMenu}>
+            <i className="fa-solid fa-xmark"></i>
+          </div>
           {navItems.map((link: NavLink) => (
             <li key={link.id} className={link.label === "Home" ? styles.homeItem : ""}>
               <a href={`#${link.id}`} onClick={() => setIsOpen(false)}>
                 <i className={`fas ${link.icon} ${styles.icon}`}></i>
                 {link.label}
               </a>
-              {link.label === "Home" && (
-                <div className={styles.closeIcon} onClick={toggleMenu}>
-                  <i className="fa-solid fa-xmark"></i>
-                </div>
-              )}
             </li>
           ))}
         </ul>

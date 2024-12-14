@@ -3,7 +3,6 @@
   z-index: 15;
   top: 25px;
   left: 10px;
-  height: 40px;
   color: inherit; // Inherit text color
   background: inherit; // Inherit background color
 }
@@ -28,9 +27,8 @@
 
 .navMenu {
   position: absolute;
-  padding: 5px;
   width: 300px;
-  left: -15px;
+  left: -25px;
   height: 100vh;
   top: -15px;
   background: inherit; // Inherit background color
@@ -84,10 +82,10 @@
 
 .closeIcon {
   color: inherit;
-  font-size: 25px;
+  font-size: 30px;
   position: absolute;
-  right: 10px;
-  top: 60%;
+  right: 15px;
+  top: 30px;
   transform: translateY(-50%);
   cursor: pointer;
 }

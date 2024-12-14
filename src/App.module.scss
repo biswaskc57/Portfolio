@@ -116,6 +116,10 @@ p {
   @include darkTheme;
 }
 
+.app.darkTheme {
+  @include darkTheme;
+}
+
 #home,
 #about,
 #experience,

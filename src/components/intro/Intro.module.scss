@@ -4,7 +4,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 90vh;
+  max-height: 150vh;
   justify-content:space-around;
   background-size: contain;
   border-bottom: 4px solid transparent;
@@ -12,6 +13,7 @@
   background-clip: padding-box;
   animation: gradient-border 3s infinite alternate;
   padding: 20px; // Padding for mobile adjustments
+  position: relative;
   @include separator;
 }
 
@@ -90,6 +92,7 @@
 
 .name {
   color: $h4-color;
+  text-align: left;
 }
 
 .profession {
@@ -203,7 +206,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
     background-size: contain;
     border-bottom: 4px solid transparent;
     background-clip: padding-box;
