@@ -33,8 +33,8 @@ export interface Languages {
 
 export const languageStrings: LanguageStrings = {
   en: {
-    greeting: "Hello, I'm Biswas K C",
-    intro: "I'm a Web Developer with 3+ years of experience in React and TypeScript, focusing on SaaS applications and UI components. I'm currently studying AI for Business Transformation and excited to use AI to drive business innovation. I’m looking for new challenges where I can help companies grow using advanced technology.",
+    greeting: "Hi, my name is Biswas K C",
+    intro: "I'm a Web Developer with 3+ years in React and TypeScript, specializing in SaaS and UI components. Currently studying AI for Business Transformation, I aim to leverage AI to drive innovation and help businesses grow.",
     bio: "I’m a frontend developer with 3+ years of experience in React, JavaScript, TypeScript, HTML, and CSS. At Frosmo Limited, I specialize in developing SaaS applications and UI components, collaborating with cross-functional teams to deliver high-quality solutions. Proficient in debugging, CI/CD, and end-to-end testing with Cypress, I thrive in team environments and am passionate about continuous growth. I’m currently seeking a mid/senior-level frontend developer role to contribute my expertise and tackle innovative challenges.",
     frosmo: "👨‍💻 Building dynamic, data-driven interfaces and reusable components while enhancing UI/UX, collaborating in Agile teams, and delivering customer-focused solutions.",
     haagaHelia: "👨‍💻 Developed dynamic interfaces with React and TypeScript, optimized data management with GraphQL, and collaborated with Siili Solutions on a large-scale application using scalable AWS architecture.",

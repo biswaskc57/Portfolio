@@ -54,7 +54,6 @@ export const navItems: NavItem[] = [
   { id: "intro", label: "Home", icon: "fa-home" },
   { id: "experience", label: "Experience", icon: "fa-briefcase" },
   { id: "projects", label: "Projects", icon: "fa-diagram-project" },
-  { id: "contact", label: "Contact", icon: "fa-address-card" },
   { id: "about", label: "About", icon: "fa-user" },
 ];
 

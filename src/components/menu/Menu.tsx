@@ -32,12 +32,12 @@ const HamburgerMenu: React.FC = () => {
           {navItems.map((link: NavLink) => (
             <li key={link.id} className={link.label === "Home" ? styles.homeItem : ""}>
               <a href={`#${link.id}`} onClick={() => setIsOpen(false)}>
-                <i className={`fas ${link.icon}`}></i>
+                <i className={`fas ${link.icon} ${styles.icon}`}></i>
                 {link.label}
               </a>
               {link.label === "Home" && (
                 <div className={styles.closeIcon} onClick={toggleMenu}>
-                  <i className="fa-solid fa-xmark" style={{ fontSize: '24px', color: 'red' }}></i>
+                  <i className="fa-solid fa-xmark"></i>
                 </div>
               )}
             </li>

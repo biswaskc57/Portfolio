@@ -72,8 +72,8 @@ const App: React.FC = () => {
       <LanguageProvider>
         <Navigation />
         <ThemeToggle />
-        <LanguageSwitcher />
         <Menu />
+        <LanguageSwitcher />
         <div id="intro" ref={sectionRefs.current.intro}>
           <Intro />
         </div>

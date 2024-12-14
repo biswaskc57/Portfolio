@@ -164,7 +164,7 @@
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateX(-350px);
+    transform: translateY(+100px);
   }
   100% {
     opacity: 1;
@@ -199,14 +199,13 @@
 /* Mobile Responsive Styles */
 @media only screen and (max-width: 768px) {
   .introContainer {
+    top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 100vh;
     background-size: contain;
     border-bottom: 4px solid transparent;
-    background-size: 200% 100%;
     background-clip: padding-box;
     animation: gradient-border 3s infinite alternate;
     padding: 20px; // Padding for mobile adjustments
@@ -220,9 +219,6 @@
     text-align: center;
     width: 100%;
   }
-  .myImage {
-    height: 15rem;
-  }
 
   .profession {
     font-size: 1rem;
@@ -233,5 +229,12 @@
     flex-direction: column;
     align-self: center;
     gap: 10px;
+  }
+
+  .typewriterText {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
