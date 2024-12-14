@@ -33,7 +33,7 @@ export interface Languages {
 
 export const languageStrings: LanguageStrings = {
   en: {
-    greeting: "Hi, my name is Biswas K C",
+    greeting: "Hi, I am Biswas K C",
     intro: "I'm a Web Developer with 3+ years in React and TypeScript, specializing in SaaS and UI components. Currently studying AI for Business Transformation, I aim to leverage AI to drive innovation and help businesses grow.",
     bio: "I’m a frontend developer with 3+ years of experience in React, JavaScript, TypeScript, HTML, and CSS. At Frosmo Limited, I specialize in developing SaaS applications and UI components, collaborating with cross-functional teams to deliver high-quality solutions. Proficient in debugging, CI/CD, and end-to-end testing with Cypress, I thrive in team environments and am passionate about continuous growth. I’m currently seeking a mid/senior-level frontend developer role to contribute my expertise and tackle innovative challenges.",
     frosmo: "👨‍💻 Building dynamic, data-driven interfaces and reusable components while enhancing UI/UX, collaborating in Agile teams, and delivering customer-focused solutions.",
@@ -53,7 +53,7 @@ export const languageStrings: LanguageStrings = {
     },
   },
   fi: {
-    greeting: "Hei, minä olen Biswas K C",
+    greeting: "Hei, olen Biswas K C",
     intro: "Olen web-kehittäjä, jolla on yli 3 vuoden kokemus Reactista ja TypeScriptistä. Erikoistun SaaS-sovelluksiin ja käyttöliittymäkomponentteihin. Opiskelen tekoälyä liiketoiminnan kehittämiseksi ja etsin haasteita, joissa voin auttaa yrityksiä hyödyntämään teknologiaa kasvussa.",
     bio: "Olen frontend-kehittäjä, jolla on yli 3 vuoden kokemus Reactista, JavaScriptistä, TypeScriptistä, HTML:stä ja CSS:stä. Frosmo Limitedillä kehität SaaS-sovelluksia ja käyttöliittymäkomponentteja. Osaan virheenkorjauksen, CI/CD-putket ja testauksen Cypressillä. Etsin uusia mahdollisuuksia, joissa voin käyttää osaamistani ja kehittää itseäni.",
     frosmo: "👨‍💻 Rakentamassa dynaamisia, dataohjattuja käyttöliittymiä ja uudelleenkäytettäviä komponentteja, parantamassa UI/UX:ää, tekemässä yhteistyötä Agile-tiimien kanssa ja toimittamassa asiakaslähtöisiä ratkaisuja.",
