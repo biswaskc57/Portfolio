@@ -21,7 +21,7 @@ const Projects: React.FC = () => {
     const slider = sliderRef.current;
     if (!slider) return;
 
-    const scrollAmount = direction === "left" ? -280 : 280;
+    const scrollAmount = direction === "left" ? -345 : 345;
     slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
 

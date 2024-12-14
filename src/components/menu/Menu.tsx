@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import { navItems } from "../../data";
 
 import styles from "./menu.module.scss";
+import LanguageSwitcher from "../Translate/LanguageSwitcher";
+import { useLanguage } from "../Contexts/LanguageContext";
 
 // Define the type for the nav items
 type NavLink = {
@@ -14,7 +16,10 @@ type NavLink = {
 const HamburgerMenu: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
+  const {setIsModelOpen, isModelOpen, selectedLanguage, language} = useLanguage();
+
   const toggleMenu = () => setIsOpen((prev) => !prev);
+  const languageNav = {id: "language", label: "", icon:"fa-language" };
 
   return (
     <div className={styles.hamburgerMenu}>
@@ -40,8 +45,14 @@ const HamburgerMenu: React.FC = () => {
               </a>
             </li>
           ))}
+          <div className={styles.languageSection} key={languageNav.id} onClick={()=>{setIsModelOpen(!isModelOpen);}}> 
+            <i className={`fa ${languageNav.icon}`}> </i>
+            <div className={styles.languageText}>{language.languageTypes[selectedLanguage].toLocaleUpperCase()}</div>
+          </div>
         </ul>
+
       </nav>
+      <LanguageSwitcher />
     </div>
   );
 };

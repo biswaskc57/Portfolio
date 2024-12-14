@@ -91,6 +91,16 @@
   cursor: pointer;
 }
 
+.languageSection {
+  cursor: pointer;
+  margin: 15px 20px 20px 25px;
+  display: flex;
+  align-items: center;
+  .languageText {
+      margin: 0 6px;
+  }
+}
+
 @media (min-width: 550px) {
   .hamburgerMenu {
     display: none;

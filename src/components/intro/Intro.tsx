@@ -65,7 +65,7 @@ const Intro: React.FC = () => {
           <i
             className="fas fa-caret-down"
             onClick={() => {
-              document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+              document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" });
             }}
           ></i>
         </Tooltip>
