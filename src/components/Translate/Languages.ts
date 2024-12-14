@@ -54,7 +54,7 @@ export const languageStrings: LanguageStrings = {
   },
   fi: {
     greeting: "Hei, olen Biswas K C",
-    intro: "Olen web-kehittäjä, jolla on yli 3 vuoden kokemus Reactista ja TypeScriptistä. Erikoistun SaaS-sovelluksiin ja käyttöliittymäkomponentteihin. Opiskelen tekoälyä liiketoiminnan kehittämiseksi ja etsin haasteita, joissa voin auttaa yrityksiä hyödyntämään teknologiaa kasvussa.",
+    intro: "Olen web-kehittäjä, jolla on yli 3 vuoden kokemus Reactista ja TypeScriptistä. Erikoistun SaaS-sovelluksiin ja käyttöliittymiin. Opiskelen tekoälyä liiketoiminnan kehittämiseen ja etsin haasteita, joissa voin auttaa yrityksiä hyödyntämään teknologiaa.",
     bio: "Olen frontend-kehittäjä, jolla on yli 3 vuoden kokemus Reactista, JavaScriptistä, TypeScriptistä, HTML:stä ja CSS:stä. Frosmo Limitedillä kehität SaaS-sovelluksia ja käyttöliittymäkomponentteja. Osaan virheenkorjauksen, CI/CD-putket ja testauksen Cypressillä. Etsin uusia mahdollisuuksia, joissa voin käyttää osaamistani ja kehittää itseäni.",
     frosmo: "👨‍💻 Rakentamassa dynaamisia, dataohjattuja käyttöliittymiä ja uudelleenkäytettäviä komponentteja, parantamassa UI/UX:ää, tekemässä yhteistyötä Agile-tiimien kanssa ja toimittamassa asiakaslähtöisiä ratkaisuja.",
     haagaHelia: "👨‍💻 Kehitti dynaamisia käyttöliittymiä Reactilla ja TypeScriptillä, optimoi datanhallintaa GraphQL:llä ja teki yhteistyötä Siili Solutionsin kanssa laajamittaisessa sovellusprojektissa käyttäen skaalautuvaa AWS-arkkitehtuuria.",

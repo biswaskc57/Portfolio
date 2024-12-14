@@ -86,8 +86,8 @@
   box-shadow: $box-shadow-color;
   opacity: 0.9;
   cursor: pointer;
-  min-width: 17em;
-  max-width: 17em;
+  min-width: 16em;
+  max-width: 16em;
   flex-shrink: 0;
   border-radius: 8px;
   padding: 20px;
@@ -178,8 +178,8 @@
   }
 
   .projectCard {
-    min-width: 16em; /* Reduce card size on mobile */
-    max-width: 16em; /* Adjust card size on mobile */
+    min-width: 15.5em; /* Reduce card size on mobile */
+    max-width: 15.5em; /* Adjust card size on mobile */
     height: auto; /* Allow the card height to adjust */
   }
 
