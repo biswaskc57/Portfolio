@@ -83,18 +83,16 @@
 }
 
 .projectCard {
-  box-shadow: $box-shadow-color;
-  opacity: 0.9;
-  cursor: pointer;
-  min-width: 16em;
-  max-width: 16em;
-  flex-shrink: 0;
-  border-radius: 8px;
-  padding: 20px;
-  height: 480px;
-  transform: translateX(0);
-  opacity: 1;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  border-radius: 3px;
+    box-shadow: 3px 2px 3px 3px rgba(108, 65, 65, .302);
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 480px;
+    max-width: 16em;
+    min-width: 16em;
+    padding: 20px;
+    transform: translateX(0);
+    transition: transform .5s ease-out, opacity .5s ease-out;
 
   /* Animation for projects sliding out */
   &.slide-out {
@@ -109,7 +107,7 @@
 
   &:hover {
     box-shadow: $box-hover-shadow-color;
-    scale: 1.02;
+    scale: 1.04;
     opacity: 1;
   }
 }
