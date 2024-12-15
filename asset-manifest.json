@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.16adc46b.css",
-    "main.js": "/Portfolio/static/js/main.6a6f5a04.js",
+    "main.css": "/Portfolio/static/css/main.965fc234.css",
+    "main.js": "/Portfolio/static/js/main.a77419bf.js",
     "static/media/resume.pdf": "/Portfolio/static/media/resume.29ba972d6688f28d77f2.pdf",
     "static/media/react-native.png": "/Portfolio/static/media/react-native.49c37bcc86b8259bb642.png",
     "static/media/carshop.jpg": "/Portfolio/static/media/carshop.78161c921868e9549a27.jpg",
@@ -23,11 +23,11 @@
     "static/media/js.png": "/Portfolio/static/media/js.266bd9fb2663dcc057b4.png",
     "static/media/mysql.png": "/Portfolio/static/media/mysql.17ec01314179e9a8ab58.png",
     "index.html": "/Portfolio/index.html",
-    "main.16adc46b.css.map": "/Portfolio/static/css/main.16adc46b.css.map",
-    "main.6a6f5a04.js.map": "/Portfolio/static/js/main.6a6f5a04.js.map"
+    "main.965fc234.css.map": "/Portfolio/static/css/main.965fc234.css.map",
+    "main.a77419bf.js.map": "/Portfolio/static/js/main.a77419bf.js.map"
   },
   "entrypoints": [
-    "static/css/main.16adc46b.css",
-    "static/js/main.6a6f5a04.js"
+    "static/css/main.965fc234.css",
+    "static/js/main.a77419bf.js"
   ]
 }
