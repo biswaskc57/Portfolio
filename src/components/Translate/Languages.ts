@@ -9,6 +9,14 @@ export interface Description {
   tacoBell: string;
   Navigation: NavigationItems;
   languageTypes: Languages;
+  contact: contactDetails
+}
+
+export interface contactDetails {
+  name: string;
+  email: string;
+  phoneNumber: string;
+  text: string;
 }
 
 export interface NavigationItems {
@@ -51,6 +59,9 @@ export const languageStrings: LanguageStrings = {
       fi: "Finnish",
       ne: "Nepali",
     },
+    contact: {
+      name: "Name", email: "Email", phoneNumber: "Phone Number", text: "Text"
+    }
   },
   fi: {
     greeting: "Hei, olen Biswas K C",
@@ -71,6 +82,12 @@ export const languageStrings: LanguageStrings = {
       fi: "Suomi",
       ne: "Nepali",
     },
+    contact:{
+      name: "Nimi",
+      email: "Sähköposti",
+      phoneNumber: "Puhelinnumero",
+      text: "Teksti"
+    }
   },
   ne: {
     greeting: "म बिस्वास के सी हुँ|",
@@ -91,6 +108,13 @@ export const languageStrings: LanguageStrings = {
       fi: "फिनिश",
       ne: "नेपाली",
     },
+    contact: {
+      name: "नाम",
+      email: "इमेल",
+      phoneNumber: "फोन नम्बर",
+      text: "सन्देश"
+      
+    }
   },
 };
 

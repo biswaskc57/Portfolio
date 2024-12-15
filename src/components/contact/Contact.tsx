@@ -3,6 +3,7 @@ import emailjs from "emailjs-com";
 import { SubmitHandler, useForm } from "react-hook-form";
 import styles from "./contact.module.scss";
 import { countryCodes } from "../../data";
+import { useLanguage } from "../Contexts/LanguageContext";
 
 interface FormData {
   name: string;
@@ -20,6 +21,7 @@ const EMAILJS_USER_ID = process.env.REACT_APP_EMAILJS_USER_ID || "";
 const Contact: React.FC = () => {
   const { register, handleSubmit, formState: { errors }, setValue } = useForm<FormData>();
   const [phone, setPhone] = useState<string>("");
+  const {language} = useLanguage();
 
   const onSubmit: SubmitHandler<FormData> = (data) => {
     const { name, email, phone, subject, countryCode } = data;
@@ -34,7 +36,7 @@ const Contact: React.FC = () => {
     emailjs
       .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_USER_ID)
       .then(
-        (response) => {
+        () => {
           alert("Message sent! I'll get back to you ASAP!.");
         },
         (error) => {
@@ -59,17 +61,17 @@ const Contact: React.FC = () => {
   return (
     <div className={styles.contactFormContainer}>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        {renderLabel("Name", true)}
+        {renderLabel(language.contact.name, true)}
         <input
           id="name"
           type="text"
           {...register("name", { required: "Name is required" })}
-          placeholder="Your Name"
+          placeholder=""
           className={styles.input}
         />
         {errors.name && <p className={styles.error}>{errors.name.message}</p>}
 
-        {renderLabel("Email", true)}
+        {renderLabel(language.contact.email, true)}
         <input
           id="email"
           type="email"
@@ -80,12 +82,12 @@ const Contact: React.FC = () => {
               message: "Please enter a valid email address",
             },
           })}
-          placeholder="Your Email"
+          placeholder=""
           className={styles.input}
         />
         {errors.email && <p className={styles.error}>{errors.email.message}</p>}
 
-        {renderLabel("Phone Number", false)}
+        {renderLabel(language.contact.phoneNumber, false)}
         <div className={styles.phoneContainer}>
           <select
             {...register("countryCode")}
@@ -119,7 +121,7 @@ const Contact: React.FC = () => {
         </div>
         {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
 
-        {renderLabel("Subject", true)}
+        {renderLabel(language.contact.text, true)}
         <textarea
           id="subject"
           {...register("subject", {
@@ -129,7 +131,7 @@ const Contact: React.FC = () => {
               message: "Subject cannot exceed 500 characters",
             },
           })}
-          placeholder="How can I help? (up to 500 characters)"
+          placeholder=""
           className={styles.textarea}
         />
         {errors.subject && <p className={styles.error}>{errors.subject.message}</p>}
