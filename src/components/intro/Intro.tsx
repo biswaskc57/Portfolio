@@ -44,7 +44,7 @@ const Intro: React.FC = () => {
           <h1>
             <span className={styles.name}>{language.greeting}</span>
           </h1>
-          <p className={`${styles.text} ${styles.profession}`}>{language.intro}</p>
+          <div className={`${styles.text} ${styles.profession}`}>{language.intro}</div>
           <div className={styles.buttons}>
             <a href={Pdf} rel="noopener noreferrer" target="_blank">
               <Button variant="primary">Resume</Button>

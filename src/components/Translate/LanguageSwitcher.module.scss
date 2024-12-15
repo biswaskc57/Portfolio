@@ -10,12 +10,7 @@ button {
     cursor: pointer;
     transition: background-color 0.3s, border-color 0.3s;
     margin-top: 10px;
-    // margin-left: 10px;
-  
-    &:hover {
-    //   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    }
-  }
+}
 
 .selectorSection {
     position: fixed; /* Covers the viewport */
@@ -50,7 +45,7 @@ button {
 
 .closeButton {
     position: relative;
-    margin: 0px;
+    margin: 0px 10px 0 0;
     right: -20px;
     color: inherit !important;
     border: none;

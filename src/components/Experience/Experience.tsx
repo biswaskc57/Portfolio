@@ -38,7 +38,7 @@ const Experience: React.FC = () => {
   ];
   return (
     <div className={styles.experienceContainer}>
-      <h2><h2>{language.Navigation.Experience}</h2></h2>
+      <h2>{language.Navigation.Experience}</h2>
       <div className={styles.experience}>
         {experiences.map((exp, index) => (
           <div

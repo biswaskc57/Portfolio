@@ -61,10 +61,9 @@
 }
 
 .textSection {
-  box-shadow: $box-shadow-color;
+  box-shadow: 10px 10px 10px 10px #6c41414d;;
   z-index: 3;
   margin-top: 10px;
-  border: 2px solid gray;
   padding: 0 2em;
   display: flex;
   flex-direction: column;
@@ -78,7 +77,6 @@
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   overflow: hidden;
   padding-top: 40px;
-  box-shadow: $box-shadow-color;
 }
 
 .skillItem {
@@ -161,11 +159,6 @@
 
   .profession {
     font-size: 15px;
-  }
-
-  button {
-    font-size: 12px;
-    padding: 6px;
   }
 
   .myDetail {

@@ -7,7 +7,7 @@ const About: React.FC = () => {
   const { language } = useLanguage(); 
   return (
     <div className={styles.infoContainer}>
-      <h2><h2>{language.Navigation.About}</h2></h2>
+      <h2>{language.Navigation.About}</h2>
       <div className={styles.myDetail}>
         <div 
           tabIndex={0}
@@ -17,15 +17,16 @@ const About: React.FC = () => {
           <p className={styles.text}>
             {language.bio}
           </p>
+          <div className={styles.skillsGrid}>
+            {skills.map((skill, index) => (
+              <div key={index} className={styles.skillItem} style={{ "--i": index } as React.CSSProperties}>
+                <img src={skill.url} alt={skill.name} />
+                <p>{skill.name}</p>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className={styles.skillsGrid}>
-          {skills.map((skill, index) => (
-            <div key={index} className={styles.skillItem} style={{ "--i": index } as React.CSSProperties}>
-              <img src={skill.url} alt={skill.name} />
-              <p>{skill.name}</p>
-            </div>
-          ))}
-        </div>
+        
       </div>
     </div>
   );
