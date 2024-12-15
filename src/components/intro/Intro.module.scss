@@ -224,7 +224,6 @@
 
   .myImage {
     height: 20em;
-    width: 80vw;
   }
 
   .text {
@@ -249,5 +248,12 @@
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+  }
+}
+
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 450px) {
+  .myImage {
+    width: 80vw;
   }
 }

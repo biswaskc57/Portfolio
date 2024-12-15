@@ -17,8 +17,6 @@ const EMAILJS_SERVICE_ID = process.env.REACT_APP_EMAILJS_SERVICE_ID || "";
 const EMAILJS_TEMPLATE_ID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID || "";
 const EMAILJS_USER_ID = process.env.REACT_APP_EMAILJS_USER_ID || "";
 
-
-
 const Contact: React.FC = () => {
   const { register, handleSubmit, formState: { errors }, setValue } = useForm<FormData>();
   const [phone, setPhone] = useState<string>("");
@@ -36,9 +34,8 @@ const Contact: React.FC = () => {
     emailjs
       .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_USER_ID)
       .then(
-        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         (response) => {
-          alert("Message sent! We'll be in touch.");
+          alert("Message sent! I'll get back to you ASAP!.");
         },
         (error) => {
           console.error("Error sending email:", error);
@@ -53,10 +50,16 @@ const Contact: React.FC = () => {
     return formatted;
   };
 
+  const renderLabel = (text: string, required: boolean) => (
+    <label className={styles.label}>
+      {text} {required && <span className={styles.required}>*</span>}
+    </label>
+  );
+
   return (
     <div className={styles.contactFormContainer}>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        <label htmlFor="name" className={styles.label}>Name</label>
+        {renderLabel("Name", true)}
         <input
           id="name"
           type="text"
@@ -66,7 +69,7 @@ const Contact: React.FC = () => {
         />
         {errors.name && <p className={styles.error}>{errors.name.message}</p>}
 
-        <label htmlFor="email" className={styles.label}>Email</label>
+        {renderLabel("Email", true)}
         <input
           id="email"
           type="email"
@@ -82,8 +85,7 @@ const Contact: React.FC = () => {
         />
         {errors.email && <p className={styles.error}>{errors.email.message}</p>}
 
-        {/* Phone Number with Country Code */}
-        <label htmlFor="phone" className={styles.label}>Phone Number</label>
+        {renderLabel("Phone Number", false)}
         <div className={styles.phoneContainer}>
           <select
             {...register("countryCode")}
@@ -100,7 +102,6 @@ const Contact: React.FC = () => {
             id="phone"
             type="tel"
             {...register("phone", {
-              required: "Phone number is required",
               pattern: {
                 value: /^\d{3} \d{4} \d{3}$/,
                 message: "Please enter a valid phone number in the format 045 1234 567",
@@ -118,8 +119,7 @@ const Contact: React.FC = () => {
         </div>
         {errors.phone && <p className={styles.error}>{errors.phone.message}</p>}
 
-        {/* Subject */}
-        <label htmlFor="subject" className={styles.label}>Subject</label>
+        {renderLabel("Subject", true)}
         <textarea
           id="subject"
           {...register("subject", {
@@ -133,12 +133,11 @@ const Contact: React.FC = () => {
           className={styles.textarea}
         />
         {errors.subject && <p className={styles.error}>{errors.subject.message}</p>}
-        {/* Submit Button */}
+
         <button type="submit" className={styles.button}>Send Message</button>
       </form>
     </div>
   );
 };
-
 
 export default Contact;

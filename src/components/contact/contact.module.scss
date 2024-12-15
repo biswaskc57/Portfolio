@@ -9,6 +9,11 @@
   color: inherit;
 }
 
+.required {
+  color: red;
+  margin-left: 0.2rem;
+}
+
 .pageHeading {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -19,6 +24,7 @@
   border-radius: 8px;
   box-shadow: $box-shadow-color;
 }
+
 
 .heading {
   font-size: 1.5rem;
@@ -75,10 +81,17 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  width: 200px !important; 
+  input {
+    width: 120px !important; 
+  }
+}
+input {
+  width: 222px;
 }
 
 .countryCode {
-  width: 100px;
+  width: 95px;
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
