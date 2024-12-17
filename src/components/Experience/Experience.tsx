@@ -1,9 +1,7 @@
 import React from "react";
 import styles from "./experience.module.scss";
 import { useLanguage } from "../Contexts/LanguageContext";
-
-
-
+import Link from "../Link/Link";
 
 const Experience: React.FC = () => {
   const { language } = useLanguage(); 
@@ -44,22 +42,19 @@ const Experience: React.FC = () => {
           <div
             key={index}
             className={styles.info}
-            onClick={() =>
-              window.open(exp.url, "_blank", "noopener noreferrer")
-            }
           >
             <div className={styles.duration}><h3>{exp.duration}</h3></div>
             <div className={styles.detail}>
               <div>
                 <h3>
-                  {exp.role} ({exp.company})
+                  {exp.role} ({exp.company}) 
                 </h3>
-                <h4>{exp.location}</h4>
+                <h4>{exp.location}<Link href={exp.url} target = "_blank"></Link></h4>
               </div>
               <p>{exp.responsibility}</p>
               <div className={styles.technology}>
                 {exp.technologies.map((technology) => (
-                  <div key={technology}>{technology}</div>
+                  <div key={technology}> <code>{technology}</code></div>
                 ))}
               </div>
             </div>

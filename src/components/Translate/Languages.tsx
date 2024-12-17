@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '../Link/Link';
 
 // LanguageType for languages
 export type LanguageType = 'en' | 'fi' | 'ne';
@@ -47,6 +48,11 @@ export interface Languages {
   ne: string;
 }
 
+
+function HaagaHelia () : React.JSX.Element {
+  return (<Link href="https://www.haaga-helia.com" target = "_blank"></Link>);
+}
+
 // Example language data with JSX elements
 export const languageStrings: LanguageStrings = {
   en: {
@@ -54,10 +60,11 @@ export const languageStrings: LanguageStrings = {
     intro: (
       <div>
         <p>
-          I have over 3 years of professional experience in <code>React</code> and <code>TypeScript</code>, specializing in front-end development.
+          I have over 3 years of professional experience in <code>React</code> and <code>TypeScript</code>, 
+          specializing in front-end development.
         </p>
         <p>
-          I&apos;m a Master&apos;s student in AI for Business Transformation at Haaga-Helia University.
+          I&apos;m a Master&apos;s student in AI for Business Transformation at Haaga-Helia University {HaagaHelia()}.
         </p>
       </div>
     ),
@@ -93,7 +100,7 @@ export const languageStrings: LanguageStrings = {
           -teknologioista Frosmo Oy:ssä, ja erikoistun front-end-kehitykseen.
         </p>
         <p>
-          Olen Haaga-Helian AI for Business Transformation maisteriohjelman opiskelija.
+          Olen Haaga-Helian {HaagaHelia()} AI for Business Transformation maisteriohjelman opiskelija.
         </p>
       </div>
     ),
@@ -128,7 +135,7 @@ export const languageStrings: LanguageStrings = {
           मलाई <code>React</code> र <code>TypeScript</code> मा ३ वर्षभन्दा बढीको व्यावसायिक अनुभव छ, र म फ्रन्ट-एन्ड विकासमा विशेषज्ञता राख्छु।
         </p>
         <p>
-          म Haaga-Helia विश्वविद्यालयमा <code>AI for Business Transformation</code> मा मास्टरको अध्ययन गर्दैछु।
+          म Haaga-Helia {HaagaHelia()} विश्वविद्यालयमा AI for Business Transformation मा मास्टरको अध्ययन गर्दैछु।
         </p>
       </div>
     ),

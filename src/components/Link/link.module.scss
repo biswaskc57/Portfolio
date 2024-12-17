@@ -1,0 +1,25 @@
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; // Space between text and icon
+    text-decoration: none;
+    color: inherit; // Inherit color from parent
+    transition: color 0.3s ease;
+    margin-left: 5px;
+    &:hover {
+      color: #007bff; // Change color on hover
+    }
+  }
+  
+  .text {
+    font-size: 1rem;
+  }
+  
+  .icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .link:hover .icon {
+    transform: translateY(-2px); // Slight animation on hover
+  }
+  

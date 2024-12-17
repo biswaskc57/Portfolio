@@ -133,7 +133,7 @@ const Projects: React.FC = () => {
               <p className={styles.description}>{project.description}</p>
               <div className={styles.stack}>
                 {project.stacks.map((stack, index) => (
-                  <div key={index}>{stack}</div>
+                  <div key={index}><code>{stack}</code></div>
                 ))}
               </div>
             </div>

@@ -29,10 +29,6 @@
   box-shadow: $box-shadow-color;
 }
 
-.info:hover {
-  box-shadow: $button-box-shadow;
-  transform: scale(1.01);
-}
 .duration {
   flex: 1;
 }
@@ -73,8 +69,9 @@
 .info:hover h3,
 .info:hover h4,
 .info:hover .duration,
-.info:hover .technology div {
-  color: $h3-color;
+.info:hover .technology div,
+.info:hover .technology div code  {
+  color: $h4-color;
 }
 
 /* Media queries */
