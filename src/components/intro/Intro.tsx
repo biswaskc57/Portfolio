@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import styles from "./Intro.module.scss";
 import slush from "../../assets/Slush.jpg";
-import Pdf from "../../assets/resume.pdf";
+import Pdf from "../../assets/Biswas_KC_CV.pdf";
 
 import useOnElementVisible from "../Hooks/useOnElementVisible";
 import Tooltip from "../Atoms/Tooltip/Tooltip";

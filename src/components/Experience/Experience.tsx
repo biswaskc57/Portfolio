@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./experience.module.scss";
 import { useLanguage } from "../Contexts/LanguageContext";
-import Link from "../Link/Link";
+import Link from "../Atoms/Link/Link";
 
 const Experience: React.FC = () => {
   const { language } = useLanguage(); 
@@ -47,9 +47,10 @@ const Experience: React.FC = () => {
             <div className={styles.detail}>
               <div>
                 <h3>
-                  {exp.role} ({exp.company}) 
+                  {exp.role}<br></br>
                 </h3>
-                <h4>{exp.location}<Link href={exp.url} target = "_blank"></Link></h4>
+                <h4><Link href={exp.url} target = "_blank" showLink={true} iconSize="medium"> {exp.company} </Link></h4>
+                <h4>{exp.location}</h4>
               </div>
               <p>{exp.responsibility}</p>
               <div className={styles.technology}>

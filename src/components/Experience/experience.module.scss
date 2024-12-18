@@ -25,7 +25,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  cursor: pointer;
+  // cursor: pointer;
   box-shadow: $box-shadow-color;
 }
 
@@ -72,6 +72,10 @@
 .info:hover .technology div,
 .info:hover .technology div code  {
   color: $h4-color;
+}
+
+.detail div h4 a {
+  margin-left: 0px;
 }
 
 /* Media queries */
