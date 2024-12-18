@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.e4a31322.css",
-    "main.js": "/Portfolio/static/js/main.32e8af76.js",
-    "static/media/resume.pdf": "/Portfolio/static/media/resume.29ba972d6688f28d77f2.pdf",
+    "main.css": "/Portfolio/static/css/main.9853bb92.css",
+    "main.js": "/Portfolio/static/js/main.1bd71286.js",
     "static/media/react-native.png": "/Portfolio/static/media/react-native.49c37bcc86b8259bb642.png",
     "static/media/carshop.jpg": "/Portfolio/static/media/carshop.78161c921868e9549a27.jpg",
     "static/media/python.png": "/Portfolio/static/media/python.d8b377f05522bf35de36.png",
     "static/media/hhApp.png": "/Portfolio/static/media/hhApp.b436129bcf068bd0e214.png",
     "static/media/noPreview.jpg": "/Portfolio/static/media/noPreview.9e56ceb44210997fcb60.jpg",
     "static/media/React-icon.png": "/Portfolio/static/media/React-icon.8cf15fe9a546ffb69e65.png",
+    "static/media/Biswas_KC_CV.pdf": "/Portfolio/static/media/Biswas_KC_CV.b099dab99dbe750455c2.pdf",
     "static/media/express.png": "/Portfolio/static/media/express.f53f212d0d010d54c095.png",
     "static/media/Slush.jpg": "/Portfolio/static/media/Slush.8a0da5bf9c5f7c000d3f.jpg",
     "static/media/c-plus.png": "/Portfolio/static/media/c-plus.bbadf6a5b3a55ddac2ca.png",
@@ -23,11 +23,11 @@
     "static/media/js.png": "/Portfolio/static/media/js.266bd9fb2663dcc057b4.png",
     "static/media/mysql.png": "/Portfolio/static/media/mysql.17ec01314179e9a8ab58.png",
     "index.html": "/Portfolio/index.html",
-    "main.e4a31322.css.map": "/Portfolio/static/css/main.e4a31322.css.map",
-    "main.32e8af76.js.map": "/Portfolio/static/js/main.32e8af76.js.map"
+    "main.9853bb92.css.map": "/Portfolio/static/css/main.9853bb92.css.map",
+    "main.1bd71286.js.map": "/Portfolio/static/js/main.1bd71286.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4a31322.css",
-    "static/js/main.32e8af76.js"
+    "static/css/main.9853bb92.css",
+    "static/js/main.1bd71286.js"
   ]
 }
