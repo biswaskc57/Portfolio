@@ -1,5 +1,3 @@
-// toggleButton.module.scss
-
 @use '../../../variables.scss' as *;
 
 .themeToggle {
@@ -15,7 +13,6 @@
   box-shadow: inherit;
   padding: 5px;
   position: fixed;
-  top: 40px;
   right: 25px;
   z-index: 999;
   background: transparent;

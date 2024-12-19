@@ -6,97 +6,98 @@ import About from './components/About/About';
 import Projects from './components/projects/Projects';
 import Experience from './components/Experience/Experience';
 import Footer from './components/Footer/Footer';
-import Contact from './components/Contact/Contact';
-import Navigation from './components/Navigation/Navigation';
 import GoToTop from './components/Atoms/GoToTop/GoToTop';
 import ThemeToggle from './components/Atoms/ToggleButton/ToggleButton';
+import LanguageSwitcher from './components/Translate/LanguageSwitcher';
+import { LanguageProvider } from './components/Contexts/LanguageContext';
+import { ThemeProvider, useTheme } from './components/Contexts/ThemeContext';
+import Navigation from './components/Navigation/Navigation';
 
 interface SectionRefs {
   about: React.RefObject<HTMLDivElement>;
   intro: React.RefObject<HTMLDivElement>;
   projects: React.RefObject<HTMLDivElement>;
   experience: React.RefObject<HTMLDivElement>;
-  contact: React.RefObject<HTMLDivElement>;
 }
 
 const App: React.FC = () => {
   const [isGoToTopSectionActive, setIsGoToTopSectionActive] = useState<boolean>(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
 
   const sectionRefs = useRef<SectionRefs>({
     about: React.createRef<HTMLDivElement>(),
     intro: React.createRef<HTMLDivElement>(),
     projects: React.createRef<HTMLDivElement>(),
     experience: React.createRef<HTMLDivElement>(),
-    contact: React.createRef<HTMLDivElement>(),
   });
 
   const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-    // Use 'some' to stop checking once the condition is met
-    const isIntroVisible = entries.some((entry: IntersectionObserverEntry) => {
-      // Check if the entry is the 'intro' section and is intersecting
-      if (entry.target.id === "intro" && entry.isIntersecting) {
+    const isIntroVisible = entries.some((entry) => {
+      if (entry.target.id === 'intro' && entry.isIntersecting) {
         setIsGoToTopSectionActive(false);
-        return true; // Stop further checks
+        return true;
       }
-      return false; // Continue checking
+      return false;
     });
 
-    // If 'intro' is not visible, set the active state accordingly
     if (!isIntroVisible) {
       setIsGoToTopSectionActive(true);
     }
   };
 
   useEffect(() => {
-    const { about, intro, projects, experience, contact } = sectionRefs.current;
+    const { about, intro, projects, experience } = sectionRefs.current;
 
     const observer = new IntersectionObserver(handleIntersection, {
       threshold: 0.5,
     });
 
-    const pages = [about, intro, projects, experience, contact];
+    const pages = [about, intro, projects, experience];
 
     pages.forEach((ref) => {
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
+      if (ref.current) observer.observe(ref.current);
     });
 
     return () => {
       pages.forEach((ref) => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
+        if (ref.current) observer.unobserve(ref.current);
       });
     };
   }, []);
 
+  // Use the ThemeContext
+  const { isDarkMode } = useTheme();
 
   return (
     <div className={`${styles.app} ${isDarkMode ? styles.darkTheme : styles.lightTheme}`}>
-      <Navigation />
-      <ThemeToggle isDarkMode={isDarkMode}setIsDarkMode={setIsDarkMode}/> 
-      <Menu />
-      <div id="intro" ref={sectionRefs.current.intro}>
-        <Intro />
-      </div>
-      <div id="about" ref={sectionRefs.current.about}>
-        <About />
-      </div>
-      <div id="projects" ref={sectionRefs.current.projects}>
-        <Projects />
-      </div>
-      <div id="experience" ref={sectionRefs.current.experience}>
-        <Experience />
-      </div>
-      <div id="contact" ref={sectionRefs.current.contact}>
-        <Contact />
-      </div>
-      <GoToTop isVisible={isGoToTopSectionActive} />
-      <Footer />
+      <LanguageProvider>
+        <Navigation />
+        <ThemeToggle />
+        <Menu />
+        <LanguageSwitcher />
+        <div id="intro" ref={sectionRefs.current.intro}>
+          <Intro />
+        </div>
+        <div id="experience" ref={sectionRefs.current.experience}>
+          <Experience />
+        </div>
+        <div id="projects" ref={sectionRefs.current.projects}>
+          <Projects />
+        </div>
+        <div id="about" ref={sectionRefs.current.about}>
+          <About />
+        </div>
+        <GoToTop isVisible={isGoToTopSectionActive} />
+        <Footer />
+      </LanguageProvider>
     </div>
   );
 };
 
-export default App;
+// Wrap App with ThemeProvider
+const AppWithProviders: React.FC = () => (
+  <ThemeProvider>
+    <App />
+  </ThemeProvider>
+);
+
+export default AppWithProviders;

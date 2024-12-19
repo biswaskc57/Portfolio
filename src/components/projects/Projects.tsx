@@ -1,6 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import styles from "./projects.module.scss";
 import { projects } from "../../data";
+import { useLanguage } from "../Contexts/LanguageContext";
 
 interface Project {
   name: string;
@@ -15,13 +16,15 @@ const Projects: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showLeftButton, setShowLeftButton] = useState(false);
   const [showRightButton, setShowRightButton] = useState(true);
+  const {language} = useLanguage();
+
 
   // Scroll handling for navigation buttons
   const handleScroll = (direction: string) => {
     const slider = sliderRef.current;
     if (!slider) return;
 
-    const scrollAmount = direction === "left" ? -365 : 365;
+    const scrollAmount = direction === "left" ? -325 : 325;
     slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
 
@@ -101,7 +104,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className={styles.projectsContainer}>
-      <h2>Projects</h2>
+      <h2>{language.Navigation.Projects}</h2>
       <div className={styles.sliderContainer}>
         {showLeftButton && (
           <button
@@ -111,7 +114,7 @@ const Projects: React.FC = () => {
               updateButtonVisibility();
             }}
           >
-            <i className="fa-solid fa-circle-chevron-left"></i>
+            <i className={`fa-solid fa-chevron-left`}></i>
           </button>
         )}
         <div className={styles.projectsSlider} ref={sliderRef}>
@@ -121,16 +124,16 @@ const Projects: React.FC = () => {
               key={index}
               onClick={() => handleCardClick(project.link)}
             >
-              <h3 className={styles.projectTitle}>{project.name}</h3>
               <img
                 src={project.image}
                 alt={project.name}
                 className={styles.projectImage}
               />
+              <h3 className={styles.projectTitle}>{project.name}</h3>
               <p className={styles.description}>{project.description}</p>
               <div className={styles.stack}>
                 {project.stacks.map((stack, index) => (
-                  <div key={index}>{stack}</div>
+                  <div key={index}><code>{stack}</code></div>
                 ))}
               </div>
             </div>
@@ -144,7 +147,7 @@ const Projects: React.FC = () => {
               updateButtonVisibility();
             }}
           >
-            <i className="fa-solid fa-circle-chevron-right"></i>
+            <i className="fa-solid fa-chevron-right"></i>
           </button>
         )}
       </div>

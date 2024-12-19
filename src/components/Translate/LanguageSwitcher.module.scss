@@ -1,0 +1,85 @@
+@use '../../variables.scss' as *;
+
+button {
+    background-color: inherit;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 10px 0px;
+    font-size: 1rem;
+    font-family: monospace;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-top: 10px;
+}
+
+.selectorSection {
+    position: fixed; /* Covers the viewport */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centers content */
+    z-index: 9999; /* Ensure it's above other elements */
+    pointer-events: auto; /* Allows interaction with this layer */
+    backdrop-filter: blur(12px); 
+    transform: scale(1.1);
+    padding: 0 20px;
+}
+
+.lightTheme {
+    @include lightTheme;
+  }
+  
+.darkTheme {
+    @include darkTheme;
+  } 
+
+.selector {
+    position: relative; /* Required for pseudo-element layering */
+    padding: 20px;
+    border-radius: 15px;
+    z-index: 10; /* Ensure it is above the blur layer */
+}
+
+.closeButton {
+    position: relative;
+    margin: 0px 10px 0 0;
+    right: -20px;
+    color: inherit !important;
+    border: none;
+    background-color: inherit !important;
+    &:hover {
+        color: rgba(171, 159, 159, 0.369) !important;
+    }
+}
+
+.button {
+    margin: 10px;
+    background-color: inherit !important;
+    color: inherit !important;
+    border: none;
+    &:hover {
+        background-color: #ab9f9f5e !important;
+    }  
+}
+
+.selectedLanguage {
+    background-color:$h4-hover-color !important;
+}
+
+.select {
+    display: flex;
+}
+
+.options {
+    display:flex;
+    flex-direction: column;
+    margin: 10px;
+    color: inherit !important;
+    border: none;
+}
+.noScroll {
+    overflow: hidden; /* Disable scrolling on body */
+  }

@@ -19,19 +19,16 @@
 }
 
 .info {
+  gap: 15px;
   padding: 20px;
   margin: 30px;
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
-  cursor: pointer;
+  // cursor: pointer;
   box-shadow: $box-shadow-color;
 }
 
-.info:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.01);
-}
 .duration {
   flex: 1;
 }
@@ -54,8 +51,6 @@
 
 .detail p {
   margin-bottom: 10px;
-  text-align: justify;
-  line-height: 1.6;
 }
 
 .technology {
@@ -74,8 +69,13 @@
 .info:hover h3,
 .info:hover h4,
 .info:hover .duration,
-.info:hover .technology div {
-  color: #5ae0d2;
+.info:hover .technology div,
+.info:hover .technology div code  {
+  color: $h4-color;
+}
+
+.detail div h4 a {
+  margin-left: 0px;
 }
 
 /* Media queries */

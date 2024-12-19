@@ -5,6 +5,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: inherit;
+  color: inherit;
+}
+
+.required {
+  color: red;
+  margin-left: 0.2rem;
 }
 
 .pageHeading {
@@ -13,12 +20,11 @@
 }
 
 .contactFormContainer {
-  width: 100%;
-  max-width: 500px;
   padding: 2rem;
   border-radius: 8px;
   box-shadow: $box-shadow-color;
 }
+
 
 .heading {
   font-size: 1.5rem;
@@ -52,7 +58,7 @@
   margin-top: 1rem;
   padding: 0.75rem;
   font-size: 1rem;
-  background-color: #66c2a5;
+  background-color: $h3-color;
   border: 1px solid #66c2a5;
   border: none;
   border-radius: 4px;
@@ -75,10 +81,17 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  width: 200px !important; 
+  input {
+    width: 120px !important; 
+  }
+}
+input {
+  width: 222px;
 }
 
 .countryCode {
-  width: 100px;
+  width: 95px;
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -91,4 +104,40 @@
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: inherit;
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: inherit;
+  padding: 2rem;
+  border-radius: 8px;
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: $box-shadow-color;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
 }

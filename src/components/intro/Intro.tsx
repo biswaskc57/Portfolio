@@ -1,13 +1,16 @@
-import React, {useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./Intro.module.scss";
 import slush from "../../assets/Slush.jpg";
-import Pdf from "../../assets/resume.pdf";
+import Pdf from "../../assets/Biswas_KC_CV.pdf";
 
 import useOnElementVisible from "../Hooks/useOnElementVisible";
 import Tooltip from "../Atoms/Tooltip/Tooltip";
+import { useLanguage } from "../Contexts/LanguageContext";
+import Button from "../Atoms/Button/Button";
+import Contact from "../Contact/Contact";
+import Dialog from "../Atoms/Dialog/Dialog";
 
 const Intro: React.FC = () => {
-
   const imageRef = useRef<HTMLDivElement>(null);
   const textRef = useRef<HTMLDivElement>(null);
   const caretRef = useRef<HTMLDivElement>(null);
@@ -16,31 +19,66 @@ const Intro: React.FC = () => {
   const isTextVisible = useOnElementVisible(textRef);
   const isCaretVisible = useOnElementVisible(caretRef);
 
+  const { language } = useLanguage();
+
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  };
 
   return (
     <div className={styles.introContainer}>
       <div className={styles.introElements}>
-        <div ref={imageRef} id={"testElement"} className={`${styles.myElement} ${isImageVisible ? styles.animate : styles.hide}`}>
+        <div
+          ref={imageRef}
+          id="testElement"
+          className={`${styles.myElement} ${isImageVisible ? styles.animate : styles.hide}`}
+        >
           <img id={styles.slider} className={styles.myImage} src={slush} alt="profile" />
         </div>
-        <div ref={textRef} className={`${styles.typewriterText} ${isTextVisible ? styles.animateText : styles.hide}`}>
-          <p className={styles.name}>
-            Hello, <span>I&apos;m Biswas K C!</span>
-          </p>
-          <p className={styles.profession}>Mobile application and Web developer</p>
-          <a href={Pdf} rel="noopener noreferrer" target="_blank">
-            <button title="View resume">Resume</button>
-          </a>
+        <div
+          ref={textRef}
+          className={`${styles.typewriterText} ${isTextVisible ? styles.animateText : styles.hide}`}
+        >
+          <h1>
+            <span className={styles.name}>{language.greeting}</span>
+          </h1>
+          <div className={`${styles.text} ${styles.profession}`}>{language.intro}</div>
+          <div className={styles.buttons}>
+            <a href={Pdf} rel="noopener noreferrer" target="_blank">
+              <Button variant="primary">Resume</Button>
+            </a>
+            <a href="#" rel="noopener noreferrer" onClick={(e) => e.preventDefault()}>
+              <Button onClick={toggleModal} variant="secondary">
+                {language.Navigation.Contact}
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
-      <div ref={caretRef} className={`${isCaretVisible ? styles.animateCaret : styles.hideCaret}`}>
+      <div
+        ref={caretRef}
+        className={`${isCaretVisible ? styles.animateCaret : styles.hideCaret}`}
+      >
         <Tooltip message="Click here to scroll down" direction="top">
-          <i className="fas fa-caret-down" onClick={()=>{
-            // Add a logic here to go to about page on click
-            document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
-          }}></i>
+          <i
+            className="fas fa-caret-down"
+            onClick={() => {
+              document.getElementById("experience")?.scrollIntoView({ behavior: "smooth" });
+            }}
+          ></i>
         </Tooltip>
       </div>
+
+      {/* Using Dialog Component */}
+      <Dialog
+        isOpen={isModalOpen}
+        onClose={toggleModal}
+        title="Contact me"
+      >
+        <Contact />
+      </Dialog>
     </div>
   );
 };

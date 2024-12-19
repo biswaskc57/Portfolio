@@ -8,7 +8,7 @@
     width: 100%;
     z-index: 1000;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
     box-shadow: $box-shadow-color;
 }
@@ -16,7 +16,7 @@
 .appNav.hidden {
     transform: translateY(0);
     display: flex;
-    opacity: 0;
+    visibility: hidden;
 }
 
 .appNav.visible {
@@ -48,13 +48,23 @@
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.appNav li a:hover {
-    color: #008080;
+.selectedNavItem,.languageSection:hover, .appNav li a:hover {
+    color: $h3-color;
     transform: scale(1.1);
+    filter: brightness(1.1);
 }
 
 .appNav li a i {
     margin: 0 10px;
+}
+
+.languageSection {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    .languageText {
+        margin: 0 6px;
+    }
 }
 
 @media only screen and (min-width: 280px) and (max-width: 920px) {

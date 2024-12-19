@@ -1,12 +1,13 @@
 @use '../../variables' as *;
 
 .projectsContainer {
-  padding: 80px 0;
+  padding: 80px 12px;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: scroll;
+  @include separator;
 }
 
 .projectsContainer h2 {
@@ -18,18 +19,17 @@
   display: flex;
   align-items: center;
   position: relative;
-  width: 100%;
-  max-width: 1200px;
+  width: 80%;
 }
 
 .scrollButton {
-  background: none !important;
+  background: $h4-color; // Add gradient background
   border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #008080;
-  padding: 0 15px;
-  transition: color 0.3s;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: inherit;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -39,23 +39,32 @@
   justify-content: center;
 
   &:hover {
-    opacity: 0.8;
+    box-shadow: $button-box-shadow;
+    background: $h5-hover-color;
+    transform: translateY(-50%) scale(1.03);
+    cursor: pointer;
   }
 
   &.left {
-    left: -50px;
+    left: -5px;
   }
 
   &.right {
-    right: 5px;
+    right: 30px;
+  }
+
+  i {
+    font-size: 1.2rem;
+    pointer-events: none; // Prevent click on the icon
   }
 }
+
 
 .projectsSlider {
   display: flex;
   overflow-x: scroll;
   scroll-behavior: smooth;
-  gap: 20px;
+  gap: 2em;
   padding: 10px;
   width: 100%;
   max-width: calc(100% - 80px);
@@ -74,18 +83,16 @@
 }
 
 .projectCard {
-  min-width: 300px;
-  max-width: 300px;
-  flex-shrink: 0;
-  border: 1px solid #f6f6f6;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  height: 480px;
-  transform: translateX(0);
-  opacity: 1;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+  border-radius: 3px;
+    box-shadow: 3px 2px 3px 3px rgba(108, 65, 65, .302);
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 480px;
+    max-width: 16em;
+    min-width: 16em;
+    padding: 20px;
+    transform: translateX(0);
+    transition: transform .5s ease-out, opacity .5s ease-out;
 
   /* Animation for projects sliding out */
   &.slide-out {
@@ -96,29 +103,26 @@
   /* Animation for projects sliding in */
   &.slide-in {
     transform: translateX(100%);
-    opacity: 1;
   }
 
   &:hover {
-    box-shadow: $box-shadow-color;
-    opacity: 0.9;
-    cursor: pointer;
-    scale: 1.01;
+    box-shadow: $box-hover-shadow-color;
+    scale: 1.02;
+    opacity: 1;
   }
 }
 
 
 .projectImage {
   width: 100%;
-  height: 70%;
+  height: 15rem;
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 8px;
 }
 
 .projectTitle {
-  margin: 0;
-  font-size: 1.25rem;
+  margin: .5rem;
   text-align: center;
 }
 
@@ -129,7 +133,7 @@
 }
 
 .stack div {
-  background-color: #008080;
+  // background-color: $h4-hover-color;
   padding: 5px 8px;
   border-radius: 15px;
   font-size: 12px;
@@ -152,7 +156,7 @@
 }
 
 .paginationBullet.active {
-  background-color: #008080;
+  background-color: $h2-color;
   transform: scale(1.2);
 }
 
@@ -168,12 +172,17 @@
   }
 
   .projectsSlider {
-    gap: 10px;
+    gap: 2em;
   }
 
   .projectCard {
-    min-width: 300px; /* Reduce card size on mobile */
-    max-width: 300px; /* Adjust card size on mobile */
+    min-width: 15.5em; /* Reduce card size on mobile */
+    max-width: 15.5em; /* Adjust card size on mobile */
     height: auto; /* Allow the card height to adjust */
   }
+
+  .sliderContainer {
+    width: 100%;
+  }
+  
 }
