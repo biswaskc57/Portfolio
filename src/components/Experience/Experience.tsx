@@ -49,8 +49,8 @@ const Experience: React.FC = () => {
                 <h3>
                   {exp.role}<br></br>
                 </h3>
-                <h4><Link href={exp.url} target = "_blank" showLink={true} iconSize="medium"> {exp.company} </Link></h4>
-                <h4>{exp.location}</h4>
+                <h4><Link href={exp.url} target = "_blank" showLink={true} iconSize="x-small"> {exp.company} </Link></h4>
+                <h5>{exp.location}</h5>
               </div>
               <p>{exp.responsibility}</p>
               <div className={styles.technology}>

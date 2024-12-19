@@ -7,16 +7,17 @@ interface LinkProps {
   target?: "_blank" | "_self" | "_parent" | "_top";
   rel?: string;
   className?: string;
-  iconSize?: "small" | "medium" | "large";
+  iconSize?: "x-small"|"small" | "medium" | "large";
   showLink?: boolean;
 }
 
 const Link: React.FC<LinkProps> = (props) => {
   // Map iconSize to numeric dimensions
-  const sizeMap: Record<"small" | "medium" | "large", number> = {
+  const sizeMap: Record< "x-small"|"small" | "medium" | "large", number> = {
+    "x-small":12,
     small: 14,
     medium: 20,
-    large: 30,
+    large: 25,
   };
 
   const iconDimension = sizeMap[props.iconSize ?? "medium"];

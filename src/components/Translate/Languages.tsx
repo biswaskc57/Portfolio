@@ -50,7 +50,7 @@ export interface Languages {
 
 
 function HaagaHelia () : React.JSX.Element {
-  return (<Link href="https://www.haaga-helia.com" target = "_blank" showLink={true}> Haaga-Helia UAS</Link>);
+  return (<Link href="https://www.haaga-helia.com" target = "_blank" showLink={true} iconSize='small'> Haaga-Helia UAS</Link>);
 }
 
 // Example language data with JSX elements
@@ -100,7 +100,7 @@ export const languageStrings: LanguageStrings = {
           -teknologioista Frosmo Oy:ssä, ja erikoistun front-end-kehitykseen.
         </p>
         <p>
-          Olen Haaga-Helian {HaagaHelia()}n AI for Business Transformation maisteriohjelman opiskelija.
+          Olen {HaagaHelia()}n AI for Business Transformation maisteriohjelman opiskelija.
         </p>
       </div>
     ),
@@ -135,7 +135,7 @@ export const languageStrings: LanguageStrings = {
           मलाई <code>React</code> र <code>TypeScript</code> मा ३ वर्षभन्दा बढीको व्यावसायिक अनुभव छ, र म फ्रन्ट-एन्ड विकासमा विशेषज्ञता राख्छु।
         </p>
         <p>
-          म Haaga-Helia {HaagaHelia()} मा AI for Business Transformation मा मास्टरको अध्ययन गर्दैछु।
+          म {HaagaHelia()} मा AI for Business Transformation मा मास्टरको अध्ययन गर्दैछु।
         </p>
       </div>
     ),
