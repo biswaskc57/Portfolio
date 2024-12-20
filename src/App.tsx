@@ -86,7 +86,7 @@ const App: React.FC = () => {
         <div id="about" ref={sectionRefs.current.about}>
           <About />
         </div>
-        <GoToTop isVisible={isGoToTopSectionActive} />
+        <GoToTop isVisible={true} />
         <Footer />
       </LanguageProvider>
     </div>
