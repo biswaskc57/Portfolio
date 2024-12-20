@@ -14,9 +14,7 @@ const About: React.FC = () => {
           className={styles.textSection}>
           <p className={styles.text}>
           </p>
-          <p className={styles.text}>
-            {language.bio}
-          </p>
+          {language.bio}
           <div className={styles.skillsGrid}>
             {skills.map((skill, index) => (
               <div key={index} className={styles.skillItem} style={{ "--i": index } as React.CSSProperties}>

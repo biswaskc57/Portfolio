@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import styles from './App.module.scss';
 import Intro from './components/intro/Intro';
 import Menu from './components/menu/Menu';
@@ -21,7 +21,6 @@ interface SectionRefs {
 }
 
 const App: React.FC = () => {
-  const [isGoToTopSectionActive, setIsGoToTopSectionActive] = useState<boolean>(false);
 
   const sectionRefs = useRef<SectionRefs>({
     about: React.createRef<HTMLDivElement>(),
@@ -29,40 +28,6 @@ const App: React.FC = () => {
     projects: React.createRef<HTMLDivElement>(),
     experience: React.createRef<HTMLDivElement>(),
   });
-
-  const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-    const isIntroVisible = entries.some((entry) => {
-      if (entry.target.id === 'intro' && entry.isIntersecting) {
-        setIsGoToTopSectionActive(false);
-        return true;
-      }
-      return false;
-    });
-
-    if (!isIntroVisible) {
-      setIsGoToTopSectionActive(true);
-    }
-  };
-
-  useEffect(() => {
-    const { about, intro, projects, experience } = sectionRefs.current;
-
-    const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.5,
-    });
-
-    const pages = [about, intro, projects, experience];
-
-    pages.forEach((ref) => {
-      if (ref.current) observer.observe(ref.current);
-    });
-
-    return () => {
-      pages.forEach((ref) => {
-        if (ref.current) observer.unobserve(ref.current);
-      });
-    };
-  }, []);
 
   // Use the ThemeContext
   const { isDarkMode } = useTheme();
