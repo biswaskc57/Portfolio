@@ -83,7 +83,7 @@
 
 .projectCard {
   border-radius: 3px;
-    box-shadow: 3px 2px 3px 3px rgba(160, 159, 159, 0.302);
+    box-shadow: 3px 2px 3px 3px #a09f9f4d;
     cursor: pointer;
     flex-shrink: 0;
     height: 480px;
@@ -123,6 +123,9 @@
 .projectTitle {
   margin: .5rem;
   text-align: center;
+  :hover {
+    text-decoration: underline;
+  }
 }
 
 .stack {

@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from "react";
 import styles from "./projects.module.scss";
 import { projects } from "../../data";
 import { useLanguage } from "../Contexts/LanguageContext";
+import Link from "../Atoms/Link/Link";
 
 interface Project {
   name: string;
@@ -122,14 +123,13 @@ const Projects: React.FC = () => {
             <div
               className={styles.projectCard}
               key={index}
-              onClick={() => handleCardClick(project.link)}
             >
               <img
                 src={project.image}
                 alt={project.name}
                 className={styles.projectImage}
               />
-              <h3 className={styles.projectTitle}>{project.name}</h3>
+              <Link href={project.link}><p className={styles.projectTitle} onClick={() => handleCardClick(project.link)}>{project.name}</p></Link>
               <p className={styles.description}>{project.description}</p>
               <div className={styles.stack}>
                 {project.stacks.map((stack, index) => (
