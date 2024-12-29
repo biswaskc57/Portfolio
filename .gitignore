@@ -27,3 +27,5 @@ db.js
 
 # Environment Variables
 .env
+
+*storybook.log
