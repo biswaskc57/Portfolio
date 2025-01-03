@@ -4,7 +4,7 @@ button {
     background-color: inherit;
     border: 1px solid;
     border-radius: 5px;
-    padding: 10px 0px;
+    padding: 10px 20px;
     font-size: 1rem;
     font-family: monospace;
     cursor: pointer;
@@ -25,38 +25,30 @@ button {
     pointer-events: auto; /* Allows interaction with this layer */
     backdrop-filter: blur(12px); 
     transform: scale(1.1);
-    padding: 0 20px;
 }
-
-.lightTheme {
-    @include lightTheme;
-  }
-  
-.darkTheme {
-    @include darkTheme;
-  } 
 
 .selector {
     position: relative; /* Required for pseudo-element layering */
-    padding: 20px;
     border-radius: 15px;
     z-index: 10; /* Ensure it is above the blur layer */
+    padding: 30px 30px;
+    min-width: 275px;
 }
 
 .closeButton {
-    position: relative;
-    margin: 0px 10px 0 0;
-    right: -20px;
+    padding: 2px;
+    height: 24px;
     color: inherit !important;
-    border: none;
+    margin-left: 30px;
     background-color: inherit !important;
+    align-self: center;
+    margin-top: 0;
     &:hover {
         color: rgba(171, 159, 159, 0.369) !important;
     }
 }
 
 .button {
-    margin: 10px;
     background-color: inherit !important;
     color: inherit !important;
     border: none;
@@ -71,12 +63,13 @@ button {
 
 .select {
     display: flex;
+    justify-content: space-between;
 }
 
 .options {
     display:flex;
     flex-direction: column;
-    margin: 10px;
+    margin: 10px 0;
     color: inherit !important;
     border: none;
 }

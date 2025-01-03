@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    // overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  .panel {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: white;
+    background: linear-gradient(45deg, #6b5b95, #feb236);
+  }
+  
+  .panel_1 {
+    background: linear-gradient(45deg, #f6b5b5, #b5dff6);
+  }
+  
+  .panel_2 {
+    background: linear-gradient(45deg, #dff6b5, #f6d5b5);
+  }
+  
+  .panel_3 {
+    background: linear-gradient(45deg, #f6b5d6, #b5f6e1);
+  }
+  

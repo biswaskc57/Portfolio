@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./experience.module.scss";
 import { useLanguage } from "../Contexts/LanguageContext";
 import Link from "../Atoms/Link/Link";
+import AnimatedScroll from "../AnimatedScroll/AnimatedScroll";
 
 const Experience: React.FC = () => {
   const { language } = useLanguage(); 
@@ -35,34 +36,40 @@ const Experience: React.FC = () => {
     }
   ];
   return (
-    <div className={styles.experienceContainer}>
+        
+    <div className={`${styles.experienceContainer} `}>
       <h2>{language.Navigation.Experience}</h2>
       <div className={styles.experience}>
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className={styles.info}
-          >
-            <div className={styles.duration}><h3>{exp.duration}</h3></div>
-            <div className={styles.detail}>
-              <div>
-                <h3>
-                  {exp.role}<br></br>
-                </h3>
-                <h4><Link href={exp.url} target = "_blank" showLink={true} iconSize="x-small"> {exp.company} </Link></h4>
-                <h5>{exp.location}</h5>
-              </div>
-              <p>{exp.responsibility}</p>
-              <div className={styles.technology}>
-                {exp.technologies.map((technology) => (
-                  <div key={technology}> <code>{technology}</code></div>
-                ))}
+        <AnimatedScroll>
+          {experiences.map((exp, index) => (
+            
+            <div
+              key={index}
+              className={`${styles.info} box`}>
+            
+              <div className={styles.duration}><h3>{exp.duration}</h3></div>
+              <div className={styles.detail}>
+                <div>
+                  <h3>
+                    {exp.role}<br></br>
+                  </h3>
+                  <h4><Link href={exp.url} target = "_blank" showLink={true} iconSize="x-small"> {exp.company} </Link></h4>
+                  <h5>{exp.location}</h5>
+                </div>
+                <p>{exp.responsibility}</p>
+                <div className={styles.technology}>
+                  {exp.technologies.map((technology) => (
+                    <div key={technology}> <code>{technology}</code></div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+           
+          ))}
+        </AnimatedScroll>
       </div>
     </div>
+
   );
 };
 

@@ -12,6 +12,7 @@ import LanguageSwitcher from './components/Translate/LanguageSwitcher';
 import { LanguageProvider } from './components/Contexts/LanguageContext';
 import { ThemeProvider, useTheme } from './components/Contexts/ThemeContext';
 import Navigation from './components/Navigation/Navigation';
+import AnimatedScroll from './components/AnimatedScroll/AnimatedScroll';
 
 interface SectionRefs {
   about: React.RefObject<HTMLDivElement>;
@@ -39,9 +40,12 @@ const App: React.FC = () => {
         <ThemeToggle />
         <Menu />
         <LanguageSwitcher />
+       
         <div id="intro" ref={sectionRefs.current.intro}>
           <Intro />
         </div>
+        <AnimatedScroll>
+        </AnimatedScroll>
         <div id="experience" ref={sectionRefs.current.experience}>
           <Experience />
         </div>
@@ -52,6 +56,8 @@ const App: React.FC = () => {
           <About />
         </div>
         <GoToTop isVisible={true} />
+        <AnimatedScroll>
+        </AnimatedScroll>
         <Footer />
       </LanguageProvider>
     </div>

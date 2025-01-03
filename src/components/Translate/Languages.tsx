@@ -14,6 +14,7 @@ export interface Description {
   tacoBell: string;
   Navigation: NavigationItems;
   languageTypes: Languages;
+  languageSelector: string;
   contact: contactDetails;
 }
 
@@ -117,6 +118,7 @@ export const languageStrings: LanguageStrings = {
       fi: "Finnish",
       ne: "Nepali",
     },
+    languageSelector: "Select language",
     contact: {
       name: "Name",
       email: "Email",
@@ -188,6 +190,7 @@ export const languageStrings: LanguageStrings = {
       fi: "Suomi",
       ne: "Nepali",
     },
+    languageSelector: "Valitse kieli",
     contact: {
       name: "Nimi",
       email: "Sähköposti",
@@ -258,6 +261,7 @@ export const languageStrings: LanguageStrings = {
       fi: "फिनिश",
       ne: "नेपाली",
     },
+    languageSelector: "भाषा छान्नुहोस्",
     contact: {
       name: "नाम",
       email: "इमेल",

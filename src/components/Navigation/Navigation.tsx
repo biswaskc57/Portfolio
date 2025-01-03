@@ -48,7 +48,7 @@ const Navigation: React.FC = () => {
         ))}
         <div className={styles.languageSection} key={languageNav.id} onClick={()=>{setIsModelOpen(!isModelOpen);}}> 
           <i className={`fa ${languageNav.icon}`}> </i>
-          <div className={styles.languageText}>{language.languageTypes[selectedLanguage].toLocaleUpperCase()}</div>
+          <div className={styles.languageText}><h5>{language.languageTypes[selectedLanguage].toLocaleUpperCase()}</h5></div>
         </div>
       </ul>
 
