@@ -50,8 +50,8 @@ export interface Languages {
 }
 
 
-function HaagaHelia () : React.JSX.Element {
-  return (<Link href="https://www.haaga-helia.com" target = "_blank" showLink={true} iconSize='small'> Haaga-Helia UAS</Link>);
+function getUniversityLink (universityName: string) : React.JSX.Element {
+  return (<Link href="https://www.haaga-helia.com" target = "_blank" showLink={true} iconSize='small'> {universityName}</Link>);
 }
 
 // Example language data with JSX elements
@@ -65,7 +65,7 @@ export const languageStrings: LanguageStrings = {
           specializing in front-end development.
         </p>
         <p>
-          I&apos;m a Master&apos;s student in AI for Business Transformation at {HaagaHelia()}.
+        Currently, I am pursuing a Master&apos;s degree in AI for Business Transformation at {getUniversityLink("Haaga-helia")}.
         </p>
       </div>
     ),
@@ -135,7 +135,7 @@ export const languageStrings: LanguageStrings = {
           -teknologioista Frosmo Oy:ssä, ja erikoistun front-end-kehitykseen.
         </p>
         <p>
-          Olen {HaagaHelia()}n AI for Business Transformation maisteriohjelman opiskelija.
+          Opiskelen {getUniversityLink("Haaga-helia ammattikorkeakoulussa")} AI for Business Transformation maisteriohjelmassa.
         </p>
       </div>
     ),
@@ -206,7 +206,7 @@ export const languageStrings: LanguageStrings = {
           मलाई <code>React</code> र <code>TypeScript</code> मा ३ वर्षभन्दा बढीको व्यावसायिक अनुभव छ, र म फ्रन्ट-एन्ड विकासमा विशेषज्ञता राख्छु।
         </p>
         <p>
-          म {HaagaHelia()} मा AI for Business Transformation मा मास्टरको अध्ययन गर्दैछु।
+          म {getUniversityLink("Haaga-helia")} मा AI for Business Transformation मा मास्टरको अध्ययन गर्दैछु।
         </p>
       </div>
     ),
