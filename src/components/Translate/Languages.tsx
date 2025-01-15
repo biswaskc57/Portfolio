@@ -109,7 +109,7 @@ export const languageStrings: LanguageStrings = {
             AI, and project management to make meaningful contributions to organizations and help shape the future of technology-driven businesses.
         </p>
         <p>
-          <strong>Summer Job Aspirations:</strong> I am actively seeking summer job opportunities that align with my growing project management
+          I am actively seeking summer job opportunities that align with my growing project management
            aspirations. I am excited to take on roles where I can lead or support AI-driven projects, contributing to their successful delivery
             while collaborating with diverse teams. These experiences will allow me to combine my technical background with emerging leadership
              skills and explore the full potential of AI in project management.
@@ -197,7 +197,7 @@ export const languageStrings: LanguageStrings = {
              perustuvia liiketoimintaratkaisuja.
         </p>
         <p>
-          <strong>Kesätyöhaaveet:</strong> Etsin aktiivisesti kesätyömahdollisuuksia, jotka vastaavat kasvavia projektinhallintatavoitteitani.
+          Etsin aktiivisesti kesätyömahdollisuuksia, jotka vastaavat kasvavia projektinhallintatavoitteitani.
            Olen innostunut ottamaan vastaan rooleja, joissa voin johtaa tai tukea tekoälyhankkeita varmistaen niiden onnistuneen toteutuksen
             ja tekemällä yhteistyötä monien eri tiimien kanssa. Nämä kokemukset auttavat minua yhdistämään teknisen taustan ja nousevat
              johtamistaidot, samalla kun tutkin tekoälyn täyden potentiaalin projektinhallinnassa.
