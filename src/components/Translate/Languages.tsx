@@ -72,35 +72,51 @@ export const languageStrings: LanguageStrings = {
     bio: (
       <div>
         <p>
-          I was born in Kathmandu, Nepal, where I grew up surrounded by rich culture and beautiful nature. In 2013, I moved to Seinäjoki,
-           Finland, to pursue a Bachelor of Business Administration (BBA) in International Business, specializing in business operations.
-            I graduated in 2017 and soon after relocated to Helsinki to begin my career.
+          I was born in Kathmandu, Nepal, and grew up surrounded by a rich cultural heritage and beautiful landscapes. In 2013,
+           I moved to Seinäjoki, Finland, to pursue a Bachelor of Business Administration (BBA) in International Business,
+            specializing in business operations. After graduating in 2017, I relocated to Helsinki to begin my professional journey.
         </p>
         <p>
-          From 2018 to 2021, I worked as an Assistant Manager at Taco Bell, where I gained valuable experience in leadership, teamwork,
-           and operational management. This role honed my problem-solving skills as I managed shifts, trained staff, and ensured smooth 
-           operations during busy hours.
+          From 2018 to 2021, I worked as an Assistant Manager at Taco Bell, where I developed strong leadership, teamwork, and
+           operational management skills. This role helped me enhance my problem-solving and organizational abilities as I
+            managed shifts, trained staff, and ensured smooth operations during peak times.
         </p>
         <p>
-          My growing interest in technology inspired me to pursue a second BBA degree in Business and Information Technology at Haaga-Helia
-           University of Applied Sciences. Specializing in software development, I graduated in 2023 with expertise in tools like 
-          <code>React</code>, <code>TypeScript</code>, <code>GraphQL</code>, and <code>AWS</code>.
+          Driven by my growing interest in technology, I pursued a second BBA degree in Business and Information Technology
+           at Haaga-Helia University of Applied Sciences. Specializing in software development, I graduated in 2023, gaining
+           expertise in modern technologies such as <code>React</code>, <code>TypeScript</code>, <code>GraphQL</code>, and <code>AWS</code>.
         </p>
         <p>
-          In 2020, I began working on software development projects for Haaga-Helia UAS, including a large-scale collaboration with Siili Solutions.
-           These experiences allowed me to enhance my technical skills and work on innovative applications.
+          During my studies, I worked on an impactful collaboration with Siili Solutions, where I contributed to software development
+           projects using <code>TypeScript</code>, <code>React</code>, and <code>AWS</code>. This experience strengthened my
+            technical skills and expanded my ability to work effectively with cross-functional teams to deliver scalable and high-quality solutions.
         </p>
         <p>
-          Currently, I work as a Frontend Developer at Frosmo Oy in Helsinki, where I design and develop responsive user interfaces using
-          <code>React</code> and <code>TypeScript</code>. I also focus on creating reusable components and collaborating with Agile teams 
-           to deliver high-quality software solutions tailored to client needs.
+          From 2021 to January 2025, I worked as a Frontend Developer at Frosmo Oy in Helsinki, where I designed and developed responsive
+           user interfaces with <code>React</code> and <code>TypeScript</code>. In addition to my technical work, I utilized project
+            management tools like <code>Jira</code> and <code>Confluence</code> to manage tasks and facilitate collaboration within
+             Agile teams. This experience sparked my growing interest in project management, particularly in leading AI-driven projects.
         </p>
         <p>
-          Looking ahead, I am thrilled to begin my Master’s Degree in Artificial Intelligence for Business Transformation at Haaga-Helia UAS
-           in 2025. This program will allow me to explore how AI can revolutionize businesses and drive innovation.
+          In 2025, I am excited to start my Master’s Degree in Artificial Intelligence for Business Transformation at Haaga-Helia UAS.
+           This program will allow me to dive deeper into the potential of AI to transform business operations, and I am eager to apply
+            AI-driven solutions to project management and innovation. My long-term goal is to leverage both my technical and leadership
+             expertise to lead AI-related projects and drive impactful solutions.
+        </p>
+        <p>
+          As I look to the future, I am particularly interested in project management roles where I can apply my experience in both
+           technology and leadership to guide AI projects to successful completion. I aim to combine my expertise in software development,
+            AI, and project management to make meaningful contributions to organizations and help shape the future of technology-driven businesses.
+        </p>
+        <p>
+          <strong>Summer Job Aspirations:</strong> I am actively seeking summer job opportunities that align with my growing project management
+           aspirations. I am excited to take on roles where I can lead or support AI-driven projects, contributing to their successful delivery
+            while collaborating with diverse teams. These experiences will allow me to combine my technical background with emerging leadership
+             skills and explore the full potential of AI in project management.
         </p>
       </div>
     )
+    
     
     ,
     frosmo: "👨‍💻 Building dynamic, data-driven interfaces and reusable components while enhancing UI/UX, collaborating in Agile teams, and delivering customer-focused solutions.",
@@ -142,39 +158,53 @@ export const languageStrings: LanguageStrings = {
     bio: (
       <div>
         <p>
-          Synnyin Katmandussa, Nepalissa, ja kasvoin rikkaan kulttuurin ja kauniin luonnon ympäröimänä.
-           Vuonna 2013 muutin Seinäjoelle, Suomeen, jatkamaan kansainvälisen liiketoiminnan Bachelor of
-            Business Administration (BBA) -opintojani, erikoistuen liiketoimintojen hallintaan. 
-            Valmistuin vuonna 2017 ja muutettuani Helsinkiin aloitin urani.
+          Olen kotoisin Kathmandusta, Nepalista, ja kasvoin rikasta kulttuuria ja kauniita maisemia ympäröimänä. Vuonna 2013 muutin
+           Seinäjoelle, Suomeen, opiskellakseni liiketalouden kandidaatin tutkintoa (BBA) kansainvälisessä liiketoiminnassa, erikoistuen
+            liiketoiminnan operaatioihin. Valmistuin vuonna 2017 ja muutin pian Helsinkiin aloittaakseni ammatillisen urani.
         </p>
         <p>
-          Vuodet 2018–2021 työskentelin Taco Bellissä Assistant Managerina, jossa sain arvokasta kokemusta
-           johtamisesta, tiimityöstä ja operatiivisesta hallinnasta. Tämä rooli kehitti ongelmanratkaisutaitojani,
-            kun hallitsin työvuoroja, koulutin henkilökuntaa ja varmistin sujuvan toiminnan ruuhka-aikoina.
+          Vuodesta 2018 vuoteen 2021 työskentelin assistenttipäällikkönä Taco Bellissä, missä sain vahvaa johtamis-, tiimityöskentely- ja
+           operatiivisen hallinnan kokemusta. Tämä rooli kehitti ongelmanratkaisu- ja organisaatiotaitojani, kun johdin vuoroja, koulutin
+            henkilöstöä ja varmistin sujuvat toiminnot kiireisinä aikoina.
         </p>
         <p>
-          Kasvava kiinnostukseni teknologiaan sai minut jatkamaan toista BBA-tutkintoa Haaga-Helia Ammattikorkeakoulussa,
-          jossa erikoistuin ohjelmistokehitykseen. Valmistuin vuonna 2023 ja hankin asiantuntemusta työkaluissa kuten 
-          <code>React</code>, <code>TypeScript</code>, <code>GraphQL</code> ja <code>AWS</code>.
+          Kasvava kiinnostukseni teknologiaan sai minut suorittamaan toisen BBA-tutkinnon liiketoiminnan ja tietotekniikan alalla Haaga-Helian
+           ammattikorkeakoulussa. Erikoistuin ohjelmistokehitykseen ja valmistuin vuonna 2023, jolloin sain asiantuntemusta nykyaikaisista
+            teknologioista kuten <code>React</code>, <code>TypeScript</code>, <code>GraphQL</code> ja <code>AWS</code>.
         </p>
         <p>
-          Vuonna 2020 aloin työskennellä ohjelmistokehitysprojekteissa Haaga-Helia UAS:lle, mukaan lukien laaja yhteistyö
-           Siili Solutionsin kanssa. Nämä kokemukset auttoivat minua kehittämään teknisiä taitojani ja työskentelemään
-            innovatiivisten sovellusten parissa.
+          Opintojeni aikana työskentelin merkittävässä yhteistyössä Siili Solutionsin kanssa, jossa osallistuin ohjelmistokehitysprojekteihin
+           käyttäen <code>TypeScript</code>, <code>React</code> ja <code>AWS</code>. Tämä kokemus vahvisti teknisiä taitojani ja laajensi 
+           kykyäni työskennellä tehokkaasti monitoimisten tiimien kanssa ja tuottaa skaalautuvia ja korkealaatuisia ratkaisuja.
         </p>
         <p>
-          Tällä hetkellä työskentelen Frontend Developerina Frosmo Oy:llä Helsingissä, missä suunnittelen ja kehittän
-           responsiivisia käyttöliittymiä käyttäen <code>React</code> ja <code>TypeScript</code>. Keskityn myös luomaan 
-           uudelleenkäytettäviä komponentteja ja tekemään tiivistä yhteistyötä ketterien tiimien kanssa tarjotakseni
-            korkealaatuisia ohjelmistoratkaisuja asiakaslähtöisesti.
+          Vuodesta 2021 tammikuuhun 2025 työskentelin Frontend-kehittäjänä Frosmo Oy:ssä Helsingissä, jossa suunnittelin ja kehitin
+           responsiivisia käyttöliittymiä käyttäen <code>React</code> ja <code>TypeScript</code>. Teknisen työn lisäksi hyödynsin
+            projektinhallintatyökaluja kuten <code>Jira</code> ja <code>Confluence</code> hallitakseni tehtäviä ja edistääkseni
+             yhteistyötä ketterissä tiimeissä. Tämä kokemus herätti kasvavan kiinnostukseni projektinhallintaa kohtaan, erityisesti 
+             AI-hankkeiden johtamiseen.
         </p>
         <p>
-          Vuodesta 2025 alkaen aloitan Master’s Degree -ohjelman Artificial Intelligence for Business Transformation
-           -tutkinnossa Haaga-Helia UAS:ssa. Tämä ohjelma antaa minulle mahdollisuuden tutkia, kuinka tekoäly voi mullistaa
-            liiketoimintaa ja edistää innovaatiota.
+          Vuonna 2025 olen innokas aloittamaan maisterin tutkinnon tekoälystä liiketoiminnan transformaatioon Haaga-Helian ammattikorkeakoulussa.
+           Tämä ohjelma antaa minulle mahdollisuuden syventyä tekoälyn muutosvoimaan liiketoimintaprosesseissa, ja olen innostunut soveltamaan
+            tekoälyratkaisuja projektinhallintaan ja innovaatioon. Pitkän aikavälin tavoitteeni on yhdistää tekninen ja johtamisosaaminen ja 
+            johtaa tekoälyhankkeita, jotka tuottavat vaikuttavia ratkaisuja.
+        </p>
+        <p>
+          Katsoessani tulevaisuuteen, olen erityisen kiinnostunut projektinhallintatehtävistä, joissa voin soveltaa kokemustani teknologian
+           ja johtamisen alalta ohjaamalla tekoälyprojekteja menestyksekkäästi. Tavoitteeni on yhdistää ohjelmistokehityksessä, tekoälyssä
+            ja projektinhallinnassa hankkimani asiantuntemus ja tehdä merkittäviä panoksia organisaatioille ja auttaa muovaamaan teknologiaan
+             perustuvia liiketoimintaratkaisuja.
+        </p>
+        <p>
+          <strong>Kesätyöhaaveet:</strong> Etsin aktiivisesti kesätyömahdollisuuksia, jotka vastaavat kasvavia projektinhallintatavoitteitani.
+           Olen innostunut ottamaan vastaan rooleja, joissa voin johtaa tai tukea tekoälyhankkeita varmistaen niiden onnistuneen toteutuksen
+            ja tekemällä yhteistyötä monien eri tiimien kanssa. Nämä kokemukset auttavat minua yhdistämään teknisen taustan ja nousevat
+             johtamistaidot, samalla kun tutkin tekoälyn täyden potentiaalin projektinhallinnassa.
         </p>
       </div>
-    ),
+    )
+    ,
     frosmo: "👨‍💻 Rakentamassa dynaamisia, dataohjattuja käyttöliittymiä ja uudelleenkäytettäviä komponentteja, parantamassa UI/UX:ää, tekemässä yhteistyötä Agile-tiimien kanssa ja toimittamassa asiakaslähtöisiä ratkaisuja.",
     haagaHelia: "👨‍💻 Kehitti dynaamisia käyttöliittymiä Reactilla ja TypeScriptillä, optimoi datanhallintaa GraphQL:llä ja teki yhteistyötä Siili Solutionsin kanssa laajamittaisessa sovellusprojektissa käyttäen skaalautuvaa AWS-arkkitehtuuria.",
     tacoBell: "👨‍💻 Hallinnoi vuoroja, valvoi henkilökuntaa ruuhka-aikoina ja jakoi tehtävät, jotta palvelu pysyi laadukkaana.",
