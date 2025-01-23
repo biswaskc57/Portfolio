@@ -11,7 +11,7 @@ const Experience: React.FC = () => {
       role: "Front-end Developer",
       company: "Frosmo Oy",
       location: "Helsinki, Finland",
-      duration: "2021 – Present",
+      duration: "2021 – 2024",
       technologies: ["React", "JavaScript", "TypeScript", "HTML", "CSS", "SASS"],
       url: "https://www.frosmo.com",
       responsibility: language.frosmo

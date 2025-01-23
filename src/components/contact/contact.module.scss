@@ -64,11 +64,14 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  width: 10em;
+  align-self: center;
+
 }
 
 .button:hover {
-  outline: none;
-  box-shadow: 0 0 3px #0000004d;
+  background-color: #45a049;
+  box-shadow: 0 3px 5px rgba(56, 129, 58, 0.5);
 }
 
 .error {
